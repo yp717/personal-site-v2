@@ -1,19 +1,28 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
 import Layout from '../components/layout';
+import Img from 'gatsby-image';
+
 const BlogPage = ({ data }) => {
     const posts = data.allMarkdownRemark.edges;
     return (
     <Layout>
         <div className="post-list">
-            {posts.map(post => (
-            <div key={post.node.id} className="post-list__item">
-                <h2>{post.node.frontmatter.title}</h2>
-                <p>{post.node.frontmatter.date}</p>
-                <div className="post-list__excerpt">
-                <p>{post.node.excerpt}></p>
+        {posts.map(post => (
+          <div key={post.node.id} className="post-list__item">
+            <div className="post-list__thumbnail">
+                <Link to={post.node.fields.slug}>
+                    <Img
+                    fixed={post.node.frontmatter.thumbnail.childImageSharp.fixed}
+                    />
+                </Link>
+            </div>
+                <div className="post-list__content">
+                    <h2>{post.node.frontmatter.title}</h2>
+                    <p>{post.node.frontmatter.date}</p>
+                    <div className="post-list__excerpt">{post.node.excerpt}</div>
+                    <Link to={post.node.fields.slug}>Read More</Link>
                 </div>
-                <Link to={post.node.fields.slug}>Read More</Link>
             </div>
             ))}
         </div>
@@ -37,6 +46,13 @@ export const pageQuery = graphql`
                 frontmatter {
                     date(formatString: "MMMM DD, YYYY")
                     title
+                    thumbnail {
+                        childImageSharp {
+                            fixed(width: 200, height: 200) {
+                                ...GatsbyImageSharpFixed
+                            }
+                        }
+                    }
                 }
             }
         }
