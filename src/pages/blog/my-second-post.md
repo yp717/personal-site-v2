@@ -6,3 +6,5 @@ thumbnail: "../../images/kitten2.jpeg"
 ---
 
 This is my second blog post. Hello World!
+
+![Kitten Two](../../images/kitten2.jpeg)
