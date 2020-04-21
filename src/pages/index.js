@@ -40,7 +40,7 @@ const IndexPage = () => (
           <div className="container" style={{marginTop: '40px'}}>
             <div className="container__row">
                 {/* Section heading */}
-                <div className="col-sm-8" style={{width: '40%'}}>
+                <div className="col-sm-8" style={{width: '50%'}}>
                   <h2>Latest Projects</h2>
                 </div>
                 {/* Categories */}
