@@ -3,6 +3,28 @@ module.exports = {
     title: `Yannis Panagis`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
+    menuLinks:[
+      {
+        name:'👨🏼‍💻About',
+        link:'/about'
+      },
+      {
+        name:'🔧Projects',
+        link:'/projects'
+      },
+      {
+        name:'🎸Music',
+        link:'/music'
+      },
+      {
+        name:'🚀 Blog',
+        link:'/blog'
+      },
+      {
+        name:'✉️Contact',
+        link:'/contact'
+      }
+    ]
   },
   plugins: [
     `gatsby-plugin-sass`,
