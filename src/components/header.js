@@ -2,33 +2,28 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
+const Header = ({ siteTitle, menuLinks }) => (
+  <div className="container">
+      <div className="container__row">
+        <nav className="heightOffset navbar">
+          <div className="innerContainer" >
+            <div className="col-sm-6" style={{marginLeft: "50px"}}>
+              <h3>{siteTitle}</h3>
+            </div>
+            
+              {menuLinks.map(link => (
+                    <Link className="navLinks" to={link.link}>
+                        <div className="col-sm-2" style={{display:'flex', alignItems:"center"}}>
+                            <span>
+                                {link.name}
+                            </span>
+                        </div>
+                    </Link>
+                ))}
+          </div>
+        </nav>
+      </div>
+  </div>
 )
 
 Header.propTypes = {
@@ -40,3 +35,24 @@ Header.defaultProps = {
 }
 
 export default Header
+
+{/* <header>  
+  <div className="container">
+    <div className="container__row">
+      <div className="container__col-sm-2">
+        <h3>
+          <Link to="/">{siteTitle}</Link>
+        </h3>
+      </div>
+        {menuLinks.map(link => (
+          <div className="container__col-sm-1">
+            <p className="text-align-center">
+              <Link style={{ color: `black` }} to={link.link}>
+                {link.name}
+              </Link>
+            </p>
+          </div>
+        ))}
+    </div>  
+  </div>
+</header> */}

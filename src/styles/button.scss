@@ -1,10 +1,49 @@
 .button {
-  background-color: rgba(rebeccapurple, 0.7);
+  background-color: #3A80FE;
+  border-radius: 6px;
+  border: none;
   color: white;
+  height: 40px;
+  padding-top:5px;
+  padding-bottom:5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+  transition: all 0.4s ease;
+  &:hover {
+    background-color: rgba(rebeccapurple, 0.9);
+  }
+}
+
+.clear-button {
+  background: white;
+  border-radius: 20px;
+  border: none;
+  color: #FD3D37;
+  height: 40px;
+  width: 100px;
+  margin: 1rem;
+  margin-left: 0;
+  // font-family: 'Avenir Next';
+  transition: all 0.4s ease;
+  &:hover {
+    background-color: rgba(rebeccapurple, 0.9);
+  }
+}
+
+.submit-button {
+  background: #FD3D37;
   cursor: pointer;
-  font-weight: 700;
+  border-radius: 20px;
+  border: none;
+  color: white;
+  height: 40px;
+  width: 100px;
   padding: 1rem;
-  text-transform: uppercase;
+  margin: 1rem;
+  margin-left: 0;
+  font-weight: 700;
+  // font-family: 'Avenir Next';
   transition: all 0.4s ease;
   &:hover {
     background-color: rgba(rebeccapurple, 0.9);
