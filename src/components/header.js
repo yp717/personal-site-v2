@@ -7,10 +7,9 @@ const Header = ({ siteTitle, menuLinks }) => (
       <div className="container__row">
         <nav className="heightOffset navbar">
           <div className="innerContainer" >
-            <div className="col-sm-6" style={{marginLeft: "50px"}}>
-              <h3>{siteTitle}</h3>
+            <div className="col-sm-6" style={{marginLeft: "5%", width: "55%"}}>
+              <h2>{siteTitle}</h2>
             </div>
-            
               {menuLinks.map(link => (
                     <Link className="navLinks" to={link.link}>
                         <div className="col-sm-2" style={{display:'flex', alignItems:"center"}}>

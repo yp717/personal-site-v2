@@ -34,7 +34,7 @@ const Layout = ({ children }) => {
       should have a helmet here with extra information
       </Helmet> */}
       <Header menuLinks={data.site.siteMetadata.menuLinks} siteTitle={data.site.siteMetadata.title} />
-      <div className="container">
+      <div>
         <main>{children}</main>
       </div>
       <Footer/>

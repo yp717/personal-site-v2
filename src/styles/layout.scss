@@ -83,12 +83,12 @@ $map-grid-props: (
     }
 }
 
-.page-section-list {
-    @media (min-width: 992px) {
-        overflow-y: scroll;
-        height: 100vh;
-    } 
-}
+// .page-section-list {
+//     @media (min-width: 992px) {
+//         overflow-y: scroll;
+//         height: 100vh;
+//     } 
+// }
 
 .footer-style {
     text-align: center;
@@ -97,4 +97,8 @@ $map-grid-props: (
     bottom: 0px; 
     height: 80px;
     width: 100vw;
+}
+
+.hero-section {
+    background-color: #F3F4F6;
 }
