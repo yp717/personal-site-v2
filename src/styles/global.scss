@@ -31,9 +31,8 @@ html, body {
 }
 
 .input-field {
-  border-width: 0px;
-  // background-color: rebeccapurple;
   border: 2px solid #5ad3d4;
+  border-radius: 3px;
   line-height: 1.4rem;
   width: 100%;
   margin-Top: 1%;
@@ -46,5 +45,6 @@ html, body {
 
 .input-field:focus {
   border:2px solid #FC6964;
+  border-radius: 3px;
   outline: none;
 }

@@ -7,33 +7,33 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
-
-import Header from "./header"
+// import { useStaticQuery, graphql } from "gatsby"
 import Footer from "./footer"
 import "../styles/global.scss";
+import Header from "../components/header";
 
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-          menuLinks {
-            name
-            link
-          }
-        }
-      }
-    }
-  `)
-
+const Layout = ({ children, props }) => {
+  // const data = useStaticQuery(graphql`
+  //   query SiteTitleQuery {
+  //     site {
+  //       siteMetadata {
+  //         title
+  //         menuLinks {
+  //           name
+  //           link
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
+  
   return (
     <>
       {/* <Helmet>
       should have a helmet here with extra information
       </Helmet> */}
-      <Header menuLinks={data.site.siteMetadata.menuLinks} siteTitle={data.site.siteMetadata.title} />
+      {/* <Header menuLinks={data.site.siteMetadata.menuLinks} siteTitle={data.site.siteMetadata.title} /> */}
+      <Header/>
       <div>
         <main>{children}</main>
       </div>

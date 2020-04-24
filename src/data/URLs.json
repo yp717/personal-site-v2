@@ -1,0 +1,22 @@
+[
+    {
+        "name":"👨🏼‍💻About",
+        "link":"/about"
+    },
+    {
+      "name":"🔧Projects",
+      "link":"/projects"
+    },
+    {
+      "name":"🎸Music",
+      "link":"/music"
+    },
+    {
+      "name":"🚀 Blog",
+      "link":"/blog"
+    },
+    {
+      "name":"✉️Contact",
+      "link":"/contact"
+    }
+]
