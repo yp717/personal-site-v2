@@ -9,7 +9,7 @@ const ContactPage = () => (
         <div className="container" style={{paddingTop: '150px'}}>
             <div className="container__row" style={{display: "block"}}>
                 <div className="container__col-lg-12 container__col-md-12 container__col-sm-12 container__col-xs-12 text-align-center">
-                    <h2 className="text-align-center">Get in touch. 👇</h2>
+                    <h2 className="text-align-center">Get in touch. <span role="img" aria-label="down-arrow">👇</span></h2>
                 </div>
                 <div className="container__col-lg-12 container__col-md-12 container__col-sm-12 container__col-xs-12 text-align-center">
                     <p className="text-align-center">

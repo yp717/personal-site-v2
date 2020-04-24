@@ -1,9 +1,7 @@
 import React from "react"
-import { Link } from "gatsby"
-
+// import { Link } from "gatsby"
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import Button from "../components/button";
 import SocialLinks from "../components/socialLinks";
 
 const IndexPage = () => (  
@@ -13,17 +11,19 @@ const IndexPage = () => (
           <div className="container">
             <div className="container--fluid">
               <div className="col-sm-12" style={{paddingTop: '150px'}}>
-                <p style={{marginTop: '100px', fontFamily: 'Roboto-Light', fontSize: '18px'}}>Hi, my name is</p>
+                <p className="greeting-text">
+                    Hi <span role="img" aria-label="wave">👋</span>, my name is
+                </p>
               </div>
               <div className="col-sm-12">
-                <h1 className="is-black-text">Yannis Panagis</h1>
+                <h1 className="is-background-blue-text">Yannis Panagis</h1>
               </div>
               <div className="col-sm-12">
-                <h2 style={{fontSize: '30px', lineHeight: '30px'}} className="is-light-grey-text">Engineer. Designer. Developer. Student.</h2>
+                <h2 className="hero-tagline-text">Engineer. Designer. Developer. Student.</h2>
               </div>
-              <div className="col-sm-6" style={{marginTop: '1%', marginBottom: '1%'}}>
-                <h3>I'm currently a third year Electrical and Electronic</h3>
-                <h3>Engineering Student @ Imperial College London</h3>
+              <div className="col-sm-6">
+                <h3 className="hero-description-text">I'm currently a third year Electrical and Electronic</h3>
+                <h3 className="hero-description-text">Engineering Student @ Imperial College London</h3>
               </div>
               <div className="col-sm-12">
                 <SocialLinks/>
@@ -57,6 +57,7 @@ const IndexPage = () => (
                   <h3 style={{fontWeight: 600, fontSize: '16px', lineHeight: '16px'}}>ENGINEERING</h3>
                 </div>                  
             </div>
+            <p>this is just a test. ok cool the font looks right</p>
           </div>
         </div>
   </Layout>

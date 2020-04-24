@@ -12,7 +12,8 @@ $color-palette:
 ("very-light-grey", #F3F4F6), 
 ("very-dark-grey", #222222),
 ("green", rgb(53, 203, 115)),
-("matisse-blue", #385473);
+("matisse-blue", #385473),
+("background-blue", #17171D);
 
 @each $color in $color-palette {
   .is-#{nth($color,1)}-bg{
