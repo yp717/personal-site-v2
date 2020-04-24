@@ -13,10 +13,12 @@ img {
     margin-bottom: 100px;
     background: url("../images/icons/socialMediaIcons/facebook-grayscale.svg") no-repeat;
     background-size: 100%;
+    transition: all .2s ease-in-out;
 }
 .facebookIcon:hover {
     background: url("../images/icons/socialMediaIcons/facebook-color.svg") no-repeat;
     background-size: 100%;
+    transform: scale(1.1);
 }
 
 // Facebook Social Icon onHover Toggle 
@@ -29,10 +31,12 @@ img {
     background: url("../images/icons/socialMediaIcons/github-grayscale.svg") no-repeat;
     background-size: 100%;
     display: inline-block;
+    transition: all .2s ease-in-out;
 }
 .githubIcon:hover {
     background: url("../images/icons/socialMediaIcons/github-color.svg") no-repeat;
     background-size: 100%;
+    transform: scale(1.1);
 }
 
 // Facebook Social Icon onHover Toggle 
@@ -44,10 +48,12 @@ img {
     background: url("../images/icons/socialMediaIcons/linkedin-grayscale.svg") no-repeat;
     background-size: 100%;
     display: inline-block;
+    transition: all .2s ease-in-out;
 }
 .linkedinIcon:hover {
     background: url("../images/icons/socialMediaIcons/linkedin-color.svg") no-repeat;
     background-size: 100%;
+    transform: scale(1.1);
 }
 
 // Facebook Social Icon onHover Toggle 
@@ -59,10 +65,12 @@ img {
     background: url("../images/icons/socialMediaIcons/medium-grayscale.svg") no-repeat;
     background-size: 100%;
     display: inline-block;
+    transition: all .2s ease-in-out;
 }
 .mediumIcon:hover {
     background: url("../images/icons/socialMediaIcons/medium-color.svg") no-repeat;
     background-size: 100%;
+    transform: scale(1.1);
 }
 
 // Facebook Social Icon onHover Toggle 
@@ -74,10 +82,12 @@ img {
     background: url("../images/icons/socialMediaIcons/spotify-grayscale.svg") no-repeat;
     background-size: 100%;
     display: inline-block;
+    transition: all .2s ease-in-out;
 }
 .spotifyIcon:hover {
     background: url("../images/icons/socialMediaIcons/spotify-color.svg") no-repeat;
     background-size: 100%;
+    transform: scale(1.1);
 }
 
 // Facebook Social Icon onHover Toggle 
@@ -89,8 +99,10 @@ img {
     background: url("../images/icons/socialMediaIcons/twitter-grayscale.svg") no-repeat;
     background-size: 100%;
     display: inline-block;
+    transition: all .2s ease-in-out;
 }
 .twitterIcon:hover {
     background: url("../images/icons/socialMediaIcons/twitter-color.svg") no-repeat;
     background-size: 100%;
+    transform: scale(1.1);
 }
