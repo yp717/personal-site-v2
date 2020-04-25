@@ -7,7 +7,7 @@
 @import 'projects';
 @import 'navigation';
 @import 'vars';
-
+@import 'forms';
 // Remove margin from everythin
 * {
   margin: 0;
@@ -15,36 +15,5 @@
 
 html, body {
   height: 100%;
-}
-
-.page-wrap {
-  min-height: 100%;
-  /* equal to footer height */
-  margin-bottom: -80px; 
-}
-.page-wrap:after {
-  content: "";
-  display: block;
-}
-.site-footer, .page-wrap:after {
-  height: 80px; 
-}
-
-.input-field {
-  border-width: 0px;
-  // background-color: rebeccapurple;
-  border: 2px solid #5ad3d4;
-  line-height: 1.4rem;
-  width: 100%;
-  margin-Top: 1%;
-  margin-Bottom: 1%;
-  font-family: 'Lato';
-  font-size: 16px;
-  color: #000000;
-  text-align: left;
-}
-
-.input-field:focus {
-  border:2px solid #FC6964;
-  outline: none;
+  margin: 0;
 }

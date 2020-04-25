@@ -6,7 +6,7 @@ import SocialLinks from "../components/socialLinks";
 const ContactPage = () => (
     <Layout>
         <SEO title="About" keywords={[`gatsby`, `application`, `react`]} />  
-        <div className="container" style={{paddingTop: '150px'}}>
+        <div className="container page-wrap" style={{paddingTop: '150px'}}>
             <div className="container__row" style={{display: "block"}}>
                 <div className="container__col-lg-12 container__col-md-12 container__col-sm-12 container__col-xs-12">
                     <h1 className="text-align-left">Hi <span role="img" aria-label="wave">👋</span> I'm Yannis Panagis</h1>

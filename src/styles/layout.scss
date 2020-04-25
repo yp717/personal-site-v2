@@ -90,10 +90,19 @@ $map-grid-props: (
 //     } 
 // }
 
-.footer-style {
+.page-wrap {
+    min-height: 100%;
+    /* equal to footer height */
+    margin-bottom: -80px;
+  }
+  
+
+.push {
+    height: 80px; 
+}
+
+.footer {
     text-align: center;
-    font-size: 100px;
-    position: absolute;
     bottom: 0px; 
     height: 80px;
     width: 100vw;
@@ -101,4 +110,10 @@ $map-grid-props: (
 
 .hero-section {
     background-color: #F3F4F6;
+    padding-top: 80px;
+}
+
+.page-wrapper {
+    overflow-y: scroll;
+    height: 100vh; 
 }
