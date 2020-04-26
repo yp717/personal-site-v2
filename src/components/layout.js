@@ -12,6 +12,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import Footer from "./footer"
 import "../styles/global.scss";
+import Sidebar from "../components/sidebar";
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -35,7 +36,11 @@ const Layout = ({ children }) => {
       </Helmet> */}
       <Header menuLinks={data.site.siteMetadata.menuLinks} siteTitle={data.site.siteMetadata.title} />
       <div>
-        <main>{children}</main>
+        {/* Burger Navbar - display:None when too big */}
+        <div className="burger-navbar"> 
+          <Sidebar/>
+        </div>
+        <main id="page-wrap">{children}</main>
         <div class="push"></div>
         <Footer/>
       </div>

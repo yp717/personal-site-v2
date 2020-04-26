@@ -53,3 +53,15 @@ $nav-height: 80px;
     margin-left: 1rem;
     margin-right: 1rem;
 }
+
+.expanded-navbar {
+    @media (max-width: 1334px) {
+        display:none;
+    }
+}
+
+.burger-navbar {
+    @media (min-width: 1334px) {
+        display:none;
+    }
+}
