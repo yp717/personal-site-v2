@@ -41,6 +41,15 @@ module.exports = {
           `gatsby-remark-prismjs`,
         ],
       },
+    },
+    {
+      resolve: "gatsby-plugin-use-dark-mode",
+      options: {
+        classNameDark: "dark-mode",
+        classNameLight: "light-mode",
+        storageKey: "darkMode",
+        minify: true,
+      },
     },  
     {
       resolve: `gatsby-source-filesystem`,
