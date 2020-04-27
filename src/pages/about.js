@@ -1,8 +1,12 @@
 import React from 'react';
 import SEO from "../components/seo";
 import Layout from '../components/layout';
-import SocialLinks from "../components/socialLinks";
-import LegoSection from "../components/pageSections/legoSection";
+import AchievementsSection from "../components/pageSections/achievementSection";
+import EducationSection from "../components/pageSections/educationSection";
+import ExperienceSection from "../components/pageSections/experienceSection";
+import SkillsSection from "../components/pageSections/skillsSection";
+import VolunteeringSection from "../components/pageSections/volunteeringSection";
+import PageSection from "../components/pageSection";
 
 const ContactPage = () => (
     <Layout>
@@ -33,7 +37,39 @@ const ContactPage = () => (
                     </p>
                 </div>
 
+                {/* Education Section */}
+                <PageSection>
+                    <EducationSection/>
+                </PageSection>          
                 
+
+                {/* Experience Section */}
+                <div className="is-green-bg">
+                    <PageSection>
+                        <ExperienceSection/>
+                    </PageSection>           
+                </div>
+
+                {/* Skills Section */}
+                <div className="is-supernova-yellow-bg" style={{width:"100vw"}}>
+                    <PageSection>
+                        <SkillsSection/>
+                    </PageSection>          
+                </div>
+
+                {/* Achievements Section */}
+                <div className="is-java-green-bg">
+                    <PageSection>
+                        <AchievementsSection/>
+                    </PageSection>          
+                </div>
+                
+                {/* Volunteering Section */}
+                <div className="is-pumpkin-orange-bg">
+                    <PageSection>
+                        <VolunteeringSection/>
+                    </PageSection>          
+                </div>
             </div>
         </div>
     </Layout>
