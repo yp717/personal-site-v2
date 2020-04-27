@@ -54,15 +54,6 @@ $nav-height: 80px;
     margin-right: 1rem;
 }
 
-.active {
-    span {
-        border-bottom:3px solid #FCB234;    
-    }
-    span:hover{
-        border:none;
-    }
-}
-
 .expanded-navbar {
     @media (max-width: 1334px) {
         display:none;
