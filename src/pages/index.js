@@ -5,6 +5,7 @@ import SEO from "../components/seo";
 import HeroSection from "../components/pageSections/heroSection";
 import PageSection from "../components/pageSection";
 import LatestProjejctsSection from "../components/pageSections/latestProjectsSection";
+import LegoSection from "../components/pageSections/legoSection";
 
 const IndexPage = () => (  
   <>
@@ -12,7 +13,7 @@ const IndexPage = () => (
   <Layout>
       <div className="container--fluid">
         <div className="container__row">
-          <div className="container__col-sm-12" style={{paddingBottom: '150px'}}>
+          <div className="container__col-sm-12">
             {/* Hero Section */}
             <div className="hero-section is-very-light-grey-bg">
               <PageSection>
@@ -20,11 +21,10 @@ const IndexPage = () => (
               </PageSection>
             </div>
             {/* Latest Projects Section */}
-            <div className="latest-projects-section is-white-bg">
-              <PageSection>
-                <LatestProjejctsSection/>
-              </PageSection>
-            </div>
+            <LegoSection/>
+            {/* <div className="latest-projects-section is-white-bg"> */}
+                {/* <LatestProjejctsSection/> */}
+            {/* </div> */}
           </div>
         </div>
       </div>

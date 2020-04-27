@@ -13,10 +13,6 @@ module.exports = {
         link:'/projects'
       },
       {
-        name:'🎸Music',
-        link:'/music'
-      },
-      {
         name:'🚀 Blog',
         link:'/blog'
       },

@@ -41,7 +41,6 @@ const Layout = ({ children }) => {
           <Sidebar/>
         </div>
         <main id="page-wrap">{children}</main>
-        <div class="push"></div>
         <Footer/>
       </div>
     </>
