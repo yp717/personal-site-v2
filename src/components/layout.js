@@ -35,7 +35,7 @@ const Layout = ({ children }) => {
       should have a helmet here with extra information
       </Helmet> */}
       <Header menuLinks={data.site.siteMetadata.menuLinks} siteTitle={data.site.siteMetadata.title} />
-      <div>
+      <div className="is-white-bg">
         {/* Burger Navbar - display:None when too big */}
         <div className="burger-navbar"> 
           <Sidebar/>

@@ -5,16 +5,16 @@ import Sidebar from "../components/sidebar";
 import DarkModeToggle from "../components/darkModeToggle";
 
 const Header = ({ siteTitle, menuLinks }) => (
-  <nav className="heightOffset navbar">
+  <nav className="heightOffset navbar is-white-bg">
     <div className="innerContainer" >
       <div className="col-sm-6" style={{marginLeft: "5%", width: "55%"}}>
         <Link to="/">
-        <h2 className="name-text">{siteTitle}</h2>
+        <h2 className="name-text is-background-blue-text">{siteTitle}</h2>
         </Link>
       </div>
       {/* Full Explanded Navbar - display:None when too small */}
       {menuLinks.map(link => (
-        <Link className="navLinks expanded-navbar" to={link.link}>
+        <Link className="navLinks expanded-navbar is-background-blue-text" to={link.link}>
             <div style={{display:'flex', alignItems:"center"}}>
                 <span className="nav-link-text">
                     {link.name}

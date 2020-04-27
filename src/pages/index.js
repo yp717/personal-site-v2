@@ -14,13 +14,13 @@ const IndexPage = () => (
         <div className="container__row">
           <div className="container__col-sm-12" style={{paddingBottom: '150px'}}>
             {/* Hero Section */}
-            <div className="hero-section">
+            <div className="hero-section is-very-light-grey-bg">
               <PageSection>
                 <HeroSection/>
               </PageSection>
             </div>
             {/* Latest Projects Section */}
-            <div className="latest-projects-section">
+            <div className="latest-projects-section is-white-bg">
               <PageSection>
                 <LatestProjejctsSection/>
               </PageSection>

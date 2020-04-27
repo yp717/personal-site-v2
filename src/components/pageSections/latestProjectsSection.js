@@ -5,24 +5,24 @@ const HeroSection = () => {
         <>
             <div className="container__row">
                 {/* Section heading */}
-                <div className="col-sm-8" style={{width: '50%'}}>
+                <div className="col-sm-8 is-background-blue-text" style={{width: '50%'}}>
                   <h2>Latest Projects</h2>
                 </div>
                 {/* Categories */}
-                <div className="col-sm-2" style={{marginLeft: '2%', marginRight: '2%', display: 'flex', justifyContent: 'center', alignItems: 'flex-end'}}>
+                <div className="col-sm-2 is-background-blue-text" style={{marginLeft: '2%', marginRight: '2%', display: 'flex', justifyContent: 'center', alignItems: 'flex-end'}}>
                   <h3 className="text-align-center" style={{fontWeight: 600, fontSize: '16px', lineHeight: '16px'}}>[ALL]</h3>
                 </div>
-                <div className="col-sm-2" style={{marginLeft: '2%', marginRight: '2%', display: 'flex', justifyContent: 'center', alignItems: 'flex-end'}}>  
+                <div className="col-sm-2 is-background-blue-text" style={{marginLeft: '2%', marginRight: '2%', display: 'flex', justifyContent: 'center', alignItems: 'flex-end'}}>  
                   <h3 style={{fontWeight: 600, fontSize: '16px', lineHeight: '16px'}}>DESIGN</h3>
                 </div>
-                <div className="col-sm-2" style={{marginLeft: '2%', marginRight: '2%', display: 'flex', justifyContent: 'center', alignItems: 'flex-end'}}>  
+                <div className="col-sm-2 is-background-blue-text" style={{marginLeft: '2%', marginRight: '2%', display: 'flex', justifyContent: 'center', alignItems: 'flex-end'}}>  
                   <h3 style={{fontWeight: 600, fontSize: '16px', lineHeight: '16px'}}>DEVELOPMENT</h3>
                 </div>                  
-                <div className="col-sm-2" style={{marginLeft: '2%', marginRight: '2%', display: 'flex', justifyContent: 'center', alignItems: 'flex-end'}}>  
+                <div className="col-sm-2 is-background-blue-text" style={{marginLeft: '2%', marginRight: '2%', display: 'flex', justifyContent: 'center', alignItems: 'flex-end'}}>  
                   <h3 style={{fontWeight: 600, fontSize: '16px', lineHeight: '16px'}}>ENGINEERING</h3>
                 </div>                  
             </div>
-            <p>this is just a test. ok cool the font looks right</p>
+            <p className="is-background-blue-text">this is just a test. ok cool the font looks right</p>
         </>
     );
 }

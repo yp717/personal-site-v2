@@ -8,9 +8,9 @@ const HeroSection = () => {
                 Hi <span role="img" aria-label="wave">👋</span>, my name is
             </p>         
             <h1 className="is-background-blue-text">Yannis Panagis</h1>
-            <h2 className="hero-tagline-text">Engineer. Designer. Developer. Student.</h2>
-            <h3 className="hero-description-text">I'm currently a third year Electrical and Electronic</h3>
-            <h3 className="hero-description-text">Engineering Student @ Imperial College London</h3>
+            <h2 className="hero-tagline-text is-background-blue-text">Engineer. Designer. Developer. Student.</h2>
+            <h3 className="hero-description-text is-background-blue-text">I'm currently a third year Electrical and Electronic</h3>
+            <h3 className="hero-description-text is-background-blue-text">Engineering Student @ Imperial College London</h3>
             <div>
             <SocialLinks/>
             </div>

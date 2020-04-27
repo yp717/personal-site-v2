@@ -39,6 +39,21 @@ img {
     transform: scale(1.1);
 }
 
+.githubIcon-dark-mode {
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+    margin-left: 0px;
+    padding: 0px;
+    background: url("../images/icons/socialMediaIcons/github-grayscale-dark-mode.svg") no-repeat;
+    background-size: 100%;
+    display: inline-block;
+    transition: all .2s ease-in-out;
+}
+.githubIcon-dark-mode:hover {
+    transform: scale(1.1);
+}
+
 // Facebook Social Icon onHover Toggle 
 .linkedinIcon {
     height: 50px;
@@ -56,7 +71,20 @@ img {
     transform: scale(1.1);
 }
 
-// Facebook Social Icon onHover Toggle 
+.linkedinIcon-dark-mode {
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+    padding: 0;
+    background: url("../images/icons/socialMediaIcons/linkedin-grayscale-dark-mode.svg") no-repeat;
+    background-size: 100%;
+    display: inline-block;
+    transition: all .2s ease-in-out;
+}
+.linkedinIcon-dark-mode:hover {
+    transform: scale(1.1);
+}
+
 .mediumIcon {
     height: 50px;
     width: 50px;
@@ -70,6 +98,20 @@ img {
 .mediumIcon:hover {
     background: url("../images/icons/socialMediaIcons/medium-color.svg") no-repeat;
     background-size: 100%;
+    transform: scale(1.1);
+}
+
+.mediumIcon-dark-mode {
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+    padding: 0;
+    background: url("../images/icons/socialMediaIcons/medium-grayscale-dark-mode.svg") no-repeat;
+    background-size: 100%;
+    display: inline-block;
+    transition: all .2s ease-in-out;
+}
+.mediumIcon-dark-mode:hover {
     transform: scale(1.1);
 }
 
@@ -90,6 +132,20 @@ img {
     transform: scale(1.1);
 }
 
+.spotifyIcon-dark-mode {
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+    padding: 0;
+    background: url("../images/icons/socialMediaIcons/spotify-grayscale-dark-mode.svg") no-repeat;
+    background-size: 100%;
+    display: inline-block;
+    transition: all .2s ease-in-out;
+}
+.spotifyIcon-dark-mode:hover {
+    transform: scale(1.1);
+}
+
 // Facebook Social Icon onHover Toggle 
 .twitterIcon {
     height: 40px;
@@ -105,4 +161,42 @@ img {
     background: url("../images/icons/socialMediaIcons/twitter-color.svg") no-repeat;
     background-size: 100%;
     transform: scale(1.1);
+}
+
+.sunIcon {
+    height: 25px;
+    width: 25px;
+    margin: 10px;
+    margin-left: 0px;
+    padding: 0px;
+    background: url("../images/icons/sun-icon.svg") no-repeat;
+    background-size: 100%;
+    border: none;
+    display: inline-block;
+    transition: all .2s ease-in-out;
+}
+.sunIcon:hover {
+    transform: scale(1.1);
+}
+.sunIcon:focus {
+    outline:0 !important;
+}
+
+.moonIcon {
+    height: 20px;
+    width: 20px;
+    margin: 10px;
+    margin-left: 0px;
+    padding: 0px;
+    background: url("../images/icons/moon-icon.svg") no-repeat;
+    background-size: 100%;
+    border: none;
+    display: inline-block;
+    transition: all .2s ease-in-out;
+}
+.moonIcon:hover {
+    transform: scale(1.1);
+}
+.moonIcon:focus {
+    outline:0 !important;
 }

@@ -1,7 +1,10 @@
 
 // change this so that the dark mode colours are in a third column
 $color-palette:  
-("white",#FFFFFF, #FFFFFF),
+("white",#FFFFFF, #17171D),
+("very-light-grey", #F3F4F6, #17171D),
+("background-blue", #17171D, #FFFFFF),
+("footer-blue", #17171D, #17171D),
 ("black",#000000, #000000),
 ("pumpkin-orange",rgb(252, 105, 100), rgb(252, 105, 100)),
 ("java-green", #2CA4A4, #2CA4A4),
@@ -11,11 +14,9 @@ $color-palette:
 ("deep-sky-blue", #1EB6FF, #1EB6FF),
 ("dark-grey", #4A4A4A, #4A4A4A),
 ("light-grey", #7E7E7E, #7E7E7E),
-("very-light-grey", #F3F4F6, #F3F4F6), 
 ("very-dark-grey", #222222, #222222),
 ("green", rgb(53, 203, 115), rgb(53, 203, 115)),
-("matisse-blue", #385473, #385473),
-("background-blue", #17171D, #FFFFFF);
+("matisse-blue", #385473, #385473);
 
 @each $color in $color-palette {
   .is-#{nth($color,1)}-bg{
@@ -31,7 +32,7 @@ $color-palette:
     }
 
     .is-#{nth($color,1)}-bg {
-      color: nth($color, 3);
+      background-color: nth($color, 3);
     }
   }
 }
