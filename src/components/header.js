@@ -14,12 +14,16 @@ const Header = ({ siteTitle, menuLinks }) => (
       </div>
       {/* Full Explanded Navbar - display:None when too small */}
       {menuLinks.map(link => (
-        <Link className="navLinks expanded-navbar is-background-blue-text" to={link.link}>
-            <div style={{display:'flex', alignItems:"center"}}>
-                <span className="nav-link-text">
-                    {link.name}
-                </span>
-            </div>
+        <Link 
+          className="navLinks expanded-navbar is-background-blue-text" 
+          to={link.link}  
+          activeClassName="active"
+        >
+          <div style={{display:'flex', alignItems:"center"}}>
+              <span className="squiggle nav-link-text">
+                  {link.name}
+              </span>
+          </div>
         </Link>
       ))}
       <DarkModeToggle/>
