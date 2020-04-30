@@ -12,27 +12,27 @@ export default ({ siteTitle, menuLinks }) => {
     <>
     <nav className="heightOffset navbar is-white-bg">
       <div className="innerContainer" >
-        <div className="container__col-sm-6" style={{marginLeft:"5%"}}>
+        <div style={{left: '0px', marginLeft:"5%"}}>
           <Link to="/">
           <h2 className="name-text is-background-blue-text">{siteTitle}</h2>
           </Link>
         </div>
         {/* Full Explanded Navbar - display:None when too small */}
-        {menuLinks.map(link => (
-          <Link 
-            className="navLinks expanded-navbar is-background-blue-text" 
-            to={link.link}  
-            activeClassName="active"
-          >
-            <div style={{display:'flex', alignItems:"center"}}>
-                <span className="squiggle nav-link-text">
-                    {link.name}
-                </span>
-            </div>
-          </Link>
-        ))}
-        <div className="expanded-navbar">
-          <DarkModeToggle/>
+        <div className="wideMenuParent">
+          {menuLinks.map(link => (
+            <Link 
+              className="navLinks expanded-navbar is-background-blue-text" 
+              to={link.link}  
+              activeClassName="active"
+            >
+              <span className="squiggle nav-link-text">
+                  {link.name}
+              </span>
+            </Link>
+          ))}
+          <div className="expanded-navbar">
+            <DarkModeToggle/>
+          </div>
         </div>
         <div className="burger-navbar">
           <button 

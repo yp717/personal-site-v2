@@ -111,9 +111,20 @@ $map-grid-props: (
 
 .hero-section {
     padding-top: 80px;
+    height: 74vh;
+    width: 100vw;
 }
 
 .page-wrapper {
     overflow-y: scroll;
     height: 100vh; 
+}
+
+.absolute-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }

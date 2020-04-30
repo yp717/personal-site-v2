@@ -15,7 +15,7 @@ const LearningSkills = () => {
     ]
     return (
         <>
-            <h2 className="is-white-text" style={{margin: '0', padding: '0'}}>Technical Skills</h2>
+            <h2 className="is-white-text" style={{margin: '0', padding: '0'}}>My Toolbox 🛠</h2>
             <div className="container">
                 <div className="container__row">
                     {TechncialSKills.map((skill) =>

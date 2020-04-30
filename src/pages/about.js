@@ -7,13 +7,21 @@ import ExperienceSection from "../components/pageSections/experienceSection";
 import SkillsSection from "../components/pageSections/skillsSection";
 import VolunteeringSection from "../components/pageSections/volunteeringSection";
 import PageSection from "../components/pageSection";
-import FadeInSection from "../components/animations/fadeInSection";
+// import FadeInSection from "../components/animations/fadeInSection";
+import LegoSection from "../components/pageSections/legoSection";
 
 const ContactPage = () => (
     <Layout>
         <SEO title="About" keywords={[`gatsby`, `application`, `react`]} />  
         <div className="container">
             <div className="container__row">
+                
+                <div className="container__col-sm-12" style={{paddingBottom: '20px'}}>
+                    <h2 className="text-align-left is-background-blue-text">I've got a diverse set of software interests</h2>
+                </div>
+                <div className="container__col-sm-12" style={{paddingBottom: '20px'}}>
+                    <LegoSection/>            
+                </div>
                 <div className="container__col-sm-12" style={{paddingBottom: '20px'}}>
                     <h1 className="text-align-left is-background-blue-text">Hi <span role="img" aria-label="wave">👋</span> I'm Yannis Panagis</h1>
                 </div>
@@ -40,21 +48,11 @@ const ContactPage = () => (
             </div>
         </div>
 
-        {/* Education Section */}
         <EducationSection/>
-
-        {/* Experience Section */}
         <ExperienceSection/>
-
-        {/* Skills Section */}
         <SkillsSection/>
-
-        {/* Achievements Section */}
-        <AchievementsSection/>
-        
-        {/* Volunteering Section */}
+        <AchievementsSection/> 
         <VolunteeringSection/>         
-        
     </Layout>
 );
 

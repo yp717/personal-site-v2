@@ -10,14 +10,14 @@ export default props => {
             type="link"
             aria-label="light mode"
             onClick={darkMode.disable}
-            className="nav-dark-mode-toggle"
+            className="is-background-blue-text nav-dark-mode-toggle"
           ><span>️☀️Light Mode</span></button>
         ) : (
           <button
             type="button"
             aria-label="dark mode"
             onClick={darkMode.enable}
-            className="nav-dark-mode-toggle"
+            className="is-background-blue-text nav-dark-mode-toggle"
           ><span>🌙Dark Mode</span></button>
         )}
       </>

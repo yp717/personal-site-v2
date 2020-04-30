@@ -7,7 +7,7 @@ const SkillsSection = () => {
     return (
         <>
             <div className="container" style={{paddingBottom: '5%', paddingTop: '5%'}}>
-                <h1 className="is-background-blue-text section-heading">Technical Skills</h1>
+                <h1 className="is-background-blue-text section-heading">My Toolbox 🛠</h1>
                 <TechnicalSkills />
                 <WebDevelopment />
             </div>
