@@ -4,7 +4,7 @@ import Timeline from '../timeline';
 const EducationSection = () => {
     return (
         <>
-            <div className="container" style={{width:"100vw"}}>
+            <div className="container" style={{paddingTop: '5%'}}>
                 <h1 className="is-background-blue-text">Education</h1>
                 <div className="container__row">                
                     <Timeline/>

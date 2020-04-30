@@ -3,21 +3,24 @@ import { graphql, Link } from 'gatsby';
 import { kebabCase } from 'lodash';
 import Layout from '../components/layout';
 import Img from 'gatsby-image';
+import SEO from "../components/seo";
 
 const BlogPage = ({ data }) => {
     const posts = data.allMarkdownRemark.edges;
     return (
     <Layout>
+        <SEO title="Blog" keywords={[`gatsby`, `application`, `react`]} />  
+        <div className="container page-wrap" style={{paddingTop: '150px'}}>
         <div className="post-list">
-        {posts.map(post => (
-          <div key={post.node.id} className="post-list__item">
-            <div className="post-list__thumbnail">
-                <Link to={post.node.fields.slug}>
-                    <Img
-                    fixed={post.node.frontmatter.thumbnail.childImageSharp.fixed}
-                    />
-                </Link>
-            </div>
+            {posts.map(post => (
+            <div key={post.node.id} className="post-list__item">
+                <div className="post-list__thumbnail">
+                    <Link to={post.node.fields.slug}>
+                        <Img
+                        fixed={post.node.frontmatter.thumbnail.childImageSharp.fixed}
+                        />
+                    </Link>
+                </div>
                 <div className="post-list__content">
                     <h2>{post.node.frontmatter.title}</h2>
                     {post.node.frontmatter.tags ? (
@@ -37,6 +40,7 @@ const BlogPage = ({ data }) => {
                 </div>
             </div>
             ))}
+        </div>
         </div>
     </Layout>
     );

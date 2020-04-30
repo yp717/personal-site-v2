@@ -20,7 +20,7 @@ const SoftwarePackageSkills = () => {
     return (
         <>
             <div className="skill-section is-white-bg" style={{paddingBottom: '0px'}}>
-                <h2 className="is-black-text">Software and App Skills</h2>
+                <h2 className="is-background-blue-text">Software and App Skills</h2>
                 <table>
                     <tbody>
                         {TechncialSKills.map((skill) =>
@@ -31,7 +31,7 @@ const SoftwarePackageSkills = () => {
                                         <img src={skill[0]} alt="logo" style={{height: '30px'}}/>
                                     </td>                       
                                     <td>
-                                        <h3 className="is-black-text" style={{padding: '0', margin: '0'}}>{skill[1]}</h3>
+                                        <h3 className="is-background-blue-text" style={{padding: '0', margin: '0'}}>{skill[1]}</h3>
                                     </td>
                                 </tr>
                                 </>

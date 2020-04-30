@@ -11,7 +11,7 @@ import PageSection from "../components/pageSection";
 const ContactPage = () => (
     <Layout>
         <SEO title="About" keywords={[`gatsby`, `application`, `react`]} />  
-        <div className="container page-wrap" style={{paddingTop: '150px'}}>
+        <div className="container">
             <div className="container__row">
                 <div className="container__col-sm-12" style={{paddingBottom: '20px'}}>
                     <h1 className="text-align-left is-background-blue-text">Hi <span role="img" aria-label="wave">👋</span> I'm Yannis Panagis</h1>
@@ -36,42 +36,24 @@ const ContactPage = () => (
                     I didn’t start coding at an early age. I had no idea what I wanted to do until I went to university and it’s been a crazy ride but I’m grateful to be where I am today. I recently accepted a software engineering internship at NextJump so I’m currently not looking for any new opportunities. That being said, I’m still always open to hearing about new ideas and excited to pursue new projects, learn, collaborate and build something awesome together. If that sounds like what you’re looking for head over to the contact page or reach out via any of the social links below!
                     </p>
                 </div>
-
-                {/* Education Section */}
-                <PageSection>
-                    <EducationSection/>
-                </PageSection>          
-                
-
-                {/* Experience Section */}
-                <div className="is-green-bg">
-                    <PageSection>
-                        <ExperienceSection/>
-                    </PageSection>           
-                </div>
-
-                {/* Skills Section */}
-                <div className="is-supernova-yellow-bg" style={{width:"100vw"}}>
-                    <PageSection>
-                        <SkillsSection/>
-                    </PageSection>          
-                </div>
-
-                {/* Achievements Section */}
-                <div className="is-java-green-bg">
-                    <PageSection>
-                        <AchievementsSection/>
-                    </PageSection>          
-                </div>
-                
-                {/* Volunteering Section */}
-                <div className="is-pumpkin-orange-bg">
-                    <PageSection>
-                        <VolunteeringSection/>
-                    </PageSection>          
-                </div>
             </div>
         </div>
+
+        {/* Education Section */}
+        <EducationSection/>
+        
+        {/* Experience Section */}
+        <ExperienceSection/>
+
+        {/* Skills Section */}
+        <SkillsSection/>
+
+        {/* Achievements Section */}
+        <AchievementsSection/>
+        
+        {/* Volunteering Section */}
+        <VolunteeringSection/>         
+        
     </Layout>
 );
 
