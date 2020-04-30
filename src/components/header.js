@@ -4,7 +4,7 @@ import React, { useState } from "react"
 // import Sidebar from "../components/sidebar";
 import DarkModeToggle from "../components/darkModeToggle";
 import SmoothCollapse from "react-smooth-collapse"
-
+import NavDarkModeToggle from "../components/navDarkModeToggle";
 export default ({ siteTitle, menuLinks }) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -49,7 +49,7 @@ export default ({ siteTitle, menuLinks }) => {
       menuOpen ? "nav-open-list" : "nav-closed-list"
     }`}>
       {menuLinks.map(link => (
-        <div className="container__col-sm-12">
+        <div className="container__col-sm-12 burger-navlinks">
         <Link 
           className="is-background-blue-text" 
           to={link.link}  
@@ -61,6 +61,9 @@ export default ({ siteTitle, menuLinks }) => {
         </Link>
         </div>
       ))}
+      <div className="container__col-sm-12 burger-navlinks">
+        <NavDarkModeToggle/>
+      </div>
     </div>
     </>
   );

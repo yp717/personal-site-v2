@@ -7,6 +7,7 @@ import ExperienceSection from "../components/pageSections/experienceSection";
 import SkillsSection from "../components/pageSections/skillsSection";
 import VolunteeringSection from "../components/pageSections/volunteeringSection";
 import PageSection from "../components/pageSection";
+import FadeInSection from "../components/animations/fadeInSection";
 
 const ContactPage = () => (
     <Layout>
@@ -41,7 +42,7 @@ const ContactPage = () => (
 
         {/* Education Section */}
         <EducationSection/>
-        
+
         {/* Experience Section */}
         <ExperienceSection/>
 

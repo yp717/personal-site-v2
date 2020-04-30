@@ -69,12 +69,32 @@ $nav-height: 80px;
 }
 
 .nav-open-list{
-    left: 0;
-    margin-top: 80px;
     margin-left: 5%;
-    z-index: 99;
+
+    div {
+        margin-top: 1%;
+        margin-bottom: 1%;
+    }
 }
 
 .nav-closed-list{
     display: none;
+}
+
+.burger-navlinks{
+    border: none;
+    border-bottom: 1px;
+    border-color: black;
+}
+
+// font of this is actually system ui
+.nav-dark-mode-toggle {
+    margin: 0px;
+    padding: 0px;
+    background-size: 100%;
+    border: none;
+    font-size: 18px;
+    display: inline-block;
+    transition: all .2s ease-in-out;
+    background-color: transparent;
 }
