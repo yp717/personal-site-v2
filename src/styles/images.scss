@@ -190,15 +190,14 @@ img {
 }
 
 .sunIcon {
-    height: 25px;
-    width: 25px;
     margin: 0px;
     padding: 0px;
-    background: url("../images/icons/sun-icon.svg") no-repeat;
     background-size: 100%;
     border: none;
+    font-size: 22px;
     display: inline-block;
     transition: all .2s ease-in-out;
+    background-color: transparent;
 }
 .sunIcon:hover {
     transform: scale(1.1);
@@ -208,15 +207,14 @@ img {
 }
 
 .moonIcon {
-    height: 25px;
-    width: 25px;
     margin: 0px;
     padding: 0px;
-    background: url("../images/icons/moon-icon.svg") no-repeat;
     background-size: 100%;
     border: none;
+    font-size: 22px;
     display: inline-block;
     transition: all .2s ease-in-out;
+    background-color: transparent;
 }
 .moonIcon:hover {
     transform: scale(1.1);
