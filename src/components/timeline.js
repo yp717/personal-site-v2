@@ -13,7 +13,7 @@ const TimelineComponent = () => {
             background: '#F64755',
             padding: '20px',
             borderRadius: '8px',
-            boxShadow: '0.5rem 0.5rem 2rem 0 rgba(0, 0, 0, 0.2)',
+            // boxShadow: '0.5rem 0.5rem 2rem 0 rgba(0, 0, 0, 0.2)',
             }}
         >
             <h3 style={{color: 'white'}}>MEng Electrical & Electrical Engineering</h3>
@@ -28,7 +28,7 @@ const TimelineComponent = () => {
             background: '#F64755',
             padding: '20px',
             borderRadius: '8px',
-            boxShadow: '0.5rem 0.5rem 2rem 0 rgba(0, 0, 0, 0.2)',
+            // boxShadow: '0.5rem 0.5rem 2rem 0 rgba(0, 0, 0, 0.2)',
             }}
         >
             <h3 style={{color: 'white'}}>Stanford University Summer Exchange</h3>
@@ -43,7 +43,7 @@ const TimelineComponent = () => {
             background: '#F64755',
             padding: '20px',
             borderRadius: '8px',
-            boxShadow: '0.5rem 0.5rem 2rem 0 rgba(0, 0, 0, 0.2)',
+            // boxShadow: '0.5rem 0.5rem 2rem 0 rgba(0, 0, 0, 0.2)',
             }}
         >
             <h3 style={{color: 'white'}}>A-Levels</h3>

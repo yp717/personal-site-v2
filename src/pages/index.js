@@ -18,7 +18,7 @@ const IndexPage = () => (
             <div className="hero-section is-very-light-grey-bg text-align-center">
               <div className="absolute-center">
                 <img src={LegoYannisFront} alt="lego-icon-front" className="home-page-img"/>
-                  <p className="greeting-text">
+                  <p className="is-greeting-blue-text greeting-text">
                     Hi <span role="img" aria-label="wave">👋</span>, my name is
                   </p>         
                   <h1 className="is-background-blue-text">Yannis Panagis</h1>

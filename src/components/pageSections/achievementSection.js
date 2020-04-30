@@ -4,7 +4,7 @@ const AchievementsSection = () => {
     return (
         <>
             <div className="container" style={{paddingBottom: '5%', paddingTop: '5%'}}>
-                <h1 className="is-background-blue-text section-heading">Achievements</h1>
+                <h2 className="is-background-blue-text section-heading">Achievements</h2>
                 <div className="container__row">
                     {/* IC Hack winner */}
                     <div className="container__col-sm-12 is-white-bg experience-card">
