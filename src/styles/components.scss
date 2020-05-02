@@ -1,10 +1,17 @@
 .experience-card {
     border-radius: 13px;
     margin: 5%;
-    padding: 5%;
-    margin-bottom: 0px;
-    border-width: 2px;
-    box-shadow: 2px 7px 20px 0 rgba(0,0,0,0.50);
+    padding: 3%;
+    border: 3px solid #F64755;
+    border-radius: 4px;
+}
+
+.skill-card {
+    border-radius: 13px;
+    margin: 5%;
+    padding: 3%; 
+    border: 3px solid #FCB233;
+    border-radius: 4px;
 }
 
 .skill-section {
@@ -16,16 +23,41 @@
     padding-right: 5%;
 }
 
+// .achievement-card {
+//     box-shadow: 2px 7px 20px 0 rgba(0,0,0,0.50);
+//     border-radius: 13px;
+// }
+
 .achievement-card {
-    box-shadow: 2px 7px 20px 0 rgba(0,0,0,0.50);
     border-radius: 13px;
+    margin: 5%;
+    padding: 3%; 
+    margin-bottom: 0px; 
+    border: 3px solid rgb(53, 203, 115);
+    border-radius: 4px;
 }
 
 .volunteering-card {
-    box-shadow: 2px 7px 20px 0 rgba(0,0,0,0.50);
     border-radius: 13px;
+    margin: 5%;
+    padding: 3%;
+    margin-bottom: 0px; 
+    border: 3px solid #2CA4A4;
+    border-radius: 4px;
 }
 
 .home-page-img{
     height:24vh;
+}
+
+.card-heading{
+
+}
+
+.card-date{
+
+}
+
+.card-body{
+    
 }

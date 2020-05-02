@@ -19,7 +19,7 @@ const SoftwarePackageSkills = () => {
     ]
     return (
         <>
-            <div className="skill-section is-white-bg" style={{paddingBottom: '0px'}}>
+            <div className="skill-card is-white-bg">
                 <h2 className="is-background-blue-text">Software and App Skills</h2>
                 <table>
                     <tbody>
@@ -31,7 +31,7 @@ const SoftwarePackageSkills = () => {
                                         <img src={skill[0]} alt="logo" style={{height: '30px'}}/>
                                     </td>                       
                                     <td>
-                                        <h3 className="is-background-blue-text" style={{padding: '0', margin: '0'}}>{skill[1]}</h3>
+                                        <p className="is-background-blue-text" style={{padding: '0', margin: '0'}}>{skill[1]}</p>
                                     </td>
                                 </tr>
                                 </>

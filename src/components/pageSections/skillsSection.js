@@ -6,8 +6,8 @@ import TechnicalSkills from '../TechnicalSkills';
 const SkillsSection = () => {
     return (
         <>
-            <div className="container" style={{paddingBottom: '5%', paddingTop: '5%'}}>
-                <h2 className="is-background-blue-text section-heading">My Toolbox 🛠</h2>
+            <div className="container" style={{paddingBottom: '2%', paddingTop: '2%'}}>
+                <h2 className="is-background-blue-text section-heading-margin">My Toolbox 🛠</h2>
                 <TechnicalSkills />
                 <WebDevelopment />
             </div>

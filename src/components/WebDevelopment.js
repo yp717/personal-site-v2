@@ -24,8 +24,8 @@ const WebDevelopment = () => {
 
     return (
         <>
-            <div className="skill-section is-white-bg" style={{paddingLeft: '5%', paddingRight: '5%', paddingBottom: '0px'}}>
-                <h2 className="is-black-text">Web Development</h2>
+            <div className="skill-card">
+                <h2 className="is-background-blue-text">Web Development</h2>
                 <table>
                     <tbody>
                         {webskills.map((skill) =>
@@ -36,7 +36,7 @@ const WebDevelopment = () => {
                                         <img src={skill[0]} alt="logo" style={{height: '30px'}}/>
                                     </td>                       
                                     <td>
-                                        <h3 className="is-black-text" style={{padding: '0', margin: '0'}}>{skill[1]}</h3>
+                                        <p className="is-background-blue-text" style={{padding: '0', margin: '0'}}>{skill[1]}</p>
                                     </td>
                                 </tr>
                                 </>

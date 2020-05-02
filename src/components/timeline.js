@@ -16,8 +16,8 @@ const TimelineComponent = () => {
             // boxShadow: '0.5rem 0.5rem 2rem 0 rgba(0, 0, 0, 0.2)',
             }}
         >
-            <h3 style={{color: 'white'}}>MEng Electrical & Electrical Engineering</h3>
-            <h4 style={{color: 'white'}}>Imperial College London</h4>
+            <h2 style={{color: 'white', fontSize: '1.5em'}}>MEng Electrical & Electrical Engineering</h2>
+            <h3 style={{color: 'white'}}>Imperial College London</h3>
             <p style={{color: 'white'}}>First Year Result 2:1 <br/> Second Year Result 2:1 <br/> Predicted 2:1 or Higher</p>
         </TimelineItem>
         <TimelineItem
@@ -31,8 +31,8 @@ const TimelineComponent = () => {
             // boxShadow: '0.5rem 0.5rem 2rem 0 rgba(0, 0, 0, 0.2)',
             }}
         >
-            <h3 style={{color: 'white'}}>Stanford University Summer Exchange</h3>
-            <h4 style={{color: 'white'}}>Stanford University</h4>
+            <h2 style={{color: 'white', fontSize: '1.5em'}}>Stanford University Summer Exchange</h2>
+            <h3 style={{color: 'white'}}>Stanford University</h3>
             <p style={{color: 'white'}}>4.0 GPA with A in Data Science 101, A Programming Methodology</p>
         </TimelineItem>
         <TimelineItem
@@ -46,8 +46,8 @@ const TimelineComponent = () => {
             // boxShadow: '0.5rem 0.5rem 2rem 0 rgba(0, 0, 0, 0.2)',
             }}
         >
-            <h3 style={{color: 'white'}}>A-Levels</h3>
-            <h4 style={{color: 'white'}}>British School of Bahrain</h4>
+            <h2 style={{color: 'white', fontSize: '1.5em'}}>A-Levels</h2>
+            <h3 style={{color: 'white'}}>British School of Bahrain</h3>
             <p style={{color: 'white'}}>Mathematics A* <br/> Further Mathematics A* <br/> Physics A <br/> English Literature A</p>
         </TimelineItem>
         </Timeline>

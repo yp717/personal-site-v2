@@ -5,7 +5,7 @@ const ExperienceSection = () => {
     return (
         <>
         <div className="container" style={{paddingBottom: '3%', paddingTop: '3%'}}>
-            <h2 className="is-background-blue-text section-heading">Experience</h2>
+        <h2 className="is-background-blue-text section-heading-margin">Experience<span>🤓</span></h2>
             <div className="container__row">
                 {/* experience: Private Tutoring*/}
                 <ExperienceCard 

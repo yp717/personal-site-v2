@@ -4,10 +4,10 @@ const VolunteeringSection = () => {
     return (
         <>
             <div className="container" style={{paddingBottom: '5%', paddingTop: '5%'}}>
-                <h2 className="is-background-blue-text section-heading">Volunteering</h2>
+                <h2 className="is-background-blue-text section-heading-margin">Volunteering<span>🚀</span></h2>
                 <div className="container__row">
                     {/* Academic Representative */}
-                    <div className="container__col-sm-12 is-white-bg experience-card">
+                    <div className="container__col-sm-12 is-white-bg volunteering-card">
                         <h2 className="is-background-blue-text card-heading">Third Year Academic Representative</h2>
                         <h3 className="is-background-blue-text card-heading">Imperial College London</h3>
                         <h4 className="is-background-blue-text card-date">June 2019 - Aug 2020</h4>
@@ -17,7 +17,7 @@ const VolunteeringSection = () => {
                     </div>
 
                     {/* Departmental Representative */}
-                    <div className="container__col-sm-12 is-white-bg experience-card">
+                    <div className="container__col-sm-12 is-white-bg volunteering-card">
                         <h2 className="is-background-blue-text card-heading">Departmental Representative</h2>
                         <h3 className="is-background-blue-text card-heading">Imperial College London</h3>
                         <h4 className="is-background-blue-text card-date">June 2018 - Aug 2019</h4>
@@ -27,7 +27,7 @@ const VolunteeringSection = () => {
                     </div>
 
                     {/* Half Marathon */}
-                    <div className="container__col-sm-12 is-white-bg experience-card">
+                    <div className="container__col-sm-12 is-white-bg volunteering-card">
                         <h2 className="is-background-blue-text card-heading">Half Marathon to raise money for Alzheimer’s Research and Treatment</h2>
                         <h3 className="is-background-blue-text card-heading">Alzheimer’s Society</h3>
                         <h4 className="is-background-blue-text card-date">Date still missing here</h4>
@@ -37,7 +37,7 @@ const VolunteeringSection = () => {
                     </div>
 
                     {/* Music Society Involvement */}
-                    <div className="container__col-sm-12 is-white-bg experience-card">
+                    <div className="container__col-sm-12 is-white-bg volunteering-card">
                         <h2 className="is-background-blue-text card-heading">Music society involvement</h2>
                         <h3 className="is-background-blue-text card-heading">Imperial College London</h3>
                         <h4 className="is-background-blue-text card-date">June 2017 - Present</h4>
