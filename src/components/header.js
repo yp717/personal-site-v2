@@ -1,9 +1,9 @@
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
+// import PropTypes from "prop-types"
 import React, { useState } from "react"
 // import Sidebar from "../components/sidebar";
 import DarkModeToggle from "../components/darkModeToggle";
-import SmoothCollapse from "react-smooth-collapse"
+// import SmoothCollapse from "react-smooth-collapse"
 import NavDarkModeToggle from "../components/navDarkModeToggle";
 export default ({ siteTitle, menuLinks }) => {
   const [menuOpen, setMenuOpen] = useState(false);

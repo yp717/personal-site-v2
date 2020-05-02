@@ -4,7 +4,7 @@ const VolunteeringSection = () => {
     return (
         <>
             <div className="container" style={{paddingBottom: '5%', paddingTop: '5%'}}>
-                <h2 className="is-background-blue-text section-heading-margin">Volunteering<span>🚀</span></h2>
+                <h2 className="is-background-blue-text section-heading-margin">Volunteering<span role="img" aria-label="rocket">🚀</span></h2>
                 <div className="container__row">
                     {/* Academic Representative */}
                     <div className="container__col-sm-12 is-white-bg volunteering-card">

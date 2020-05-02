@@ -2,10 +2,6 @@ import React from "react"
 // import { Link } from "gatsby"
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import HeroSection from "../components/pageSections/heroSection";
-import PageSection from "../components/pageSection";
-import LatestProjejctsSection from "../components/pageSections/latestProjectsSection";
-import LegoSection from "../components/pageSections/legoSection";
 import LegoYannisFront from '../images/LEGOs/lego-yannis-front.svg';
 import SocialLinks from "../components/socialLinks";
 const IndexPage = () => (  

@@ -1,10 +1,9 @@
 import React from 'react';
 import useDarkMode from "use-dark-mode";
-import { darkmagenta } from 'color-name';
 
 const githubLink = `https://github.com/yp717`;
 const linkedinLink = `https://www.linkedin.com/in/yannis-panagis/`;
-const mediumLink = `https://medium.com/@yannis.panagis1998`;
+// const mediumLink = `https://medium.com/@yannis.panagis1998`;
 const youtubeLink = `https://youtu.be/aOCkkzqXl5U`;
 const spotifyLink = `https://open.spotify.com/artist/4tCn4Wkn4cf0CWLUFvQO58?si=XUyEXMPASyqdhksoCx587g`;
 

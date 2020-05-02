@@ -2,8 +2,8 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-import Img from 'gatsby-image';
-import Button from '../components/button';
+// import Img from 'gatsby-image';
+// import Button from '../components/button';
 import ProjectCard from '../components/cards/projectCard';
 
 const ProjectsPage = ({ data }) => (
