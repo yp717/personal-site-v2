@@ -24,7 +24,7 @@ const WebDevelopment = () => {
 
     return (
         <>
-            <div className="skill-card">
+            <div className="content-card is-supernova-yellow-border">
                 <h2 className="is-background-blue-text">Web Development</h2>
                 <table>
                     <tbody>

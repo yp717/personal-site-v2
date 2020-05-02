@@ -36,4 +36,8 @@ $color-palette:
       background-color: nth($color, 3);
     }
   }
+
+  .is-#{nth($color,1)}-border{
+    border: 3px solid nth($color,2);
+  }
 }

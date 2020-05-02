@@ -7,7 +7,7 @@ const AchievementsSection = () => {
                 <h2 className="is-background-blue-text section-heading-margin">Achievements<span role="img" aria-label="trophy">🏆</span></h2>
                 <div className="container__row">
                     {/* IC Hack winner */}
-                    <div className="container__col-sm-12 is-white-bg achievement-card">
+                    <div className="container__col-sm-12 is-white-bg content-card is-green-border">
                         <h2 className="is-background-blue-text">IC Hack winner</h2>
                         <h3 className="is-background-blue-text">Achievement Date</h3>
                         <p className="is-background-blue-text">
@@ -16,7 +16,7 @@ const AchievementsSection = () => {
                     </div>
 
                     {/* Old Centralian Trust Scholarship */}
-                    <div className="container__col-sm-12 is-white-bg achievement-card">
+                    <div className="container__col-sm-12 is-white-bg content-card is-green-border">
                         <h2 className="is-background-blue-text">Old Centralian Trust Scholarship</h2>
                         <h3 className="is-background-blue-text">Achievement Date</h3>
                         <p className="is-background-blue-text">
@@ -25,7 +25,7 @@ const AchievementsSection = () => {
                     </div>
 
                     {/* Gulf Finance House Leadership Award */}
-                    <div className="container__col-sm-12 is-white-bg achievement-card">
+                    <div className="container__col-sm-12 is-white-bg content-card is-green-border">
                         <h2 className="is-background-blue-text">Gulf Finance House Leadership Award</h2>
                         <h3 className="is-background-blue-text">Achievement Date</h3>
                         <p className="is-background-blue-text">

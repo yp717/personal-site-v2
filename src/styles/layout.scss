@@ -28,8 +28,8 @@ $map-grid-props: (
     @if($breakpoint == 0) {
         @content;
     } @else {
-        @media screen and (#{$min-or-max}-width: $breakpoint *1px) {
-        @content;
+            @media screen and (#{$min-or-max}-width: $breakpoint *1px) {
+            @content;
         }
     }
 }
@@ -40,12 +40,12 @@ $map-grid-props: (
         margin-left: 0;
         }
         @for $i from 1 through $grid-cols {
-        &__col#{$modifier}-#{$i} {
-            flex-basis: (100 / ($grid-cols / $i) ) * 1%;
-        }
-        &__col#{$modifier}-offset-#{$i} {
-            margin-left: (100 / ($grid-cols / $i) ) * 1%;
-        }
+            &__col#{$modifier}-#{$i} {
+                flex-basis: (100 / ($grid-cols / $i) ) * 1%;
+            }
+            &__col#{$modifier}-offset-#{$i} {
+                margin-left: (100 / ($grid-cols / $i) ) * 1%;
+            }
         }
     }
 }
@@ -83,18 +83,11 @@ $map-grid-props: (
     }
 }
 
-// .page-section-list {
-//     @media (min-width: 992px) {
-//         overflow-y: scroll;
-//         height: 100vh;
-//     } 
-// }
-
 .page-wrap {
     min-height: 100%;
     /* equal to footer height */
     margin-bottom: -80px;
-  }
+}
   
 
 .push {
