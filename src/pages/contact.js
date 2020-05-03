@@ -6,7 +6,7 @@ import ContactForm from '../components/contactForm';
 const ContactPage = () => (
     <Layout>
         <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />  
-        <div className="container padding-top-10">
+        <div className="container">
             <div className="container__row">
                 <div className="container__col-sm-12 text-align-center margin-left-right-5">
                     <h2 className="text-align-center is-background-blue-text">Get in touch. <span role="img" aria-label="down-arrow">👇</span></h2>

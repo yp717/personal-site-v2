@@ -11,7 +11,7 @@ export default props => {
     const darkMode = useDarkMode(false) //defaults to false 
     return (
         <>
-            <div className="text-align-center" style={{width: '80vw'}}>
+            <div className="text-align-center">
                 <a href={githubLink} target="blank">
                     { 
                         darkMode.value ?

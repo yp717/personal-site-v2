@@ -9,8 +9,8 @@ const IndexPage = () => (
   <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />  
   <Layout>
     <div className="container">
-      <div className="container__col-sm-12 is-very-light-grey-bg text-align-center">
-          <div className="absolute-center">
+      <div className="container__col-sm-12 text-align-center">
+          <div>
             <img src={LegoYannisFront} alt="lego-icon-front" className="is-height-24-vh"/>
               <p className="is-greeting-blue-text greeting-text">
                 Hi <span role="img" aria-label="wave">👋</span>, my name is
