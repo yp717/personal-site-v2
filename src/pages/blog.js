@@ -10,7 +10,7 @@ const BlogPage = ({ data }) => {
     return (
     <Layout>
         <SEO title="Blog" keywords={[`gatsby`, `application`, `react`]} />  
-        <div className="container page-wrap" style={{paddingTop: '150px'}}>
+        <div className="container page-wrap padding-top-10">
         <div className="post-list">
             {posts.map(post => (
             <div key={post.node.id} className="post-list__item">

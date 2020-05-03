@@ -13,7 +13,7 @@ const IndexPage = () => (
           <div className="container__col-sm-12">
             <div className="hero-section is-very-light-grey-bg text-align-center">
               <div className="absolute-center">
-                <img src={LegoYannisFront} alt="lego-icon-front" className="home-page-img"/>
+                <img src={LegoYannisFront} alt="lego-icon-front" className="is-height-24-vh"/>
                   <p className="is-greeting-blue-text greeting-text">
                     Hi <span role="img" aria-label="wave">👋</span>, my name is
                   </p>         

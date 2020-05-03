@@ -12,7 +12,7 @@ export default ({ siteTitle, menuLinks }) => {
     <>
     <nav className="heightOffset navbar is-white-bg">
       <div className="innerContainer" >
-        <div style={{left: '0px', marginLeft:"5%"}}>
+        <div className="margin-left-5 position-left">
           <Link to="/">
           <h2 className="name-text is-background-blue-text">{siteTitle}</h2>
           </Link>

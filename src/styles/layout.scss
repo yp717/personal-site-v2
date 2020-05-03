@@ -121,3 +121,64 @@ $map-grid-props: (
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
+
+// dynamically formed padding and margin classes
+// margin-left-1 - margin-left-10
+// margin-right-1 - margin-right-10
+// margin-top-1 - margin-top-10
+// margin-bottom-1 - margin-bottom-10
+
+// padding-left-1 - padding-left-10
+// padding-right-1 - padding-right-10
+// padding-top-1 - padding-top-10
+// padding-bottom-1 - padding-bottom-10
+
+$sizes: 12;
+
+@mixin margin-classes {
+  @for $i from 0 through $sizes {
+     $margin: $i * 1%;
+    /* margin #{$margin} */
+    .margin-#{$i}  {margin: $margin;}
+    .margin-left-#{$i} {margin-left: $margin;}
+    .margin-right-#{$i} {margin-right: $margin;}
+    .margin-top-#{$i} {margin-top: $margin;}
+    .margin-bottom-#{$i} {margin-bottom: $margin;}
+    .margin-left-right-#{$i} {margin-left: $margin; margin-right: $margin;}
+    .margin-top-bottom-#{$i} {margin-top: $margin; margin-bottom: $margin;}
+  }
+}
+@include margin-classes;
+
+@mixin padding-classes {
+  @for $i from 0 through $sizes {
+    $padding: $i * 1%;
+    /* padding #{$padding} */
+    .padding-#{$i} {padding: $padding;}
+    .padding-left-#{$i} {padding-left: $padding;}
+    .padding-right-#{$i} {padding-right: $padding;}
+    .padding-top-#{$i} {padding-top: $padding;}
+    .padding-bottom-#{$i} {padding-bottom: $padding;}
+    .padding-left-right-#{$i} {padding-left: $padding; padding-right: $padding;}
+    .padding-top-bottom-#{$i} {padding-top: $padding; padding-bottom: $padding;}
+  }
+}
+@include padding-classes;
+
+.position-right {
+    right: 0px;
+}
+
+.position-left {
+    left: 0px;
+}
+
+@mixin dynamic-size-classes {
+    @for $i from 1 through 100 {
+        .is-width-#{$i}-vw {width: $i * 1vw;}
+        .is-height-#{$i}-vh {height: $i * 1vh;}
+        .is-width-#{$i}-percent {width: $i * 1%;}
+        .is-height-#{$i}-percent {height: $i * 1%;}
+    }
+  }
+@include dynamic-size-classes;

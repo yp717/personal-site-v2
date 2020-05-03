@@ -27,6 +27,14 @@ $color-palette:
     color: nth($color,2);
   }
 
+  .is-#{nth($color,1)}-text-fixed {
+    color: nth($color,2);
+  }
+
+  .is-#{nth($color,1)}-bg-fixed {
+    background-color: nth($color,2);
+  }
+
   body.dark-mode {
     .is-#{nth($color,1)}-text {
       color: nth($color, 3);

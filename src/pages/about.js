@@ -12,28 +12,28 @@ const AboutPage = () => (
     <Layout>
         <SEO title="About" keywords={[`gatsby`, `application`, `react`]} />  
         <div className="container">
-            <div className="container__col-sm-12" style={{marginTop: '60px', marginBottom: '20px'}}>
-                <h1 className="text-align-left is-background-blue-text section-heading-margin">Everyone hates writing an “about page”, right?!</h1>
+            <div className="container__col-sm-12 padding-top-9 margin-bottom-3">
+                <h1 className="text-align-left is-background-blue-text margin-left-right-5">Everyone hates writing an “about page”, right?!</h1>
             </div>
             <div className="container__col-sm-12 text-align-center">
-                <p className="text-align-left body-text is-background-blue-text margin-5-left-right">
+                <p className="text-align-left body-text is-background-blue-text margin-left-right-5">
                 It’s hard to summarise yourself in a few words. Hopefully this site is at least a short introduction. Otherwise continue on below for a quick intro OR keep going and check out my digital Resume below (also available in print).<span role="img" aria-label="nerd">🤓</span>
                 <br/>
                 <br/>
                 </p>
             </div>
             <div className="container__col-sm-12">
-                <h1 className="text-align-left is-background-blue-text margin-5-left-right">In <em>short</em></h1>
+                <h1 className="text-align-left is-background-blue-text margin-left-right-5">In <em>short</em></h1>
             </div>
             <div className="container__col-xs-12 text-align-center">
-                <p className="text-align-left body-text is-background-blue-text margin-5-left-right">
+                <p className="text-align-left body-text is-background-blue-text margin-left-right-5">
                 I’m currently a third year Electrical and Electornic Engineering student at Imperial College London <span role="img" aria-label="student graduate">👨🏼‍🎓</span>. I’m originally from Switzerland <span role="img" aria-label="swiss flag">🇨🇭</span>and currently live in London 🇬🇧. Outside of work, I spend my free time working in web development, teaching, running and writing music. If you’d like to know more about my music, check out my spotify! <span role="img" aria-label="guitar">🎸</span>
                 <br/><br/>
                 I didn’t start coding at an early age. I had no idea what I wanted to do until I went to university and it’s been a crazy ride but I’m grateful to be where I am today. I recently accepted a software engineering internship at NextJump so I’m currently not looking for any new opportunities. That being said, I’m still always open to hearing about new ideas and excited to pursue new projects, learn, collaborate and build something awesome together. If that sounds like what you’re looking for head over to the contact page or reach out via social media to get in touch!
                 </p>
             </div>            
-            <div className="container__col-sm-12" style={{marginTop: '3%'}}>
-                <h1 className="text-align-left is-background-blue-text margin-5-left-right">The <em>long</em> version</h1>
+            <div className="container__col-sm-12 margin-bottom-3">
+                <h1 className="text-align-left is-background-blue-text margin-left-right-5">The <em>long</em> version</h1>
             </div>
         </div>
         

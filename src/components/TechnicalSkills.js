@@ -27,11 +27,11 @@ const SoftwarePackageSkills = () => {
                             (
                                 <>
                                 <tr>
-                                    <td style={{padding: '0', margin: '0'}}>
-                                        <img src={skill[0]} alt="logo" style={{height: '30px'}}/>
+                                    <td className="padding-0 margin-0">
+                                        <img src={skill[0]} alt="logo" className="skill-icon-height"/>
                                     </td>                       
                                     <td>
-                                        <p className="is-background-blue-text" style={{padding: '0', margin: '0'}}>{skill[1]}</p>
+                                        <p className="is-background-blue-text margin-0 padding-0">{skill[1]}</p>
                                     </td>
                                 </tr>
                                 </>
