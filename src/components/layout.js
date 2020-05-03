@@ -34,13 +34,15 @@ const Layout = ({ children }) => {
       {/* <Helmet>
       should have a helmet here with extra information
       </Helmet> */}
-      <Header menuLinks={data.site.siteMetadata.menuLinks} siteTitle={data.site.siteMetadata.title} />
-      <div className="is-white-bg">
+      <div id="page-container" className="is-white-bg">
+        <Header menuLinks={data.site.siteMetadata.menuLinks} siteTitle={data.site.siteMetadata.title} />
         {/* Burger Navbar - display:None when too big */}
         {/* <div className="burger-navbar"> 
           <Sidebar/>
         </div> */}
-        <main id="page-wrap">{children}</main>
+        <div id="content-wrap">
+          <main>{children}</main>
+        </div>
         <Footer/>
       </div>
     </>

@@ -4,27 +4,9 @@ img {
     padding: 0;
 }
 
-// Facebook Social Icon onHover Toggle 
-.facebookIcon {
-    height: 15%;
-    width: 15%;
-    margin: 10px;
-    padding: 0;
-    margin-bottom: 100px;
-    background: url("../images/icons/socialMediaIcons/facebook-grayscale.svg") no-repeat;
-    background-size: 100%;
-    transition: all .2s ease-in-out;
-}
-.facebookIcon:hover {
-    background: url("../images/icons/socialMediaIcons/facebook-color.svg") no-repeat;
-    background-size: 100%;
-    transform: scale(1.1);
-}
-
-// Facebook Social Icon onHover Toggle 
 .githubIcon {
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     margin: 10px;
     margin-left: 0px;
     padding: 0px;
@@ -40,8 +22,8 @@ img {
 }
 
 .githubIcon-dark-mode {
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     margin: 10px;
     margin-left: 0px;
     padding: 0px;
@@ -56,8 +38,8 @@ img {
 
 // Facebook Social Icon onHover Toggle 
 .linkedinIcon {
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     margin: 10px;
     padding: 0;
     background: url("../images/icons/newSocialMediaIcons/linkedin-grayscale-colored.svg") no-repeat;
@@ -72,8 +54,8 @@ img {
 }
 
 .linkedinIcon-dark-mode {
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     margin: 10px;
     padding: 0;
     background: url("../images/icons/newSocialMediaIcons/linkedin-grayscale-dark-mode-colored.svg") no-repeat;
@@ -88,8 +70,8 @@ img {
 }
 
 .mediumIcon {
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     margin: 10px;
     padding: 0;
     background: url("../images/icons/socialMediaIcons/medium-grayscale.svg") no-repeat;
@@ -105,8 +87,8 @@ img {
 }
 
 .mediumIcon-dark-mode {
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     margin: 10px;
     padding: 0;
     background: url("../images/icons/socialMediaIcons/medium-grayscale-dark-mode.svg") no-repeat;
@@ -120,8 +102,8 @@ img {
 
 //////////////////////////////////////////////////////////////////////////////////////////////// 
 .youtubeIcon {
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     margin: 10px;
     margin-top: 0px;
     margin-bottom: 0px;
@@ -139,8 +121,8 @@ img {
 }
 
 .youtubeIcon-dark-mode {
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     margin: 10px;
     margin-top: 0px;
     margin-bottom: 0px;
@@ -157,8 +139,8 @@ img {
 }
 ////////////////////////////////////////////////////////////////////////////////////////////////
 .spotifyIcon {
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     margin: 10px;
     padding: 0;
     background: url("../images/icons/newSocialMediaIcons/Spotify-grayscale-colored.svg") no-repeat;
@@ -174,8 +156,8 @@ img {
 }
 
 .spotifyIcon-dark-mode {
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     margin: 10px;
     padding: 0;
     background: url("../images/icons/newSocialMediaIcons/Spotify-grayscale-dark-mode.svg") no-repeat;

@@ -12,7 +12,7 @@ const AboutPage = () => (
     <Layout>
         <SEO title="About" keywords={[`gatsby`, `application`, `react`]} />  
         <div className="container">
-            <div className="container__col-sm-12 padding-top-9 margin-bottom-3">
+            <div className="container__col-sm-12margin-bottom-3">
                 <h1 className="text-align-left is-background-blue-text margin-left-right-5">Everyone hates writing an “about page”, right?!</h1>
             </div>
             <div className="container__col-sm-12 text-align-center">
