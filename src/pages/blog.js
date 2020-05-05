@@ -14,7 +14,7 @@ const BlogPage = ({ data }) => {
             <div className="container__col-sm-12">
                 <h1 className="is-background-blue-text margin-left-right-5">Blog</h1>
                 {posts.map(post => (
-                    <div key={post.node.id} className="content-card is-green-border padding-0">
+                    <div key={post.node.id} className={`content-card is-${post.node.frontmatter.color}-border padding-0`}>
                         <Link to={post.node.fields.slug}>
                             {/* <Img
                             fixed={post.node.frontmatter.thumbnail.childImageSharp.fixed}
@@ -67,6 +67,7 @@ export const pageQuery = graphql`
                             }
                         }
                     }
+                    color
                 }
             }
         }
