@@ -43,6 +43,12 @@ $color-palette:
     .is-#{nth($color,1)}-bg {
       background-color: nth($color, 3);
     }
+
+    .blog-text {
+      p {
+        color: white
+      }
+    }
   }
 
   .is-#{nth($color,1)}-border{

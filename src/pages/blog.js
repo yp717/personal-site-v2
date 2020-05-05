@@ -15,10 +15,7 @@ const BlogPage = ({ data }) => {
                 <h1 className="is-background-blue-text margin-left-right-5">Blog</h1>
                 {posts.map(post => (
                     <div key={post.node.id} className={`content-card is-${post.node.frontmatter.color}-border padding-0`}>
-                        <Link to={post.node.fields.slug}>
-                            {/* <Img
-                            fixed={post.node.frontmatter.thumbnail.childImageSharp.fixed}
-                            /> */}
+                        <Link to={post.node.fields.slug}> 
                             <Img
                                 fluid={post.node.frontmatter.thumbnail.childImageSharp.fluid}
                                 className="shadow"
