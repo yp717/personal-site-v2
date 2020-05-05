@@ -10,37 +10,34 @@ const BlogPage = ({ data }) => {
     return (
     <Layout>
         <SEO title="Blog" keywords={[`gatsby`, `application`, `react`]} />  
-        <div className="container page-wrap padding-top-10">
-        <div className="post-list">
-            {posts.map(post => (
-            <div key={post.node.id} className="post-list__item">
-                <div className="post-list__thumbnail">
-                    <Link to={post.node.fields.slug}>
-                        <Img
-                        fixed={post.node.frontmatter.thumbnail.childImageSharp.fixed}
-                        />
-                    </Link>
-                </div>
-                <div className="post-list__content">
-                    <h2>{post.node.frontmatter.title}</h2>
-                    {post.node.frontmatter.tags ? (
-                        <div className="tags-container">
-                            <ul className="taglist">
-                                {post.node.frontmatter.tags.map(tag => (
-                                <li key={tag + `tag`}>
-                                    <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                                </li>
-                                ))}
-                            </ul>
-                        </div>
-                    ) : null}
-                    <p>{post.node.frontmatter.date}</p>
-                    <div className="post-list__excerpt">{post.node.excerpt}</div>
-                    <Link to={post.node.fields.slug}>Read More</Link>
-                </div>
+        <div className="container margin-bottom-5">
+            <div className="container__col-sm-12">
+                <h1 className="is-background-blue-text margin-left-right-5">Blog</h1>
+                {posts.map(post => (
+                    <div key={post.node.id} className="content-card is-green-border padding-0">
+                        <Link to={post.node.fields.slug}>
+                            {/* <Img
+                            fixed={post.node.frontmatter.thumbnail.childImageSharp.fixed}
+                            /> */}
+                            <Img
+                                fluid={post.node.frontmatter.thumbnail.childImageSharp.fluid}
+                                className="shadow"
+                                style={{ maxHeight: 250 }}
+                            />
+                            <h2 style={{fontSize: '25px'}}className="is-background-blue-text">{post.node.frontmatter.title}</h2>
+                            <p className="is-background-blue-text">{post.node.frontmatter.date}</p>
+                            {post.node.frontmatter.tags ? (
+                                <div style={{marginTop: '10px', marginBottom: '10px'}}>
+                                    {post.node.frontmatter.tags.map(tag => (
+                                        <Link className="post-tags margin-right-1" to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                                    ))}
+                                </div>    
+                            ) : null}
+                            <div className="post-list__excerpt is-background-blue-text">{post.node.excerpt}</div>
+                        </Link>
+                    </div>
+                ))}
             </div>
-            ))}
-        </div>
         </div>
     </Layout>
     );
@@ -65,8 +62,8 @@ export const pageQuery = graphql`
                     tags
                     thumbnail {
                         childImageSharp {
-                            fixed(width: 200, height: 200) {
-                                ...GatsbyImageSharpFixed
+                            fluid(maxWidth: 1000) {
+                                ...GatsbyImageSharpFluid
                             }
                         }
                     }

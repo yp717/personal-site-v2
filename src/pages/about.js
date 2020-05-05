@@ -12,10 +12,10 @@ const AboutPage = () => (
     <Layout>
         <SEO title="About" keywords={[`gatsby`, `application`, `react`]} />  
         <div className="container">
-            <div className="container__col-sm-12margin-bottom-3">
+            <div className="container__col-sm-12 margin-bottom-3">
                 <h1 className="text-align-left is-background-blue-text margin-left-right-5">Everyone hates writing an “about page”, right?!</h1>
             </div>
-            <div className="container__col-sm-12 text-align-center">
+            <div className="container__col-sm-12">
                 <p className="text-align-left body-text is-background-blue-text margin-left-right-5">
                 It’s hard to summarise yourself in a few words. Hopefully this site is at least a short introduction. Otherwise continue on below for a quick intro OR keep going and check out my digital Resume below (also available in print).<span role="img" aria-label="nerd">🤓</span>
                 <br/>
@@ -25,7 +25,7 @@ const AboutPage = () => (
             <div className="container__col-sm-12">
                 <h1 className="text-align-left is-background-blue-text margin-left-right-5">In <em>short</em></h1>
             </div>
-            <div className="container__col-xs-12 text-align-center">
+            <div className="container__col-xs-12">
                 <p className="text-align-left body-text is-background-blue-text margin-left-right-5">
                 I’m currently a third year Electrical and Electornic Engineering student at Imperial College London <span role="img" aria-label="student graduate">👨🏼‍🎓</span>. I’m originally from Switzerland <span role="img" aria-label="swiss flag">🇨🇭</span>and currently live in London 🇬🇧. Outside of work, I spend my free time working in web development, teaching, running and writing music. If you’d like to know more about my music, check out my spotify! <span role="img" aria-label="guitar">🎸</span>
                 <br/><br/>

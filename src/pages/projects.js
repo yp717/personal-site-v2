@@ -9,21 +9,23 @@ import ProjectCard from '../components/cards/projectCard';
 const ProjectsPage = ({ data }) => (
   <Layout>
     <SEO
-      title="Home"
+      title="Projects"
       keywords={[`gatsby`, `application`, `react`, `portfolio`]}
     />
-    <h1>Projects</h1>
-    <div className="project-list">
-      {data.allProjectsJson.edges.map(project => (
-        <div key={project.node.id} className="project-list__item">
-          <ProjectCard 
-            title={project.node.title}
-            description={project.node.description}
-            fluid={project.node.thumbnailImage.childImageSharp.fluid}
-            url={project.node.url}
-          />
-        </div>
-      ))}
+    <div className="container">
+      <h1 className="is-background-blue-text">Projects</h1>
+      <div className="project-list">
+        {data.allProjectsJson.edges.map(project => (
+          <div key={project.node.id} className="project-list__item">
+            <ProjectCard 
+              title={project.node.title}
+              description={project.node.description}
+              fluid={project.node.thumbnailImage.childImageSharp.fluid}
+              url={project.node.url}
+            />
+          </div>
+        ))}
+      </div>
     </div>
   </Layout>
 );
