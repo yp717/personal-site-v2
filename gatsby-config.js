@@ -50,7 +50,16 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/pages`,
+        path: `${__dirname}/src/pages/blog`,
+        name: `blog`,
+      },
+    },
+    // additional instance of this plugin to read source nodes from second location in filesystem
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/pages/projects`,
+        name: `projects`,
       },
     },
     `gatsby-plugin-react-helmet`,

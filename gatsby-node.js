@@ -12,6 +12,7 @@ exports.createPages = ({ actions, graphql }) => {
     const { createPage } = actions;
 
     const postTemplate = path.resolve(`src/templates/postTemplate.js`);
+    const projectTemplate = path.resolve(`src/templates/projectTemplate.js`);
     const tagTemplate = path.resolve(`src/templates/tagTemplate.js`);
 
     return graphql(`
@@ -38,14 +39,23 @@ exports.createPages = ({ actions, graphql }) => {
         }
 
         const posts = result.data.allMarkdownRemark.edges;
-        // Create blog posts
-        posts.forEach(({ node }) => {
-            createPage({
+
+        // Create blog posts and project posts
+        posts.forEach(edge => {
+            if (edge.node.frontmatter.posttype === "project") {
+              createPage({
+                path: node.fields.slug,
+                component: projectTemplate,
+                context: { slug: node.fields.slug }
+              });
+            } else {
+              createPage({
                 path: node.fields.slug,
                 component: postTemplate,
-                context: { slug: node.fields.slug }, // additional data can be passed via context
-            });
-        });
+                context: { slug: node.fields.slug }
+              });
+            }
+          });
 
         // Create Tags pages
         // pulled directly from https://www.gatsbyjs.org/docs/adding-tags-and-categories-to-blog-posts/#add-tags-to-your-markdown-files

@@ -1,10 +1,8 @@
 ---
-path: /blog/analysis-of-circuits/introduction
-title: Analysis of Circuits Introduction
-date: 2018-12-29
+path: /projects/project1
+title: Project 1
 thumbnail: "../../images/kitten3.jpeg"
 tags: ['analysis', 'circuits', 'circuit analysis']
-posttype: 'blog'
 color: red-orange
 ---
 

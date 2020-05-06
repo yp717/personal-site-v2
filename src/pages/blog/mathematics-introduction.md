@@ -4,6 +4,7 @@ title: Mathematics Introduction
 date: 2018-11-29
 thumbnail: "../../images/kitten2.jpeg"
 tags: ['mathematics', 'introduction', 'cute']
+posttype: 'blog'
 color: regal-blue
 ---
 
