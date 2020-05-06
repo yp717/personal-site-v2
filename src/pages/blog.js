@@ -21,7 +21,6 @@ const BlogPage = ({ data }) => {
                             /> */}
                             <Img
                                 fluid={post.node.frontmatter.thumbnail.childImageSharp.fluid}
-                                className="shadow"
                                 style={{ maxHeight: 250 }}
                             />
                             <h2 style={{fontSize: '25px'}}className="is-background-blue-text">{post.node.frontmatter.title}</h2>
@@ -48,7 +47,10 @@ export default BlogPage;
 // Get all markdown data, in descending order by date, and grab the id, excerpt, slug, date, and title
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+    allMarkdownRemark(
+        sort: { order: DESC, fields: [frontmatter___date] }
+        filter: { frontmatter: { posttype: { eq: "blog" } } }
+    ) {
         edges {
             node {
                 id

@@ -11,8 +11,8 @@ const { createFilePath } = require('gatsby-source-filesystem');
 exports.createPages = ({ actions, graphql }) => {
     const { createPage } = actions;
 
-    const postTemplate = path.resolve(`src/templates/postTemplate.js`);
-    const projectTemplate = path.resolve(`src/templates/projectTemplate.js`);
+    const postTemplate = path.resolve(`src/templates/blog-post.js`);
+    const projectTemplate = path.resolve(`src/templates/project-post.js`);
     const tagTemplate = path.resolve(`src/templates/tagTemplate.js`);
 
     return graphql(`
@@ -44,15 +44,15 @@ exports.createPages = ({ actions, graphql }) => {
         posts.forEach(edge => {
             if (edge.node.frontmatter.posttype === "project") {
               createPage({
-                path: node.fields.slug,
+                path: edge.node.fields.slug,
                 component: projectTemplate,
-                context: { slug: node.fields.slug }
+                context: { slug: edge.node.fields.slug }
               });
             } else {
               createPage({
-                path: node.fields.slug,
+                path: edge.node.fields.slug,
                 component: postTemplate,
-                context: { slug: node.fields.slug }
+                context: { slug: edge.node.fields.slug }
               });
             }
           });

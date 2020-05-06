@@ -2,9 +2,11 @@
 path: /blog/statistics/introduction
 title: Welcome to my quick College Stats Guide
 date: 2020-05-05
-thumbnail: "../../images/kitten1.jpeg"
+thumbnail: "./kitten3.jpeg"
 tags: ['statistics', 'introduction']
 posttype: 'blog'
+published: true
+subtitle: subtitle could go here
 color: green
 ---
 
@@ -14,4 +16,4 @@ Since I'm new to the world of writing tutorials and blogging, I'm open to any fe
 
 For now please enjoy this picture of a cat because this blog is a work in progress and the actual content will be uploaded soon.
 
-![Kitten One](../../images/kitten1.jpeg)
+![Kitten Three](/kitten3.jpeg)
