@@ -31,11 +31,19 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 600,
+              maxWidth: 590,
+            },
+          },
+          {
+            resolve: `gatsby-remark-responsive-iframe`,
+            options: {
+              wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
           `gatsby-remark-prismjs`,
-        ],
+          `gatsby-remark-copy-linked-files`,
+          `gatsby-remark-smartypants`,
+        ]
       },
     },
     {
@@ -50,16 +58,16 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/content/blog`,
-        name: 'blog',
+        path: `${__dirname}/content/blog`,
+        name: `blog`,
       },
     },
     // additional instance of this plugin to read source nodes from second location in filesystem
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/content/projects`,
-        name: 'project',
+        path: `${__dirname}/content/projects`,
+        name: `project`,
       },
     },
     `gatsby-plugin-react-helmet`,
@@ -75,11 +83,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Yannispanagis.com`,
+        short_name: `YannisPanagis`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#000000`,
+        theme_color: `#000000`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },

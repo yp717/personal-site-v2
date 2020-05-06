@@ -6,6 +6,7 @@ import SEO from '../components/seo';
 // import Button from '../components/button';
 // import Link from "gatsby";
 import ProjectCard from '../components/cards/projectCard';
+import Img from 'gatsby-image';
 
 const ProjectsPage = ({ data }) => (
   <Layout>
@@ -18,14 +19,18 @@ const ProjectsPage = ({ data }) => (
       <div className="project-list">
         {data.allMarkdownRemark.edges.map(project => (
           <div key={project.node.id} className="project-list__item">
-            <ProjectCard 
+            {/* <ProjectCard 
               title={project.node.frontmatter.title}
               description={project.node.frontmatter.description}
               color={project.node.frontmatter.color}
-            //   fluid={project.node.frontmatter.thumbnailImage.childImageSharp.fluid}
+              fluid={project.node.frontmatter.thumbnailImage.childImageSharp.fluid}
+            /> */}
+            <Img
+                fluid={project.node.frontmatter.thumbnail.childImageSharp.fluid}
+                style={{ maxHeight: 250 }}
             />
-            {/* <h2>{project.node.frontmatter.title}</h2>
-            <p>{project.node.excerpt}</p> */}
+            <h2>{project.node.frontmatter.title}</h2>
+            <p>{project.node.excerpt}</p>
           </div>
         ))}
       </div>
@@ -36,7 +41,7 @@ const ProjectsPage = ({ data }) => (
 export default ProjectsPage;
 
 export const projectsQuery = graphql`
-  query ProjectIndex {
+  query {
     allMarkdownRemark(
         sort: { order: DESC, fields: [frontmatter___date] }
         filter: { frontmatter: { posttype: { eq: "project" } } }
