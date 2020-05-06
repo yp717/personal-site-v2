@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 
 import Layout from '../components/layout';
 
-const ProjectTemplate = ({ data }) => {
+const ProjectPost = ({ data }) => {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
   return (
@@ -25,16 +25,16 @@ const ProjectTemplate = ({ data }) => {
   );
 };
 
-export default ProjectTemplate;
+export default ProjectPost;
 
 export const projectPostQuery = graphql`
     query($slug: String!) {
-        markdownRemark(fields: { slug: { eq: $slug } }) {
-            html
-            frontmatter {
-                date(formatString: "MMMM DD, YYYY")
-                title
-            }
+      markdownRemark(fields: { slug: { eq: $slug } }) {
+        html
+        frontmatter {
+          date(formatString: "MMMM DD, YYYY")
+          title
         }
+      }
     }
 `;

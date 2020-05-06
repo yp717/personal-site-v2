@@ -2,9 +2,11 @@
 path: /blog/statistics/introduction
 title: Welcome to my quick College Stats Guide
 date: 2020-05-05
-thumbnail: "../../images/kitten1.jpeg"
+thumbnail: "../../../images/kitten1.jpeg"
 tags: ['statistics', 'introduction']
 posttype: 'blog'
+published: true
+subtitle: subtitle could go here
 color: green
 ---
 
