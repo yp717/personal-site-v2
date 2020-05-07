@@ -14,36 +14,41 @@ const ProjectsPage = ({ data }) => {
         title="Projects"
         keywords={[`gatsby`, `application`, `react`, `portfolio`]}
         />
-        <div className="container margin-bottom-5">
-            <div className="container__col-sm-12">
-                <h1 className="is-background-blue-text margin-left-right-5">Projects</h1>
+        <div className="container--fluid margin-bottom-5">
+            <div className="container__row">
+                <div className="container__col-sm-12">
+                    <h1 className="is-background-blue-text margin-left-right-5">Projects</h1>
+                </div>
+            </div>        
+            <div className="container__row">
                 {posts.map(post => (
-                    <div key={post.node.id} className={`content-card is-${post.node.frontmatter.color}-border padding-0`}>
+                    <div key={post.node.id}>
                         <Link to={post.node.fields.slug}>
-                            {/* <Img
-                            fixed={post.node.frontmatter.thumbnail.childImageSharp.fixed}
-                            /> */}
-                            <Img
-                                fluid={post.node.frontmatter.thumbnail.childImageSharp.fluid}
-                                style={{ maxHeight: 250 }}
-                            />
-                            <h2 style={{fontSize: '25px'}}className="is-background-blue-text">{post.node.frontmatter.title}</h2>
-                            <p className="is-background-blue-text">{post.node.frontmatter.date}</p>
-                            {post.node.frontmatter.tags ? (
-                                <div style={{marginTop: '10px', marginBottom: '10px'}}>
-                                    {post.node.frontmatter.tags.map(tag => (
-                                        <Link className="post-tags margin-right-1" to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                                    ))}
-                                </div>    
-                            ) : null}
-                            <div className="post-list__excerpt is-background-blue-text">{post.node.excerpt}</div>
+                            <div className="container__col-sm-6">
+                                <Img
+                                    fluid={post.node.frontmatter.thumbnail.childImageSharp.fluid}
+                                    style={{ width: 300, height: 250, objectFit: "cover" }}
+                                />
+                            </div>
+                            <div className="container__col-sm-6">
+                                <h2 style={{fontSize: '25px'}}className="is-background-blue-text">{post.node.frontmatter.title}</h2>
+                                <p className="is-background-blue-text">{post.node.frontmatter.date}</p>
+                                {post.node.frontmatter.tags ? (
+                                    <div>
+                                        {post.node.frontmatter.tags.map(tag => (
+                                            <Link className="post-tags margin-right-1" to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                                        ))}
+                                    </div>    
+                                ) : null}
+                                <div className="is-background-blue-text">{post.node.excerpt}</div>
+                            </div>
                         </Link>
                     </div>
                 ))}
             </div>
-        </div>
-</Layout>
-);
+    </div>
+    </Layout>
+    );
 };
 
 export default ProjectsPage;

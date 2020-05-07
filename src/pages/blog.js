@@ -11,10 +11,13 @@ const BlogPage = ({ data }) => {
     <Layout>
         <SEO title="Blog" keywords={[`gatsby`, `application`, `react`]} />  
         <div className="container margin-bottom-5">
-            <div className="container__col-sm-12">
-                <h1 className="is-background-blue-text margin-left-right-5">Blog</h1>
+            <div className="container__row">
+                <div className="container__col-sm-12">
+                    <h1 className="is-background-blue-text margin-left-right-5">Blog</h1>
+                </div>
                 {posts.map(post => (
-                    <div key={post.node.id} className={`content-card is-${post.node.frontmatter.color}-border padding-0`}>
+                    <div className="container__col-sm-4">
+                        <div key={post.node.id} className={`content-card is-${post.node.frontmatter.color}-border padding-0`}>
                         <Link to={post.node.fields.slug}>
                             {/* <Img
                             fixed={post.node.frontmatter.thumbnail.childImageSharp.fixed}
@@ -34,6 +37,7 @@ const BlogPage = ({ data }) => {
                             ) : null}
                             <div className="post-list__excerpt is-background-blue-text">{post.node.excerpt}</div>
                         </Link>
+                    </div>
                     </div>
                 ))}
             </div>
