@@ -17,14 +17,7 @@ const BlogPage = ({ data }) => {
                 </div>
             </div>
             {posts.map(post => (
-                <Link to={post.node.fields.slug}>
-                    <div key={post.node.id} className={`container__row grow content-card is-${post.node.frontmatter.color}-border padding-0`}>
-                            <div className="container__col-6">
-                                <Img
-                                    fluid={post.node.frontmatter.thumbnail.childImageSharp.fluid}
-                                    style={{ maxHeight: 250, maxWidth: 300 }}
-                                />
-                            </div>
+                    <div key={post.node.id} className={`container__row content-card is-${post.node.frontmatter.color}-border padding-0`}>
                             <div className="container__col-6">
                                 <h2 style={{fontSize: '25px'}}className="is-background-blue-text">{post.node.frontmatter.title}</h2>
                                 <p className="is-background-blue-text" style={{width: '50%'}}>{post.node.frontmatter.date}</p>
@@ -36,9 +29,17 @@ const BlogPage = ({ data }) => {
                                     </div>    
                                 ) : null}
                                 <div className="is-background-blue-text">{post.node.excerpt}</div>
+                                <Link to={post.node.fields.slug}>
+                                    Read More about it
+                                </Link>
+                            </div>
+                            <div className="container__col-6">
+                                <Img
+                                    fluid={post.node.frontmatter.thumbnail.childImageSharp.fluid}
+                                    style={{ maxHeight: 250, maxWidth: '280' }}
+                                />
                             </div>
                     </div>
-                </Link>
             ))}
         </div>
     </Layout>
