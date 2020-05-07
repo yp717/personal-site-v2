@@ -16,4 +16,8 @@ Since I'm new to the world of writing tutorials and blogging, I'm open to any fe
 
 For now please enjoy this picture of a cat because this blog is a work in progress and the actual content will be uploaded soon.
 
+$$
+\frac{1}{\Bigl(\sqrt{\phi \sqrt{5}}-\phi\Bigr) e^{\frac25 \pi}} \equiv 1+\frac{e^{-2\pi}} {1+\frac{e^{-4\pi}} {1+\frac{e^{-6\pi}} {1+\frac{e^{-8\pi}} {1+\cdots} } } }
+$$
+
 ![Kitten Three](/kitten3.jpeg)
