@@ -15,32 +15,31 @@ const BlogPage = ({ data }) => {
                 <div className="container__col-sm-12">
                     <h1 className="is-background-blue-text margin-left-right-5">Blog</h1>
                 </div>
-                {posts.map(post => (
-                    <div className="container__col-sm-4">
-                        <div key={post.node.id} className={`content-card is-${post.node.frontmatter.color}-border padding-0`}>
-                        <Link to={post.node.fields.slug}>
-                            {/* <Img
-                            fixed={post.node.frontmatter.thumbnail.childImageSharp.fixed}
-                            /> */}
-                            <Img
-                                fluid={post.node.frontmatter.thumbnail.childImageSharp.fluid}
-                                style={{ maxHeight: 250 }}
-                            />
-                            <h2 style={{fontSize: '25px'}}className="is-background-blue-text">{post.node.frontmatter.title}</h2>
-                            <p className="is-background-blue-text">{post.node.frontmatter.date}</p>
-                            {post.node.frontmatter.tags ? (
-                                <div style={{marginTop: '10px', marginBottom: '10px'}}>
-                                    {post.node.frontmatter.tags.map(tag => (
-                                        <Link className="post-tags margin-right-1" to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                                    ))}
-                                </div>    
-                            ) : null}
-                            <div className="post-list__excerpt is-background-blue-text">{post.node.excerpt}</div>
-                        </Link>
-                    </div>
-                    </div>
-                ))}
             </div>
+            {posts.map(post => (
+                <Link to={post.node.fields.slug}>
+                    <div key={post.node.id} className={`container__row grow content-card is-${post.node.frontmatter.color}-border padding-0`}>
+                            <div className="container__col-6">
+                                <Img
+                                    fluid={post.node.frontmatter.thumbnail.childImageSharp.fluid}
+                                    style={{ maxHeight: 250, maxWidth: 300 }}
+                                />
+                            </div>
+                            <div className="container__col-6">
+                                <h2 style={{fontSize: '25px'}}className="is-background-blue-text">{post.node.frontmatter.title}</h2>
+                                <p className="is-background-blue-text" style={{width: '50%'}}>{post.node.frontmatter.date}</p>
+                                {post.node.frontmatter.tags ? (
+                                    <div style={{marginTop: '10px', marginBottom: '10px'}}>
+                                        {post.node.frontmatter.tags.map(tag => (
+                                            <Link className="post-tags margin-right-1" to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                                        ))}
+                                    </div>    
+                                ) : null}
+                                <div className="is-background-blue-text">{post.node.excerpt}</div>
+                            </div>
+                    </div>
+                </Link>
+            ))}
         </div>
     </Layout>
     );
@@ -69,7 +68,7 @@ export const pageQuery = graphql`
                     thumbnail {
                         childImageSharp {
                             fluid(maxWidth: 1000) {
-                                ...GatsbyImageSharpFluid
+                                ...GatsbyImageSharpFluid_noBase64
                             }
                         }
                     }
