@@ -17,9 +17,8 @@ const BlogPage = ({ data }) => {
                 </div>
             </div>
             {posts.map(post => (
-                <div className="container__row">
-                    <div key={post.node.id} className={`grow content-card is-${post.node.frontmatter.color}-border padding-0`}>
-                        <Link to={post.node.fields.slug}>
+                <Link to={post.node.fields.slug}>
+                    <div key={post.node.id} className={`container__row grow content-card is-${post.node.frontmatter.color}-border padding-0`}>
                             <div className="container__col-6">
                                 <Img
                                     fluid={post.node.frontmatter.thumbnail.childImageSharp.fluid}
@@ -38,9 +37,8 @@ const BlogPage = ({ data }) => {
                                 ) : null}
                                 <div className="is-background-blue-text">{post.node.excerpt}</div>
                             </div>
-                    </Link>
                     </div>
-                </div>
+                </Link>
             ))}
         </div>
     </Layout>
