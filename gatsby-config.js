@@ -105,7 +105,20 @@ module.exports = {
       options: {
         path: `${__dirname}/src/data`,
       },
-    }
+    },
+    {
+      resolve: `gatsby-plugin-scroll-indicator`,
+      options: {
+        // Configure color of the scroll indicator
+        color: '#FCB233',
+        // Height of the scroll indicator
+        height: '5px',
+        // Configure paths where the scroll indicator will appear
+        // paths: ['/', '/blog/**'],
+        // Configure the z-index of the indicator element
+        zIndex: `9999`,
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
