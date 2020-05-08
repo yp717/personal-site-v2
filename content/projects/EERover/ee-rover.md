@@ -10,6 +10,7 @@ description: subtitle could go here
 color: red-orange
 ---
 
-This project on the website is in progress and is coming soon.<span aria-label="image">🤭</span>
+This project on the website is in progress and is coming soon.
+<span aria-label="image">🤭</span>
 
 ![Kitten One](/thumbnail.png)

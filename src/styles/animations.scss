@@ -39,3 +39,12 @@
     transform: none;
     visibility: visible;
 }
+
+.card-link{
+    background: white;
+}
+.card-link:hover{
+    transform: scale(1.05);
+    background: #FFFFFF;
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.04), 0 20px 31px 0 rgba(0,0,0,0.16);
+}
