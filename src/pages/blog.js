@@ -5,6 +5,8 @@ import Layout from '../components/layout';
 import Img from 'gatsby-image';
 import SEO from "../components/seo";
 
+import BuyMeCoffeeCard from '../components/cards/buyMeCoffeeCard';
+
 const BlogPage = ({ data }) => {
     const posts = data.allMarkdownRemark.edges;
     return (
@@ -42,6 +44,7 @@ const BlogPage = ({ data }) => {
                     </div>
             ))}
         </div>
+        <BuyMeCoffeeCard/>
     </Layout>
     );
 };
