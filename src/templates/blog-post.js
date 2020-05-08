@@ -12,7 +12,6 @@ const BlogPost = ({ data }) => {
           <div className="container__col-sm-12 margin-left-right-5">
             <h1 className="is-background-blue-text">{frontmatter.title}</h1>
             <span className="is-background-blue-text">{frontmatter.date}</span>
-            
             {/* is there a way to do this without dangerously setting inner HTML */}
             <div  
               className="blog-text"

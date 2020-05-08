@@ -42,6 +42,7 @@
 
 .card-link{
     background: white;
+    transition: opacity 0.2s ease-out, transform 0.2s ease-out;
 }
 .card-link:hover{
     transform: scale(1.05);

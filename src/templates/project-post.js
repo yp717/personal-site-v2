@@ -8,19 +8,20 @@ const ProjectPost = ({ data }) => {
   const { frontmatter, html } = markdownRemark;
   return (
     <Layout>
-        <div className="container margin-bottom-12">
-          <div className="container__col-sm-12 margin-left-right-5">
-            <h1 className="is-background-blue-text">{frontmatter.title}</h1>
-            <span className="is-background-blue-text">{frontmatter.date}</span>
-            
-            {/* is there a way to do this without dangerously setting inner HTML */}
-            <div  
-              className="blog-text"
-              dangerouslySetInnerHTML={{ __html: html }} 
-            />
+        <div className="container margin-bottom-5">
+          <div className="container__row">
+            <div className="container__col-sm-12">
+              <h1 className="is-background-blue-text">{frontmatter.title}</h1>
+              <span className="is-background-blue-text">{frontmatter.date}</span>
+              {/* is there a way to do this without dangerously setting inner HTML */}
+              <div  
+                className="blog-text"
+                dangerouslySetInnerHTML={{ __html: html }} 
+              />
+              <h1>kaki</h1>
+            </div>
           </div>
         </div>
-        
     </Layout>
   );
 };
