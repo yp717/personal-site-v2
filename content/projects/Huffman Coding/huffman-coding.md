@@ -1,7 +1,7 @@
 ---
 path: /projects/Huffman-Coding
 title: Huffman Coding
-date: 2018-11-29
+date: 2019-04-29
 thumbnail: "./thumbnail.png"
 tags: ['mathematics', 'introduction', 'cute']
 posttype: 'project'

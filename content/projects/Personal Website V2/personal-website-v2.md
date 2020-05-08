@@ -1,7 +1,7 @@
 ---
 path: /projects/personal-website-v2
 title: Personal-website V2
-date: 2018-11-29
+date: 2020-05-30
 thumbnail: "./thumbnail.png"
 tags: ['portfolio', 'blog', 'cute']
 posttype: 'project'

@@ -1,7 +1,7 @@
 ---
 path: /projects/project3
 title: Auxilium Chrome Extension
-date: 2018-11-29
+date: 2020-02-09
 thumbnail: "./thumbnail.png"
 tags: ['mathematics', 'introduction', 'cute']
 posttype: 'project'
