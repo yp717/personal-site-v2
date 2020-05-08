@@ -1,7 +1,7 @@
 ---
 path: /projects/supermarket-checkout
 title: Autonomous RFID Supermarket Checkout
-date: 2018-11-29
+date: 2019-01-27
 thumbnail: "./thumbnail.png"
 tags: ['mathematics', 'introduction', 'cute']
 posttype: 'project'

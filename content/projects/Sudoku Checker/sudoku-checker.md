@@ -1,7 +1,7 @@
 ---
 path: /projects/sudoku-checker
 title: Sudoku Checker
-date: 2018-11-29
+date: 2017-12-12
 thumbnail: "./thumbnail.png"
 tags: ['mathematics', 'introduction', 'cute']
 posttype: 'project'
@@ -35,5 +35,6 @@ An nxn sudoku is said to be valid if each of the rows, columns and subsquares co
 2 5 7 4 8 9 3 6 1
 1 8 4 7 6 3 2 5 9
 ```
+The program read the name of an input text file containing a sudoku from the user, read the input from the file and printed the sudoku on the screen. It then determined whether the sudoku is a valid and printed the outcome on the screen. There are many ways to solve this problem. I started with a simple brute force approach and then it became progressively more interesting.
 
 ![Kitten Two](/thumbnail.png)
