@@ -4,7 +4,7 @@ import Layout from '../components/layout';
 import SEO from '../components/seo';
 // import ProjectCard from '../components/cards/projectCard';
 import Img from 'gatsby-image';
-// import { kebabCase } from 'lodash';
+import { kebabCase } from 'lodash';
 // import BuyMeCoffeeCard from '../components/cards/buyMeCoffeeCard';
 
 const ProjectsPage = ({ data }) => {
@@ -30,13 +30,13 @@ const ProjectsPage = ({ data }) => {
                             <div className="container__col-sm-12 container__col-lg-6" style={{ padding: '2%'}}>
                                 <h2 style={{fontSize: '25px'}}className="is-background-blue-text">{post.node.frontmatter.title}</h2>
                                     <p className="is-background-blue-text">{post.node.frontmatter.date}</p>
-                                    {/* {post.node.frontmatter.tags ? (
+                                    {post.node.frontmatter.tags ? (
                                         <div>
                                             {post.node.frontmatter.tags.map(tag => (
                                                 <Link className="post-tags margin-r-1" to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
                                             ))}
                                         </div>    
-                                    ) : null} */}
+                                    ) : null}
                                     {/* There needs to be a sass class here to correctly set the body text formatting */}
                                     <p className="is-background-blue-text" >{post.node.excerpt}</p>
                             </div> 
