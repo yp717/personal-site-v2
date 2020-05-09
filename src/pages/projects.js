@@ -5,7 +5,7 @@ import SEO from '../components/seo';
 // import ProjectCard from '../components/cards/projectCard';
 import Img from 'gatsby-image';
 // import { kebabCase } from 'lodash';
-import BuyMeCoffeeCard from '../components/cards/buyMeCoffeeCard';
+// import BuyMeCoffeeCard from '../components/cards/buyMeCoffeeCard';
 
 const ProjectsPage = ({ data }) => {
     const posts = data.allMarkdownRemark.edges;

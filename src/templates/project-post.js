@@ -16,7 +16,7 @@ const ProjectPost = ({ data }) => {
               <span className="is-background-blue-text">{frontmatter.date}</span>
               {/* is there a way to do this without dangerously setting inner HTML */}
               <div  
-                className="blog-text"
+                className="article"
                 dangerouslySetInnerHTML={{ __html: html }} 
               />
               <h1>kaki</h1>
