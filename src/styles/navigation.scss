@@ -74,13 +74,31 @@ $nav-height: 80px;
         margin-top: 1%;
         margin-bottom: 1%;
     }
+    height: 170px;
+    -webkit-transition:height 200ms ease-in;
+    -moz-transition:height 200ms ease-in;
+    -o-transition:height 200ms ease-in;
+    transition:height 200ms ease-in;
 }
 
 .nav-closed-list{
-    display: none;
+    margin-left: 5%;
+    z-index: 999;
+    div {
+        margin-top: 1%;
+        margin-bottom: 1%;
+    }
+
+    overflow: hidden;
+    height: 0;
+    -webkit-transition:height 200ms ease-in;
+    -moz-transition:height 200ms ease-in;
+    -o-transition:height 200ms ease-in;
+    transition:height 200ms ease-in;
 }
 
 .burger-navlinks{
+    z-index: 999;
     border: none;
     border-bottom: 1px;
     border-color: black;

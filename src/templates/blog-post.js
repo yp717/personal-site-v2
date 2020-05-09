@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-
+import SEO from '../components/seo';
 import Layout from '../components/layout';
 
 const BlogPost = ({ data }) => {
@@ -8,6 +8,7 @@ const BlogPost = ({ data }) => {
   const { frontmatter, html } = markdownRemark;
   return (
     <Layout>
+      <SEO title={frontmatter.title} keywords={frontmatter.tags}/>
         <div className="container margin-bottom-12">
           <div className="container__col-sm-12 margin-left-right-5">
             <h1 className="is-background-blue-text">{frontmatter.title}</h1>

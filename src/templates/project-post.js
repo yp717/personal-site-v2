@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-
+import SEO from '../components/seo';
 import Layout from '../components/layout';
 
 const ProjectPost = ({ data }) => {
@@ -8,6 +8,7 @@ const ProjectPost = ({ data }) => {
   const { frontmatter, html } = markdownRemark;
   return (
     <Layout>
+      <SEO title={frontmatter.title} keywords={frontmatter.tags}/>
         <div className="container margin-bottom-5">
           <div className="container__row">
             <div className="container__col-sm-12">
@@ -35,6 +36,7 @@ export const projectPostQuery = graphql`
         frontmatter {
           date(formatString: "MMMM DD, YYYY")
           title
+          tags
         }
       }
     }
