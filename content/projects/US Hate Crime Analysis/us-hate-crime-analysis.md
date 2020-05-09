@@ -3,7 +3,7 @@ path: /projects/us-hate-crime-analysis
 title: US Hate Crime Analysis
 date: 2018-08-15
 thumbnail: "./thumbnail.png"
-tags: ['data science', 'USA', 'US', 'hate crime', 'hate crimes']
+tags: ['data science', 'hate crimes']
 posttype: 'project'
 published: true
 description: subtitle could go here
