@@ -1,7 +1,7 @@
 ---
 path: /blog/gatsbyjjs-reading-progress-bar
 title: Adding a Scroll Indicator to my GatsbyJS site in 10 minutes
-date: 2018-12-29
+date: 2020-05-09
 thumbnail: "./kitten1.jpeg"
 tags: ['gatsby', 'javascript', 'reading progress bar']
 posttype: 'blog'
