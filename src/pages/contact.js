@@ -8,10 +8,10 @@ const ContactPage = () => (
         <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />  
         <div className="container">
             <div className="container__row">
-                <div className="container__col-sm-12 text-align-center margin-left-right-5">
+                <div className="container__col-sm-12 text-align-center margin-l-r-5">
                     <h2 className="text-align-center is-background-blue-text">Get in touch. <span role="img" aria-label="down-arrow">👇</span></h2>
                 </div>
-                <div className="container__col-sm-12 text-align-center margin-left-right-5">
+                <div className="container__col-sm-12 text-align-center margin-l-r-5">
                     <p className="text-align-center is-background-blue-text">
                         Although I'm not currently looking for freelance opportunities, my inbox is always open. Whether for a potential project or just to say hi, I'll try my best to answer your email!
                     </p>

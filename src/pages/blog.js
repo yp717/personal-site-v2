@@ -12,10 +12,10 @@ const BlogPage = ({ data }) => {
     return (
     <Layout>
         <SEO title="Blog" keywords={[`gatsby`, `application`, `react`]} />  
-        <div className="container margin-bottom-5">
+        <div className="container margin-b-5">
             <div className="container__row">
                 <div className="container__col-sm-12">
-                    <h1 className="is-background-blue-text margin-left-right-5">Blog</h1>
+                    <h1 className="is-background-blue-text margin-l-r-5">Blog</h1>
                 </div>
             </div>
             {posts.map(post => (
@@ -32,7 +32,7 @@ const BlogPage = ({ data }) => {
                                 {post.node.frontmatter.tags ? (
                                     <div style={{marginTop: '5px', marginBottom: '5px'}}>
                                         {post.node.frontmatter.tags.map(tag => (
-                                            <Link className="post-tags margin-right-1" to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                                            <Link className="post-tags margin-r-1" to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
                                         ))}
                                     </div>    
                                 ) : null}

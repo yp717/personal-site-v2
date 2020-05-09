@@ -4,7 +4,7 @@ import LegoYannisFront from "../../images/LEGOs/lego-yannis-front.svg";
 
 const BuyMeCoffeeCard = () => (
     <div className="container">
-        <div className="container__row padding-left-right-5">
+        <div className="container__row padding-l-r-5">
             <div className="container__col-sm-12 container__col-md-3 text-align-center">
                 <img src={LegoYannisFront} alt="lego-icon-front"/>
             </div>

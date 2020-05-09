@@ -8,12 +8,12 @@ const NotFoundPage = () => (
     <SEO title="404: Not found" />
     <div className="container">
       <div className="container__row">
-        <div className="container__col-sm-12 text-align-center margin-left-right-2">
+        <div className="container__col-sm-12 text-align-center margin-l-r-2">
           <h2 className="text-align-center is-background-blue-text">We're um...having some technical difficulties</h2>
         </div>
       </div>
       <div className="container__row">
-        <div className="container__col-sm-12 margin-left-right-2 text-align-center">
+        <div className="container__col-sm-12 margin-l-r-2 text-align-center">
           <img className="text-align-center" style={{width: '50vw'}} alt="angry lego smashes computer" src="https://media.giphy.com/media/ReImZejkBnqYU/giphy.gif"/>
         </div>  
       </div>

@@ -4,8 +4,8 @@ import ExperienceCard from '../cards/ExperienceCard';
 const ExperienceSection = () => {
     return (
         <>
-        <div className="container padding-top-bottom-3">
-        <h2 className="is-background-blue-text margin-left-right-5">Experience<span role="img" aria-label="nerd">🤓</span></h2>
+        <div className="container padding-t-b-3">
+        <h2 className="is-background-blue-text margin-l-r-5">Experience<span role="img" aria-label="nerd">🤓</span></h2>
             {/* <div className="container__row"> */}
                 {/* experience: Private Tutoring*/}
                 <div

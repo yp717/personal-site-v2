@@ -3,8 +3,8 @@ import React from 'react';
 const AchievementsSection = () => {
     return (
         <>
-            <div className="container padding-top-bottom-2">
-                <h2 className="is-background-blue-text margin-left-right-5">Achievements<span role="img" aria-label="trophy">🏆</span></h2>
+            <div className="container padding-t-b-2">
+                <h2 className="is-background-blue-text margin-l-r-5">Achievements<span role="img" aria-label="trophy">🏆</span></h2>
                 <div className="container__row">
                     {/* IC Hack winner */}
                     <div className="container__col-sm-12 is-white-bg content-card is-green-border">

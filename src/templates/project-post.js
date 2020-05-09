@@ -9,7 +9,7 @@ const ProjectPost = ({ data }) => {
   return (
     <Layout>
       <SEO title={frontmatter.title} keywords={frontmatter.tags}/>
-        <div className="container margin-bottom-5">
+        <div className="container margin-b-5">
           <div className="container__row">
             <div className="container__col-sm-12">
               <h1 className="is-background-blue-text">{frontmatter.title}</h1>

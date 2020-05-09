@@ -11,7 +11,11 @@ const IndexPage = () => (
     <div className="container">
       <div className="container__col-sm-12 text-align-center">
           <div>
-            <img src={LegoYannisFront} alt="lego-icon-front" className="is-height-24-vh"/>
+            <img 
+              src={LegoYannisFront} 
+              style={{height: '24vh'}} 
+              alt="lego-icon-front"
+            />
               <p className="is-greeting-blue-text greeting-text">
                 Hi <span role="img" aria-label="wave">👋</span>, my name is
               </p>         
