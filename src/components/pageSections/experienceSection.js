@@ -6,7 +6,7 @@ const ExperienceSection = () => {
         <>
         <div className="container padding-top-bottom-3">
         <h2 className="is-background-blue-text margin-left-right-5">Experience<span role="img" aria-label="nerd">🤓</span></h2>
-            <div className="container__row">
+            {/* <div className="container__row"> */}
                 {/* experience: Private Tutoring*/}
                 <div
                     data-sal="flip-up"
@@ -18,7 +18,7 @@ const ExperienceSection = () => {
                         title="Private Tutoring"
                         subheading="Self-organised"
                         date ="June 2019 - Present"
-                        description="Tutoring A-Level, GCSE and University students in Python, Computer Science concepts and Mathematics."
+                        description="Tutoring A-Level, GCSE and University students in Python, Computer Science concepts, Mathematics and English Literature."
                     />
                 </div>
                 
@@ -66,7 +66,7 @@ const ExperienceSection = () => {
                         description="Analysed corporate financial data to build models to examine companies and markets to determine investment viability for 10 potential acquisitions"
                     />
                 </div>
-            </div>
+            {/* </div> */}
         </div>
         </>
     );
