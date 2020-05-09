@@ -8,7 +8,7 @@
 </h1>
 
 You can see it live here: 
-`yannispanagis.com`
+[yannispanagis.com](yannispanagis.com)
 
 This website was developed from the default boilerplate gatsby starter project, together with the main Gatsby configuration files. It has been built out and developed using JavaScript, ReactJS, GraphQL, and, of course, my favourite react framework GatsbyJS.
 
