@@ -14,7 +14,7 @@ This project was actually a first year assignment at Imperial College which aske
 <br/><br/>
 To provide a little more detail it may be best to give an example. If we were to set $n=4$, this would mean that we are dealing with a 4x4 sudoku with 16 elements. Likewise, if $n=9$ it would have 81 elements and so on. The input to the program was a string of the following format as an example for the 4x4 case
 
-```c++
+```
 1 2 3 4
 4 3 2 1
 2 3 4 1
@@ -24,7 +24,7 @@ It's easy to identify the rows as [1 2 3 4 ; 4 3 2 1 ; 2 3 4 1 ; 3 4 2 1], the c
 
 An nxn sudoku is said to be valid if each of the rows, columns and subsquares contains all the numbers from 1 to n, just as in the original game (though in the original typically n=9). The above example clearly isn't valid, but the following 9x9 sample is perfectly valid
 
-```c++
+```
 3 1 5 8 2 7 9 4 6
 4 6 8 9 1 5 7 3 2
 7 2 9 3 4 6 5 1 8 

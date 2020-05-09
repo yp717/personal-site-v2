@@ -1,11 +1,9 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
-import { kebabCase } from 'lodash';
 import Layout from '../components/layout';
 import Img from 'gatsby-image';
 import SEO from "../components/seo";
-
-import BuyMeCoffeeCard from '../components/cards/buyMeCoffeeCard';
+// import BuyMeCoffeeCard from '../components/cards/buyMeCoffeeCard';
 
 const BlogPage = ({ data }) => {
     const posts = data.allMarkdownRemark.edges;

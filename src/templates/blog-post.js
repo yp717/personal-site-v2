@@ -2,6 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import SEO from '../components/seo';
 import Layout from '../components/layout';
+import ReactHtmlParser from "react-html-parser";
 
 const BlogPost = ({ data }) => {
   const { markdownRemark } = data;
@@ -14,10 +15,9 @@ const BlogPost = ({ data }) => {
             <h1 className="is-background-blue-text">{frontmatter.title}</h1>
             <span className="is-background-blue-text">{frontmatter.date}</span>
             {/* is there a way to do this without dangerously setting inner HTML */}
-            <div  
-              className="blog-text"
-              dangerouslySetInnerHTML={{ __html: html }} 
-            />
+            <div className="blog-text">
+              {ReactHtmlParser(html)}
+            </div>
           </div>
         </div>
         
