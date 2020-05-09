@@ -9,7 +9,7 @@ const NotFoundPage = () => (
     <div className="container">
       <div className="container__row">
         <div className="container__col-sm-12 text-align-center margin-left-right-2">
-          <h2 className="text-align-center">We're um...having some technical difficulties</h2>
+          <h2 className="text-align-center is-background-blue-text">We're um...having some technical difficulties</h2>
         </div>
       </div>
       <div className="container__row">
@@ -19,12 +19,12 @@ const NotFoundPage = () => (
       </div>
       <div className="container__row">
         <div className="container__col-sm-12 text-align-center">
-          <p>The link to this mage might not exist or be out of date... let's keep it together</p>
+          <p className="is-background-blue-text">The link to this mage might not exist or be out of date... let's keep it together</p>
         </div>
       </div>
       <div className="container__row">
         <div className="container__col-sm-12 text-align-center">
-          <p>Take a deep breath. I'll go contact the other legos on the server. In the meantime, how about you go back to the <Link to="/">home page</Link>?</p>
+          <p className="is-background-blue-text">Take a deep breath. I'll go contact the other legos on the server. In the meantime, how about you go back to the <Link to="/">home page</Link>?</p>
         </div>
       </div>
     </div>
