@@ -16,7 +16,7 @@ const TagsPage = ({ data }) => {
                 <div className="container__row">
                     <div className="container__col-sm-12 margin-l-r-5">
                         <h1>Tags</h1>
-                        <p>The following is a list of all the tags on this site. Maybe now you can find what you were looking for 😉</p>
+                        <p>The following is a list of all the tags on this site. Maybe now you can find what you were looking for <span role="img" aria-label="winking">😉</span></p>
                     </div>
                 </div>
                 <div className="container__row">
@@ -40,12 +40,12 @@ const TagsPage = ({ data }) => {
 export default TagsPage;
 
 export const pageQuery = graphql`
-  query {
-    allMarkdownRemark(limit: 2000) {
-      group(field: frontmatter___tags) {
-        fieldValue
-        totalCount
-      }
+    query {
+        allMarkdownRemark(limit: 2000) {
+            group(field: frontmatter___tags) {
+                fieldValue
+                totalCount
+            }
+        }
     }
-  }
 `;
