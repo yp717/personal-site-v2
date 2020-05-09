@@ -135,6 +135,9 @@ module.exports = {
           exitEventName: 'sal:out', // Exit event name
       }
     },
+    // Read more @ https://www.gatsbyjs.org/packages/gatsby-plugin-smoothscroll/
+    // can be used for scroll to animations
+    `gatsby-plugin-smoothscroll`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
