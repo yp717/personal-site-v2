@@ -19,8 +19,8 @@ const ProjectsPage = ({ data }) => {
                 </div>
             </div>    
                 {posts.map(post => (
-                    <Link to={post.node.fields.slug}>
-                        <div key={post.node.id} className={`container__row content-card card-link padding-0`} style={{width: '90%'}}>
+                    <Link to={post.node.fields.slug} className="margin-0 padding-0">
+                        <div key={post.node.id} className={`container__row content-card card-link padding-0`} style={{width: '80%'}}>
                             <div className="container__col-sm-12 container__col-lg-4">
                                 <Img
                                     fluid={post.node.frontmatter.thumbnail.childImageSharp.fluid}
@@ -44,7 +44,7 @@ const ProjectsPage = ({ data }) => {
                     </Link>     
                 ))}
         </div>
-        <BuyMeCoffeeCard/>
+        {/* <BuyMeCoffeeCard/> */}
     </Layout>
     );
 };

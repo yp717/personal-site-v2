@@ -9,7 +9,7 @@ const BuyMeCoffeeCard = () => (
                 <img src={LegoYannisFront} alt="lego-icon-front"/>
             </div>
             <div className="container__col-sm-12 container__col-md-9">
-                <p>I don't have any ads or sponsors. If you enjoyed the content on this site and found it helpful, interesting or fun, please consider supporting this site by buying me a coffee.</p>
+                <p className="is-background-blue-text">I don't have any ads or sponsors. If you enjoyed the content on this site and found it helpful, interesting or fun, please consider supporting this site by buying me a coffee.</p>
                 <div className="margin-2">
                     <BuyMeCoffeeButton/>
                 </div>                    
