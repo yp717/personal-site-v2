@@ -1,23 +1,26 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
 
 // These fonts could replace the others and make the site look better
 @import url("https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+// Karla font - change all back to lato if you decide you don't like karla anymore
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
 a {
-    font-family: Lato;
+    font-family: Karla;
     text-decoration: none;
 }
 
 p {
-    font-family: Lato;
+    font-family: Karla;
     color: #17171D;
     font-size: 1.1em;
 }
   
 h1 {
     display: block;
-    font-family: Lato;
+    font-family: Karla;
     font-size: 2em;
     font-weight: 900;
     margin-bottom: 0.67em;
@@ -28,7 +31,7 @@ h1 {
   
 h2 {
     display: block;
-    font-family: Lato;
+    font-family: Karla;
     font-size: 1.5em;
     font-weight: bold;
     
@@ -40,7 +43,7 @@ h2 {
   
 h3 {
     display: block;
-    font-family: Lato;
+    font-family: Karla;
     font-weight: 400;
     font-size: 1.17em;
     margin-bottom: 1em;
@@ -51,7 +54,7 @@ h3 {
   
 h4 {
     display: block;
-    font-family: Lato;
+    font-family: Karla;
     font-weight: 400;
     font-size: 1em;
 
@@ -63,7 +66,7 @@ h4 {
   
 h5 {
     display: block;
-    font-family: Lato;
+    font-family: Karla;
     font-size: 0.83em;
 
     margin-bottom: 1.67em;
@@ -74,7 +77,7 @@ h5 {
   
 h6 {
     display: block;
-    font-family: Lato;
+    font-family: Karla;
     font-size: 0.67em;
     font-weight: bold;
     margin-bottom: 2.33em;
@@ -85,7 +88,7 @@ h6 {
 
 // fixed up to here curious what it will look like tho lol
 span {    
-    font-family: Lato;
+    font-family: Karla;
 }
 
 .footer-text {
@@ -94,40 +97,40 @@ span {
     line-height: 80px;
     margin: 0;
     color: #FFFFFF;
-    font-family: Lato;
+    font-family: Karla;
 }
 
 .greeting-text {
-    font-family: Lato-Bold;
+    font-family: Karla;
     font-size: 1.6em;
     margin-top: 10px;
 }
 
 .name-text {
-    font-family: Lato;
+    font-family: Karla;
     font-size: 25px;
 }
 
 .nav-link-text {
-    font-family: Lato;
+    font-family: Karla;
     font-size: 18px;
     line-height: 20px;
 }
 
 .hero-description-text {
-    font-family: Lato-Light;
+    font-family: Karla;
     font-size: 20px;
 }
 
 .hero-tagline-text {
-    font-family: Lato;
+    font-family: Karla;
     font-size: 30px;
     line-height: 30px;
     margin-top: 10px;
 }
 
 .body-text {
-    font-family: Lora-SemiBold;
+    font-family: Karla;
     font-size: 19px;
     line-height: 34px;
 }

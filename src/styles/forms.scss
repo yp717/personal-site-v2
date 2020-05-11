@@ -1,11 +1,12 @@
 .input-field {
     border-width: 0px;
     border: 2px solid #5ad3d4;
+    border-radius: 4px;
     line-height: 1.4rem;
     width: 100%;
     margin-Top: 1%;
     margin-Bottom: 1%;
-    font-family: 'Lato';
+    font-family: Karla;
     font-size: 16px;
     color: #000000;
     text-align: left;
@@ -13,5 +14,6 @@
   
   .input-field:focus {
     border:2px solid #FC6964;
+    border-radius: 4px;
     outline: none;
   }

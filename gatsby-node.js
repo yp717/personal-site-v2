@@ -28,6 +28,7 @@ exports.createPages = ({ actions, graphql }) => {
                         }
                         frontmatter {
                             tags
+                            posttype
                         }
                     }
                 }
@@ -86,11 +87,19 @@ exports.createPages = ({ actions, graphql }) => {
 exports.onCreateNode = ({ node, actions, getNode }) => {
     const { createNodeField } = actions;
     if (node.internal.type === `MarkdownRemark`) {
-        const slug = createFilePath({ node, getNode, basePath: `pages` });
+        if (node.frontmatter.posttype === "project") {
         createNodeField({
             node,
             name: `slug`,
-            value: slug,
+            value: "projects/" + node.frontmatter.title.trim().split(" ").join("-"),
         });
+        }
+        if (node.frontmatter.posttype === "blog") {
+            createNodeField({
+                node,
+                name: `slug`,
+                value: "blog/" + node.frontmatter.title.trim().split(" ").join("-"),
+            });
+        }
     }
 };
