@@ -23,10 +23,7 @@ h1 {
     font-family: Karla;
     font-size: 2em;
     font-weight: 900;
-    margin-bottom: 0.67em;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 0.67em;
+    margin: 0em;
 }
   
 h2 {
@@ -34,11 +31,7 @@ h2 {
     font-family: Karla;
     font-size: 1.5em;
     font-weight: bold;
-    
-    margin-bottom: 0.83em;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 0.83em;
+    margin: 0em;
 }
   
 h3 {
@@ -46,10 +39,7 @@ h3 {
     font-family: Karla;
     font-weight: 400;
     font-size: 1.17em;
-    margin-bottom: 1em;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 1em;
+    margin: 0em;
 }
   
 h4 {
@@ -57,22 +47,14 @@ h4 {
     font-family: Karla;
     font-weight: 400;
     font-size: 1em;
-
-    margin-bottom: 1.33em;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 1.33em;
+    margin: 0;
 }
   
 h5 {
     display: block;
     font-family: Karla;
     font-size: 0.83em;
-
-    margin-bottom: 1.67em;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 1.67em;
+    margin: 0;
 }
   
 h6 {
@@ -80,10 +62,7 @@ h6 {
     font-family: Karla;
     font-size: 0.67em;
     font-weight: bold;
-    margin-bottom: 2.33em;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 2.33em;
+    margin: 0;
 }
 
 // fixed up to here curious what it will look like tho lol
@@ -92,12 +71,11 @@ span {
 }
 
 .footer-text {
-    opacity: 0.7;
-    text-align: center;
-    line-height: 80px;
-    margin: 0;
-    color: #FFFFFF;
     font-family: Karla;
+    opacity: 0.7;
+    line-height: 80px;
+    color: #FFFFFF;
+    margin: 0;
 }
 
 .greeting-text {

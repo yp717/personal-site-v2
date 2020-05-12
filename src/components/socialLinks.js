@@ -38,10 +38,10 @@ export default props => {
                     {
                         darkMode.value ? 
                         (
-                            <div className="youtubeIcon-dark-mode"/>
+                            <div className="mediumIcon-dark-mode"/>
                         ) :
                         (
-                            <div className="youtubeIcon"/>
+                            <div className="mediumIconIcon"/>
                         )
                     }
                 </a>

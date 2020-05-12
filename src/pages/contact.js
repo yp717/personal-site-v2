@@ -9,7 +9,7 @@ const ContactPage = () => (
         <div className="container">
             <div className="container__row">
                 <div className="container__col-sm-12 text-align-center margin-l-r-5">
-                    <h2 className="text-align-center is-background-blue-text">Get in touch. <span role="img" aria-label="down-arrow">👇</span></h2>
+                    <h1 className="text-align-center is-background-blue-text">Get in touch. <span role="img" aria-label="down-arrow">👇</span></h1>
                 </div>
                 <div className="container__col-sm-12 text-align-center margin-l-r-5">
                     <p className="text-align-center is-background-blue-text">

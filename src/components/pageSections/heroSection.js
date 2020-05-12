@@ -1,5 +1,5 @@
 import React from 'react';
-import SocialLinks from "../../components/socialLinks";
+// import SocialLinks from "../../components/socialLinks";
 
 const HeroSection = () => {
     return (
@@ -11,9 +11,9 @@ const HeroSection = () => {
             <h2 className="hero-tagline-text is-background-blue-text">Engineer. Designer. Developer. Student.</h2>
             <h3 className="hero-description-text is-background-blue-text">I'm currently a third year Electrical and Electronic</h3>
             <h3 className="hero-description-text is-background-blue-text">Engineering Student @ Imperial College London</h3>
-            <div>
+            {/* <div>
             <SocialLinks/>
-            </div>
+            </div> */}
             {/* <div className="col-sm-12">
             <Button buttonText="Get in touch" />
             <Button buttonText="Resume" />

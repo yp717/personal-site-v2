@@ -12,7 +12,7 @@ const AboutPage = () => (
         <SEO title="About" keywords={[`gatsby`, `application`, `react`]} />  
         <div className="container">
             <div className="container__col-sm-12">
-                <h2 className="text-align-left is-background-blue-text margin-l-r-5">In <em>short</em></h2>
+                <h1 className="text-align-left is-background-blue-text margin-l-r-5">In <em>short</em></h1>
             </div>
             <div className="container__col-xs-12">
                 <p className="text-align-left is-background-blue-text margin-l-r-5">
@@ -26,7 +26,7 @@ const AboutPage = () => (
                 </p>
             </div>            
             <div className="container__col-sm-12 margin-b-3">
-                <h2 className="text-align-left is-background-blue-text margin-l-r-5 padding-t-2">The <em>long</em> version</h2>
+                <h1 className="text-align-left is-background-blue-text margin-l-r-5 padding-t-2">The <em>long</em> version</h1>
             </div>
         </div>
         
