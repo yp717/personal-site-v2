@@ -34,6 +34,7 @@
     "react": "^16.13.1",
     "react-burger-menu": "^2.6.13",
     "react-dom": "^16.13.1",
+    "react-emoji-render": "^1.2.4",
     "react-helmet": "^6.0.0",
     "react-html-parser": "^2.0.2",
     "react-smooth-collapse": "^2.1.0",

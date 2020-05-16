@@ -1,5 +1,6 @@
 import React from "react"
 import useDarkMode from "use-dark-mode"
+import Emoji from "react-emoji-render";
 
 export default props => {
     const darkMode = useDarkMode(false) //defaults to false 
@@ -11,7 +12,9 @@ export default props => {
             aria-label="light mode"
             onClick={darkMode.disable}
             className="sunIcon"
-          ><span role="img" aria-label="sun">️☀️</span></button>
+          >
+            <Emoji text="☀️"/>
+          </button>
         ) : (
           <button
             type="button"
