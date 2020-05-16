@@ -1,5 +1,4 @@
 import React from 'react';
-// import Button from '../button';
 import Img from 'gatsby-image';
 // category, project title, description, date, img url -> should store this in a json file and pull in with graphql query
 // for now for making design let's just keep it static
