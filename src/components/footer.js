@@ -2,10 +2,10 @@ import React from 'react';
 import SocialLinks from '../components/socialLinks';
 
 const Footer = () => (
-    <footer className="is-footer-blue-bg">
+    <footer className="is-white-bg">
         <div style={{float: 'left', marginLeft: '5%'}}>
-            <p className="footer-text text-align-left" style={{fontSize: '14px'}}>
-                © Yannis Panagis 
+            <p className="footer-text is-background-blue-text text-align-left" style={{fontSize: '14px'}}>
+                © Yannis Panagis 2020
             </p>
         </div>                       
         <div style={{float: 'right', marginRight: '5%', height: '80px', display: 'flex', alignItems: 'center'}}>

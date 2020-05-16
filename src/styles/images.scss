@@ -4,166 +4,37 @@ img {
     padding: 0;
 }
 
-.githubIcon {
+.socialIcon {
     height: 20px;
     width: 20px;
     margin: 10px;
     padding: 0px;
-    background: url("../images/icons/newSocialMediaIcons/Github-grayscale-colored.svg") no-repeat;
     background-size: 100%;
     display: inline-block;
     transition: all .2s ease-in-out;
 }
-.githubIcon:hover {
-    background: url("../images/icons/newSocialMediaIcons/Github-colored.svg") no-repeat;
+.socialIcon:hover {
     background-size: 100%;
     transform: scale(1.1);
 }
 
-.githubIcon-dark-mode {
-    height: 20px;
-    width: 20px;
-    margin: 10px;
-    padding: 0px;
-    background: url("../images/icons/newSocialMediaIcons/Github-grayscale-colored-dark-mode.svg") no-repeat;
-    background-size: 100%;
-    display: inline-block;
-    transition: all .2s ease-in-out;
-}
-.githubIcon-dark-mode:hover {
-    transform: scale(1.1);
-}
-
-// Facebook Social Icon onHover Toggle 
-.linkedinIcon {
-    height: 20px;
-    width: 20px;
-    margin: 10px;
-    padding: 0;
-    background: url("../images/icons/newSocialMediaIcons/LinkedIn-grayscale-colored.svg") no-repeat;
-    background-size: 100%;
-    display: inline-block;
-    transition: all .2s ease-in-out;
-}
-.linkedinIcon:hover {
-    background: url("../images/icons/newSocialMediaIcons/LinkedIn-colored.svg") no-repeat;
-    background-size: 100%;
-    transform: scale(1.1);
-}
-
-.linkedinIcon-dark-mode {
-    height: 20px;
-    width: 20px;
-    margin: 10px;
-    padding: 0;
-    background: url("../images/icons/newSocialMediaIcons/LinkedIn-grayscale-dark-mode-colored.svg") no-repeat;
-    background-size: 100%;
-    display: inline-block;
-    transition: all .2s ease-in-out;
-}
-.linkedinIcon-dark-mode:hover {
-    background: url("../images/icons/newSocialMediaIcons/LinkedIn-colored.svg") no-repeat;
-    background-size: 100%;
-    transform: scale(1.1);
-}
-
-.mediumIcon {
-    height: 20px;
-    width: 20px;
-    margin: 10px;
-    padding: 0;
-    background: url("../images/icons/socialMediaIcons/medium-grayscale-dark-mode.svg") no-repeat;
-    background-size: 100%;
-    display: inline-block;
-    transition: all .2s ease-in-out;
-}
-
-.mediumIcon:hover {
-    transform: scale(1.1);
-}
-
-.mediumIcon-dark-mode {
-    height: 20px;
-    width: 20px;
-    margin: 10px;
-    padding: 0;
-    background: url("../images/icons/socialMediaIcons/medium-grayscale-dark-mode.svg") no-repeat;
-    background-size: 100%;
-    display: inline-block;
-    transition: all .2s ease-in-out;
-}
-.mediumIcon-dark-mode:hover {
-    transform: scale(1.1);
-}
-
-//////////////////////////////////////////////////////////////////////////////////////////////// 
-.youtubeIcon {
-    height: 20px;
-    width: 20px;
-    margin: 10px;
-    padding: 0;
-    background: url("../images/icons/newSocialMediaIcons/Youtube-grayscale-colored.svg") no-repeat;
-    background-size: 100%;
-    display: inline-block;
-    transition: all .2s ease-in-out;
-}
-
-.youtubeIcon:hover {
-    background: url("../images/icons/newSocialMediaIcons/Youtube-colored.svg") no-repeat;
-    background-size: 100%;
-    transform: scale(1.1);
-}
-
-.youtubeIcon-dark-mode {
-    height: 20px;
-    width: 20px;
-    margin: 10px;
-    padding: 0;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    background: url("../images/icons/newSocialMediaIcons/Youtube-grayscale-colored-dark-mode.svg") no-repeat;
-    background-size: 100%;
-    display: inline-block;
-    transition: all .2s ease-in-out;
-}
-.youtubeIcon-dark-mode:hover {
-    background: url("../images/icons/newSocialMediaIcons/Youtube-colored.svg") no-repeat;
-    background-size: 100%;
-    transform: scale(1.1);
-}
 ////////////////////////////////////////////////////////////////////////////////////////////////
 .spotifyIcon {
     height: 20px;
     width: 20px;
     margin: 10px;
     padding: 0;
-    background: url("../images/icons/newSocialMediaIcons/Spotify-grayscale-colored.svg") no-repeat;
     background-size: 100%;
     display: inline-block;
     transition: all .2s ease-in-out;
 }
 
 .spotifyIcon:hover {
-    background: url("../images/icons/newSocialMediaIcons/Spotify-colored.svg") no-repeat;
     background-size: 100%;
     transform: scale(1.1);
 }
 
-.spotifyIcon-dark-mode {
-    height: 20px;
-    width: 20px;
-    margin: 10px;
-    padding: 0;
-    background: url("../images/icons/newSocialMediaIcons/Spotify-grayscale-dark-mode.svg") no-repeat;
-    background-size: 100%;
-    display: inline-block;
-    transition: all .2s ease-in-out;
-}
 .spotifyIcon-dark-mode:hover {
-    background: url("../images/icons/newSocialMediaIcons/Spotify-colored.svg") no-repeat;
     background-size: 100%;
     transform: scale(1.1);
 }

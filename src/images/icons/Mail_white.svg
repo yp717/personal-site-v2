@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Mail_white</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Mail_white" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Mail" fill="#FFFFFF" fill-rule="nonzero">
+            <path d="M24,48 C10.745166,48 0,37.254834 0,24 C0,10.745166 10.745166,0 24,0 C37.254834,0 48,10.745166 48,24 C48,37.254834 37.254834,48 24,48 Z M24.3344,22.653024 C26.29952,22.653024 35.8544,17.28 35.8544,17.28 L35.86976,16.32 C35.86976,15.26016 35.0096,14.4 33.94688,14.4 L14.72192,14.4 C13.66016,14.4 12.8,15.26016 12.8,16.32 L12.8,17.17536 C12.8,17.17536 22.45952,22.653024 24.3344,22.653024 Z M24.3344,25.293024 C22.45952,25.293024 12.8144,20.16 12.81536,20.16 L12.8,31.68 C12.8,32.73984 13.66112,33.6 14.72192,33.6 L33.94688,33.6 C35.0096,33.6 35.86976,32.73984 35.86976,31.68 L35.8544,20.16 C35.8544,20.16 26.38976,25.293024 24.3344,25.293024 Z" id="Combined-Shape"></path>
+        </g>
+    </g>
+</svg>
