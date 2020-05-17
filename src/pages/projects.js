@@ -19,8 +19,8 @@ const ProjectsPage = ({ data }) => {
                 </div>
             </div>    
                 {posts.map(post => (
-                    <Link to={post.node.fields.slug} className="margin-0 padding-0">
-                        <div key={post.node.id} className={`container__row content-card card-link padding-0`} style={{width: '90%'}}>
+                    
+                        <div key={post.node.id} className={`container__row content-card padding-0`} style={{width: '90%'}}>
                             <div className="container__col-sm-12 container__col-lg-4">
                                 <Img
                                     fluid={post.node.frontmatter.thumbnail.childImageSharp.fluid}
@@ -39,9 +39,11 @@ const ProjectsPage = ({ data }) => {
                                     ) : null}
                                     {/* There needs to be a sass class here to correctly set the body text formatting */}
                                     <p className="is-background-blue-text" >{post.node.excerpt}</p>
-                            </div> 
+                                    <Link to={post.node.fields.slug} className="margin-0 padding-0">
+                                        <p className="is-background-blue-text readmore-link" >Read more about it -></p>
+                                    </Link>
+                            </div>
                         </div>   
-                    </Link>     
                 ))}
         </div>
         {/* <BuyMeCoffeeCard/> */}

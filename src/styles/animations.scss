@@ -40,10 +40,19 @@
     visibility: visible;
 }
 
+.readmore-link{
+    margin-left: 5px;
+    transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+}
+.readmore-link:hover{
+    transform: scale(1.02);
+    color: #1EB6FF;
+    // box-shadow: 0 0 20px 0 rgba(0,0,0,0.04), 0 20px 31px 0 rgba(0,0,0,0.16);
+}
+
 .card-link{
     transition: opacity 0.2s ease-out, transform 0.2s ease-out;
 }
 .card-link:hover{
-    transform: scale(1.05);
-    box-shadow: 0 0 20px 0 rgba(0,0,0,0.04), 0 20px 31px 0 rgba(0,0,0,0.16);
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.04), 0 20px 31px 0 rgba(235, 42, 42, 0.16);
 }

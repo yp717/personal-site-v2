@@ -1,6 +1,6 @@
 ---
 path: /projects/personal-website-v2
-title: COVID Machine Learning for EPiC IMPOC at the Centre for BioInspired Technology
+title: COVID Machine Learning integration in EPiC IMPOC
 date: 2020-04-27
 thumbnail: "./thumbnail.png"
 tags: ['portfolio', 'blog', 'cute']
