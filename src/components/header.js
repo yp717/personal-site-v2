@@ -14,7 +14,7 @@ export default ({ siteTitle, menuLinks }) => {
       <div className="innerContainer" >
         <div className="margin-l-5 position-left">
           <Link to="/">
-          <h2 className="name-text is-background-blue-text">{siteTitle}</h2>
+          <h2 className="name-text is-background-blue-text">Yannis Panagis</h2>
           </Link>
         </div>
         {/* Full Explanded Navbar - display:None when too small */}

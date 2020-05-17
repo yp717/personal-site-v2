@@ -31,9 +31,9 @@ const ProjectsPage = ({ data }) => {
                                 <h2 style={{fontSize: '25px'}}className="is-background-blue-text">{post.node.frontmatter.title}</h2>
                                     <p className="is-background-blue-text">{post.node.frontmatter.date}</p>
                                     {post.node.frontmatter.tags ? (
-                                        <div>
+                                        <div className="margin-t-b-2">
                                             {post.node.frontmatter.tags.map(tag => (
-                                                <Link className="post-tags margin-r-1" to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                                                <Link className="post-tags margin-l-r-1" to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
                                             ))}
                                         </div>    
                                     ) : null}

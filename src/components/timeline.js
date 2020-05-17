@@ -9,6 +9,7 @@ const TimelineComponent = () => {
             key="001"
             dateText="10/2017 – Present"
             dateInnerStyle={{ background: '#F64755', color: '#FFFFFF' }}
+            dateStyle={{ background: 'transparent' }}
             bodyContainerStyle={{
             background: '#F64755',
             padding: '20px',
@@ -24,6 +25,7 @@ const TimelineComponent = () => {
             key="002"
             dateText="06/2018 – 08/2018"
             dateInnerStyle={{ background: '#F64755', color: '#FFFFFF' }}
+            dateStyle={{ background: 'transparent' }}
             bodyContainerStyle={{
             background: '#F64755',
             padding: '20px',
@@ -39,6 +41,7 @@ const TimelineComponent = () => {
             key="003"
             dateText="06/2018 – 08/2018"
             dateInnerStyle={{ background: '#F64755', color: '#FFFFFF' }}
+            dateStyle={{ background: 'transparent' }}
             bodyContainerStyle={{
             background: '#F64755',
             padding: '20px',
