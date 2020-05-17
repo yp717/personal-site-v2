@@ -37,6 +37,7 @@
     "react-emoji-render": "^1.2.4",
     "react-helmet": "^6.0.0",
     "react-html-parser": "^2.0.2",
+    "react-rotating-text": "^1.4.1",
     "react-smooth-collapse": "^2.1.0",
     "sass": "^1.26.5",
     "use-dark-mode": "^2.3.1",

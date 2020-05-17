@@ -21,7 +21,7 @@ const ProjectsPage = ({ data }) => {
                 {posts.map(post => (
                     
                         <div key={post.node.id} className={`container__row content-card padding-0`} style={{width: '90%'}}>
-                            <div className="container__col-sm-12 container__col-lg-4">
+                            <div className="container__col-sm-12 container__col-lg-5">
                                 <Img
                                     fluid={post.node.frontmatter.thumbnail.childImageSharp.fluid}
                                     style={{ maxHeight: 250 }}
@@ -33,7 +33,7 @@ const ProjectsPage = ({ data }) => {
                                     {post.node.frontmatter.tags ? (
                                         <div className="margin-t-b-2">
                                             {post.node.frontmatter.tags.map(tag => (
-                                                <Link className="post-tags margin-l-r-1" to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                                                <Link className="post-tags margin-r-2" to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
                                             ))}
                                         </div>    
                                     ) : null}
