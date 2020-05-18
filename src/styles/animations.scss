@@ -81,6 +81,8 @@
     background: transparent;  
     background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
     width: 100%;
+    margin: 0;
+    bottom: 0;
 }
 
 .circles{
@@ -93,7 +95,7 @@
 }
 
 .circles li{
-    position: absolute;
+    position: relative;
     display: block;
     list-style: none;
     width: 20px;

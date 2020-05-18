@@ -12,7 +12,6 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import Footer from "./footer"
 import "../styles/global.scss";
-// import Sidebar from "../components/sidebar";
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -28,7 +27,6 @@ const Layout = ({ children }) => {
       }
     }
   `)
-
   return (
     <>
       {/* <Helmet>
