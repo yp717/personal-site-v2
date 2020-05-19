@@ -8,12 +8,13 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-
+import useDarkMode from "use-dark-mode"
 import Header from "./header"
 import Footer from "./footer"
 import "../styles/global.scss";
 
 const Layout = ({ children }) => {
+  const darkMode = useDarkMode(false) //defaults to false 
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -38,7 +39,7 @@ const Layout = ({ children }) => {
         {/* <div className="burger-navbar"> 
           <Sidebar/>
         </div> */}
-        <div id="content-wrap">
+        <div id="content-wrap" className="is-very-light-grey-bg">
           <main>{children}</main>
         </div>
         <Footer/>
