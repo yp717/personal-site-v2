@@ -101,6 +101,11 @@ $map-grid-props: (
     left: 0px;
 }
 
+.position-right {
+    margin-left: auto;
+    margin-right: 5%;
+}
+
 #page-container {
     display: flex;
     flex-direction: column;
@@ -111,10 +116,10 @@ $map-grid-props: (
     flex-grow: 1;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; 
 }
-  
-  #footer {
+
+#footer {
     width: 100%;
     height: 80px;            /* Footer height */
-  }
+}

@@ -13,18 +13,18 @@ export default props => {
             type="button"
             aria-label="light mode"
             onClick={darkMode.disable}
-            className="darkModeToggleButton"
+            className="sunIcon"
           >
-            <img className="sunIcon" src={SunIcon}/>
+            <Emoji text="☀️"/>
           </button>
         ) : (
           <button
             type="button"
             aria-label="dark mode"
-            onClick={darkMode.enable} 
-            className="darkModeToggleButton"
+            onClick={darkMode.enable}
+            className="moonIcon"
           >
-            <img className="moonIcon" src={MoonIcon}/>
+            <Emoji text="🌙"/>
           </button>
         )}
       </>
