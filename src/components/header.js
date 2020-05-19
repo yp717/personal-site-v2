@@ -61,7 +61,7 @@ export default ({ siteTitle, menuLinks }) => {
 
     <div className="container__col-xs-12 pad-0">
     <SmoothCollapse expanded={menuOpen} className="">
-      <div className={`${ menuOpen ? "nav-open-list" : "nav-closed-list"}`}>
+      <div className={`${ menuOpen ? "nav-open-list" : "nav-closed-list"}`} ref={wrapperRef}>
         {menuLinks.map(link => (
           <div className="container__col-sm-12 burger-navlinks">
           <Link 
