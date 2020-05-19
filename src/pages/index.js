@@ -32,8 +32,8 @@ const IndexPage = () => (
               </p>         
               <h1 className="is-background-blue-text margin-t-b-0" style={{ fontSize: '2.8em' }}>Yannis Panagis</h1>
               <h2 className="hero-tagline-text is-background-blue-text text-align-center">
-                {/* <ReactRotatingText items={['Engineer.', 'Designer.', 'Developer.', 'Student.', 'Engineer. Designer. Developer. Student.']} style={{animationIterationCount: 1}} />  */}
-                Engineer. Designer. Developer. Student.
+                <ReactRotatingText items={['Engineer.', 'Designer.', 'Developer.', 'Student.', 'Engineer. Designer. Developer. Student.']} style={{animationIterationCount: 1}} /> 
+                {/* Engineer. Designer. Developer. Student. */}
                 </h2>
             </div>
           {/* </div> */}
