@@ -4,23 +4,13 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import LegoYannisFront from '../images/LEGOs/lego-yannis-front.svg';
 import ReactRotatingText from 'react-rotating-text';
-import { whitesmoke } from "color-name";
 
-// import SocialLinks from "../components/socialLinks";
 const IndexPage = () => (  
   <>
   <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />     
   <Layout style={{zIndex: '99'}}>
     <div className="container">
       <div className="container__col-sm-12 text-align-center">
-          {/* <div className="area">
-          <ul class="circles">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul> */}
           <div style={{zIndex: '99'}}>
             <img 
               src={LegoYannisFront} 
