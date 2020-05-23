@@ -1,6 +1,6 @@
 import { Link } from "gatsby"
 // import PropTypes from "prop-types"
-import React, { useState } from "react"
+import React, { useRef, useState, useEffect } from "react"
 // import Sidebar from "../components/sidebar";
 // import DarkModeToggle from "../components/darkModeToggle";
 // import SmoothCollapse from "react-smooth-collapse"
@@ -8,12 +8,41 @@ import useDarkMode from "use-dark-mode"
 import NavDarkModeToggle from "../components/navDarkModeToggle";
 import DarkModeAnim from "../animations/DarkModeToggleAnim";
 
+function useOutsideAlerter(ref, fn) {
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (ref.current && !ref.current.contains(event.target)) {
+        fn(false)
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside)
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside)
+    }
+  }, [ref, fn])
+}
+
 export default ({ menuLinks }) => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const wrapperRef = useRef(null)
+  useOutsideAlerter(wrapperRef, setMenuOpen)
   const darkMode = useDarkMode(false) //defaults to false 
+  
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      if (menuOpen) {
+        setMenuOpen(false)
+      }
+    })
+  })
+
+  const delay = (fn) => {
+    setTimeout(() => fn(), 300)
+  }
+
   return(
     <>
-    <nav className="heightOffset navbar is-white-bg">
+    <nav className="heightOffset navbar is-white-bg" style={{ zIndex: 100 }} ref={wrapperRef}>
       <div className="innerContainer" >
         <div className="margin-l-5 position-left">
           <Link to="/">
@@ -50,6 +79,15 @@ export default ({ menuLinks }) => {
             }`}
           />
         </div>
+        <button 
+          onClick={() => {
+            delay(darkMode.value ? darkMode.disable : darkMode.enable)
+          }}
+          className="burger-navbar"
+          style={{marginRight: '25px'}}
+        >
+          <DarkModeAnim/>
+        </button>
       </div>
     </nav>
     <div className={`${
@@ -68,9 +106,6 @@ export default ({ menuLinks }) => {
         </Link>
         </div>
       ))}
-      <div className="container__col-sm-12 burger-navlinks">
-        <NavDarkModeToggle/>
-      </div>
     </div>
     </>
   );
