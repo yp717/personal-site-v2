@@ -8,19 +8,18 @@
 }
 
 .post-tags { 
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 4px;
     padding-left: 12px;
     padding-right: 12px;
     margin-top: 3px;
     margin-bottom: 3px;
-    color: white;
-    background-color: #2CA4A4;
+    color: #1EB6FF;
     transition: all .2s ease-in-out;
 }
 
 .post-tags:hover {
-    background-color: darken(#2CA4A4, 10%);
+    color: #3CF0B9;
 }
 // .card-heading{
 // }

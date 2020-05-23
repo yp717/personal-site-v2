@@ -24,10 +24,18 @@ export default props => {
                     { 
                         darkMode.value ?
                         (
-                            <img className="socialIcon" src={GithubIconWhite}/>
+                            <img 
+                                className="socialIcon" 
+                                aria-label="github icon" 
+                                alt="github icon"
+                                src={GithubIconWhite}/>
                         ) :
                         (
-                            <img className="socialIcon" src={GithubIcon}/>
+                            <img 
+                                className="socialIcon" 
+                                aria-label="github" 
+                                alt="github icon"
+                                src={GithubIcon}/>
                         )
                     }
                 </a>
@@ -35,10 +43,18 @@ export default props => {
                     {
                         darkMode.value ?
                         (
-                            <img className="socialIcon" src={LinkedInIconWhite}/>
+                            <img 
+                                className="socialIcon" 
+                                aria-label="linkedin" 
+                                alt="linkedin icon"
+                                src={LinkedInIconWhite}/>
                         ) :
                         (
-                            <img className="socialIcon" src={LinkedInIcon}/>
+                            <img 
+                                className="socialIcon" 
+                                aria-label="linkedin" 
+                                alt="linkedin icon"
+                                src={LinkedInIcon}/>
                         )
                     } 
                 </a>
@@ -46,10 +62,18 @@ export default props => {
                     {
                         darkMode.value ? 
                         (
-                            <img className="socialIcon" src={SpotifyIconWhite}/>
+                            <img 
+                                className="socialIcon" 
+                                aria-label="spotify" 
+                                alt="spotify icon"
+                                src={SpotifyIconWhite}/>
                         ) :
                         (
-                            <img className="socialIcon" src={SpotifyIcon}/>
+                            <img 
+                                className="socialIcon" 
+                                aria-label="spotify" 
+                                alt="spotify icon"
+                                src={SpotifyIcon}/>
                         )
                     }
                 </a>
@@ -57,10 +81,18 @@ export default props => {
                     {
                         darkMode.value ?
                         (
-                            <img className="socialIcon" src={MailIconWhite}/>
+                            <img 
+                                className="socialIcon" 
+                                aria-label="mail" 
+                                alt="mail icon"
+                                src={MailIconWhite}/>
                         ) :
                         (
-                            <img className="socialIcon" src={MailIcon}/>
+                            <img 
+                                className="socialIcon" 
+                                aria-label="mail" 
+                                alt="mail icon"
+                                src={MailIcon}/>
                         )
                     }
                 </a>

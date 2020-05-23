@@ -3,9 +3,10 @@ import { graphql, Link } from 'gatsby';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 // import ProjectCard from '../components/cards/projectCard';
-import Img from 'gatsby-image';
+// import Img from 'gatsby-image';
 import { kebabCase } from 'lodash';
 // import BuyMeCoffeeCard from '../components/cards/buyMeCoffeeCard';
+// import ReadMoreButton from '../components/ReadMoreButton';
 
 const ProjectsPage = ({ data }) => {
     const posts = data.allMarkdownRemark.edges;
@@ -21,27 +22,31 @@ const ProjectsPage = ({ data }) => {
                 {posts.map(post => (
                     
                         <div key={post.node.id} className={`container__row content-card padding-0`} style={{width: '90%'}}>
-                            <div className="container__col-sm-12 container__col-lg-5">
+                            {/* <div className="container__col-sm-12 container__col-lg-5">
                                 <Img
                                     fluid={post.node.frontmatter.thumbnail.childImageSharp.fluid}
                                     style={{ maxHeight: 250 }}
                                 />
-                            </div> 
-                            <div className="container__col-sm-12 container__col-lg-6" style={{ padding: '2%'}}>
-                                <h2 style={{fontSize: '25px'}}className="is-background-blue-text">{post.node.frontmatter.title}</h2>
+                            </div>  */}
+                            <div className="container__col-sm-12 is-deep-sky-blue-border" style={{ padding: '2%', borderRadius: '4px', width: '100%'}}>
+                            <Link to={post.node.fields.slug} className="margin-0 padding-0">
+                                <h2 
+                                    style={{fontSize: '25px'}} 
+                                    className="is-background-blue-text"
+                                >
+                                    {post.node.frontmatter.title}
+                                </h2>
+                            </Link>
                                     <p className="is-background-blue-text">{post.node.frontmatter.date}</p>
                                     {post.node.frontmatter.tags ? (
                                         <div className="margin-t-b-2">
                                             {post.node.frontmatter.tags.map(tag => (
-                                                <Link className="post-tags margin-r-2" to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                                                <Link className="post-tags margin-r-2" to={`/tags/${kebabCase(tag)}/`}>
+                                                    {tag}
+                                                </Link>
                                             ))}
                                         </div>    
                                     ) : null}
-                                    {/* There needs to be a sass class here to correctly set the body text formatting */}
-                                    <p className="is-background-blue-text" >{post.node.excerpt}</p>
-                                    <Link to={post.node.fields.slug} className="margin-0 padding-0">
-                                        <p className="is-background-blue-text readmore-link" >Read more about it -></p>
-                                    </Link>
                             </div>
                         </div>   
                 ))}
@@ -62,7 +67,7 @@ export const projectsQuery = graphql`
       edges {
         node {
             id
-            excerpt(pruneLength: 250)
+            excerpt(pruneLength: 150)
             fields {
                 slug
             }

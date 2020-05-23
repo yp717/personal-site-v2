@@ -15,7 +15,7 @@ const BlogPost = ({ data }) => {
             <h1 className="is-background-blue-text">{frontmatter.title}</h1>
             <span className="is-background-blue-text">{frontmatter.date}</span>
             {/* is there a way to do this without dangerously setting inner HTML */}
-            <div className="article">
+            <div className="article is-background-blue-text">
               {ReactHtmlParser(html)}
             </div>
           </div>

@@ -8,13 +8,11 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import useDarkMode from "use-dark-mode"
 import Header from "./header"
 import Footer from "./footer"
 import "../styles/global.scss";
 
 const Layout = ({ children }) => {
-  const darkMode = useDarkMode(false) //defaults to false 
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {

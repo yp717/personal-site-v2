@@ -62,9 +62,9 @@ $nav-height: 80px;
 .burger-navbar {
     position: absolute;
     right: 5%;
-    // @media (min-width: 1334px) {
-    //     display:none;
-    // }
+    @media (min-width: 1334px) {
+        display:none;
+    }
 }
 
 .nav-open-list{

@@ -6,7 +6,7 @@ $color-palette:
 ("background-blue", #17171D, #FFFFFF),
 ("footer-blue", #17171D, #17171D),
 ("black",#000000, #000000),
-("pumpkin-orange",rgb(252, 105, 100), rgb(252, 105, 100)),
+("pumpkin-orange", #FC6964, #FC6964),
 ("java-green", #2CA4A4, #2CA4A4),
 ("regal-blue", #182848, #182848),
 ("supernova-yellow", #FCB233, #FCB233),
@@ -18,6 +18,8 @@ $color-palette:
 ("very-dark-grey", #222222, #222222),
 ("green", rgb(53, 203, 115), rgb(53, 203, 115)),
 ("matisse-blue", #385473, #385473);
+
+// URGENT: Add a link color
 
 @each $color in $color-palette {
   .is-#{nth($color,1)}-bg{

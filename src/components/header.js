@@ -1,53 +1,47 @@
-/* eslint-disable jsx-a11y/heading-has-content*/
 import { Link } from "gatsby"
-import React, { useRef, useEffect, useState } from "react"
-import SmoothCollapse from "react-smooth-collapse"
-// import { NavLinkSmall } from "./Root/NavLink"
-import DarkModeToggle from "../components/darkModeToggle";
+// import PropTypes from "prop-types"
+import React, { useState } from "react"
+// import Sidebar from "../components/sidebar";
+// import DarkModeToggle from "../components/darkModeToggle";
+// import SmoothCollapse from "react-smooth-collapse"
+import useDarkMode from "use-dark-mode"
+import NavDarkModeToggle from "../components/navDarkModeToggle";
+import DarkModeAnim from "../animations/DarkModeToggleAnim";
 
-function useOutsideAlerter(ref, fn) {
-  useEffect(() => {
-    function handleClickOutside(event) {
-      if (ref.current && !ref.current.contains(event.target)) {
-        fn(false)
-      }
-    }
-    document.addEventListener("mousedown", handleClickOutside)
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside)
-    }
-  }, [ref, fn])
-}
-
-export default ({ siteTitle, menuLinks }) => {
-  const [menuOpen, setMenuOpen] = useState(false)
-  const wrapperRef = useRef(null)
-  useOutsideAlerter(wrapperRef, setMenuOpen)
-
-  useEffect(() => {
-    window.addEventListener("resize", () => {
-      if (menuOpen) {
-        setMenuOpen(false)
-      }
-    })
-  })
-
-  const delay = (fn) => {
-    setTimeout(() => fn(), 300)
-  }
-
-  return (
+export default ({ menuLinks }) => {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const darkMode = useDarkMode(false) //defaults to false 
+  return(
     <>
-    <nav className="heightOffset navbar is-white-bg" style={{ zIndex: 100 }} ref={wrapperRef}>
+    <nav className="heightOffset navbar is-white-bg">
       <div className="innerContainer" >
         <div className="margin-l-5 position-left">
           <Link to="/">
           <h2 className="name-text is-background-blue-text">Yannis Panagis</h2>
           </Link>
         </div>
-        
-        <div className="text-align-right position-right" style={{ display: 'flex', justifyContent: "right", alignItems: "center" }} >
-          <DarkModeToggle/>
+        {/* Full Explanded Navbar - display:None when too small */}
+        <div className="wideMenuParent">
+          {menuLinks.map(link => (
+            <Link 
+              className="navLinks expanded-navbar is-background-blue-text" 
+              to={link.link}  
+              activeClassName="active"
+            >
+              <span className="squiggle nav-link-text">
+                  {link.name}
+              </span>
+            </Link>
+          ))}
+          <button 
+            className="expanded-navbar" 
+            onClick={darkMode.value ? darkMode.disable : darkMode.enable}
+          >
+            {/* <DarkModeToggle/> */}
+            <DarkModeAnim/>
+          </button>
+        </div>
+        <div className="burger-navbar">
           <button 
             type="button" 
             onClick={() => setMenuOpen(!menuOpen)}
@@ -58,25 +52,25 @@ export default ({ siteTitle, menuLinks }) => {
         </div>
       </div>
     </nav>
-
-    <div className="container__col-xs-12 pad-0">
-    <SmoothCollapse expanded={menuOpen} className="">
-      <div className={`${ menuOpen ? "nav-open-list" : "nav-closed-list"}`} ref={wrapperRef}>
-        {menuLinks.map(link => (
-          <div className="container__col-sm-12 burger-navlinks">
-          <Link 
-            className="is-background-blue-text" 
-            to={link.link}  
-            activeClassName="active"
-          >              
-            <span className="squiggle nav-link-text">
-                {link.name}
-            </span>
-          </Link>
-          </div>
-        ))}
+    <div className={`${
+      menuOpen ? "nav-open-list" : "nav-closed-list"
+    }`}>
+      {menuLinks.map(link => (
+        <div className="container__col-sm-12 burger-navlinks">
+        <Link 
+          className="is-background-blue-text" 
+          to={link.link}  
+          activeClassName="active"
+        >              
+          <span className="squiggle nav-link-text">
+              {link.name}
+          </span>
+        </Link>
+        </div>
+      ))}
+      <div className="container__col-sm-12 burger-navlinks">
+        <NavDarkModeToggle/>
       </div>
-    </SmoothCollapse>
     </div>
     </>
   );
