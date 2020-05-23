@@ -7,6 +7,7 @@ $color-palette:
 ("footer-blue", #17171D, #17171D),
 ("black",#000000, #000000),
 ("pumpkin-orange", #FC6964, #FC6964),
+("code-block", rgb(200, 238, 255), rgb(200, 238, 255)),
 ("java-green", #2CA4A4, #2CA4A4),
 ("regal-blue", #182848, #182848),
 ("supernova-yellow", #FCB233, #FCB233),
@@ -44,12 +45,6 @@ $color-palette:
 
     .is-#{nth($color,1)}-bg {
       background-color: nth($color, 3);
-    }
-
-    .blog-text {
-      p {
-        color: white
-      }
     }
   }
 

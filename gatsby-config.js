@@ -5,15 +5,15 @@ module.exports = {
     author: `@gatsbyjs`,
     menuLinks:[
       {
-        name:'👨🏼‍💻About',
+        name:'About',
         link:'/about'
       },
       {
-        name:'🔧Projects',
+        name:'Projects',
         link:'/projects'
       },
       {
-        name:'🚀 Blog',
+        name: 'Blog',
         link:'/blog'
       }
     ]
@@ -36,7 +36,13 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
-          `gatsby-remark-prismjs`,
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              aliases:{sh: "bash", js:"javascript"},
+              showLineNumbers: true,
+            }
+          },
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
           {
@@ -106,11 +112,11 @@ module.exports = {
       resolve: `gatsby-plugin-scroll-indicator`,
       options: {
         // Configure color of the scroll indicator
-        color: '#FCB233',
+        color: '#1EB6FF',
         // Height of the scroll indicator
         height: '5px',
         // Configure paths where the scroll indicator will appear
-        // paths: ['/', '/blog/**'],
+        paths: ['/', '/blog/**'],
         // Configure the z-index of the indicator element
         zIndex: `9999`,
       },

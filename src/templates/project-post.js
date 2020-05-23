@@ -10,13 +10,13 @@ const ProjectPost = ({ data }) => {
   return (
     <Layout>
       <SEO title={frontmatter.title} keywords={frontmatter.tags}/>
-        <div className="container margin-b-5">
+        <div className="container margin-b-5 margin-t-5">
           <div className="container__row">
             <div className="container__col-sm-12">
-              <h1 className="is-background-blue-text">{frontmatter.title}</h1>
-              <span className="is-background-blue-text">{frontmatter.date}</span>
+              <h1 className="is-background-blue-text" style={{marginLeft: '5%', marginRight: '5%'}}>{frontmatter.title}</h1>
+              <span className="is-background-blue-text" style={{marginLeft: '5%', marginRight: '5%'}}>{frontmatter.date}</span>
               {/* is there a way to do this without dangerously setting inner HTML */}
-              <div className="blog-text">
+              <div className="blog-text" style={{marginLeft: '5%', marginRight: '5%'}}>
                 {ReactHtmlParser(html)}
               </div>
             </div>

@@ -24,6 +24,8 @@ h1 {
     font-size: 2em;
     font-weight: 900;
     margin: 0em;
+    margin-block-end: 0;
+    margin-block-start: 0; 
 }
   
 h2 {
@@ -118,7 +120,6 @@ span {
 }
 
 .blog-text{
-    p {
-        color: #17171D
-    }
+    @extend .is-background-blue-text;
+    font-family: Karla;
 }

@@ -9,38 +9,52 @@ published: true
 subtitle: subtitle could go here
 color: red-orange
 ---
-
+<p class="is-background-blue-text margin-t-b-2">
 This is how I added a scroll indicator on the top of my site that shows how far a user. One of the reasons I'm such a huge fan of Gatsby is its plugin eco-system. There are plenty of tutorials and ways to do this from scratch or using other libraries but today I'll run you through how I used the simplest new Gatsby plugin: Scroll Indicator. 
+</p>
 
-### So you've decided you want a scrolling progress indicator. Is it useful?
+## So you've decided you want a scrolling progress indicator. Is it useful?
 
 - Background on the usability theory behind scrolling progress indicators
 - mention that they are predominantly used on blogs
 
-
+<p class="is-background-blue-text margin-t-b-1">
 The entire process can be broken down into 4 steps and completed in a little under 10 minutes.
+</p>
 
-### Step 1: 
+## Step 1: 
 
+<p class="is-background-blue-text margin-t-b-1">
 Install all the necessary dependencies (in this case there's only one):
+</p>
 
-```
+```js
 npm install --save gatsby-plugin-scroll-indicator
 ```
 
+<p class="is-background-blue-text margin-t-b-1">
 For those of you less experienced with web development let's break this phrase down a litte. 
+</p>
 
+<p class="is-background-blue-text margin-t-b-1">
 The NPM at the start is an abbreviation for the Node Package Manager. [NPM](link) is a package manager for the [JavaScript](link) programming language. You will see a lot of other tutorials also talk about another package manager called [yarn](link) but for simplicity let's stick with NPM here. I've been using NPM for most of the projects I worked on because its simple, consistent and comes as the default package manager for the JavaScript runtime environment [Node.js](link).
+</p>
 
+<p class="is-background-blue-text margin-t-b-1">
 The next keyword `install` will install the package and any packages that it depends on. The `--save` bit just means that we want to save the package in our project, which means that next time we start everything up it'll all still be there. The last bit of the command is just the name of the package. Sounds simple enough right?
+</p>
 
-### Step 2: 
+## Step 2: 
 
+<p class="is-background-blue-text margin-t-b-1">
 The second step is to add the plugin to your `gatsby-config.js` file. BUT before you do there are two ways to do this. 
+</p>
 
+<p class="is-background-blue-text margin-t-b-1">
 The simple way is just to add the plugin the way it comes out of the box.
+</p>
 
-```
+```js
 ...
 // gatsby-conig.js
 plugins: [
@@ -49,11 +63,15 @@ plugins: [
 ...
 ```
 
+<p class="is-background-blue-text margin-t-b-1">
 This should give you a progress bar on every single page on your site in which you can scroll, with a height of 3px and the timeless Gatsby purple `#663391`.
+</p>
 
+<p class="is-background-blue-text margin-t-b-1">
 Chances are that you probably want to customise this a bit. Not to worry, it's actually quite simple to tweak the package to the needs of your site. All the values filled in below are the defaults directly from the github repository of the package.
+</p>
 
-```
+```js
 // gatsby-config.js
 plugins: [
     {
@@ -72,4 +90,6 @@ plugins: [
 ];
 ```
 
+<p class="is-background-blue-text margin-t-b-1">
 What I really like about this approach is that you don't have to make another React component and import it into every single file. The plugin, out of the box, does exactly what you want it to with minimal configuration which gets you up and running as fast as possible with your beautiful new plugin scroll indicator. 
+</p>

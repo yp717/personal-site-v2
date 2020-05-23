@@ -1,11 +1,7 @@
 import { Link } from "gatsby"
-// import PropTypes from "prop-types"
 import React, { useRef, useState, useEffect } from "react"
-// import Sidebar from "../components/sidebar";
-// import DarkModeToggle from "../components/darkModeToggle";
 // import SmoothCollapse from "react-smooth-collapse"
 import useDarkMode from "use-dark-mode"
-import NavDarkModeToggle from "../components/navDarkModeToggle";
 import DarkModeAnim from "../animations/DarkModeToggleAnim";
 
 function useOutsideAlerter(ref, fn) {
@@ -100,7 +96,7 @@ export default ({ menuLinks }) => {
           to={link.link}  
           activeClassName="active"
         >              
-          <span className="squiggle nav-link-text">
+          <span className="squiggle nav-link-text is-nav-color-text">
               {link.name}
           </span>
         </Link>
