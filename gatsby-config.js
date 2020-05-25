@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Yannis Panagis`,
+    siteUrl: 'https://www.yannispanagis.com',
     description: `Engineer. Designer. Developer. Student.`,
     author: `@gatsbyjs`,
     menuLinks:[
@@ -136,6 +137,9 @@ module.exports = {
           enterEventName: 'sal:in', // Enter event name
           exitEventName: 'sal:out', // Exit event name
       }
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
     },
     // Read more @ https://www.gatsbyjs.org/packages/gatsby-plugin-smoothscroll/
     // can be used for scroll to animations
