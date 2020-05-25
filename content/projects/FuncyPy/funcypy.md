@@ -3,14 +3,14 @@ path: /projects/project3
 title: FuncyPy
 date: 2020-03-30
 thumbnail: "./thumbnail.png"
-tags: ['f-sharp', 'F#', 'parser']
+tags: ['f-sharp', 'fsharp', 'parser']
 posttype: 'project'
 published: true
 description: Writing an interpreter for a tiny functional language
 color: regal-blue
 ---
 
-This project was quite different from anything I worked on before. We called it FuncyPy because the idea was to use a python-like syntax for a functional programming language. All parts of the interpreter were written in F#, and I specifically worked on the Parser.
+This project was quite different from anything I worked on before. We called it FuncyPy because the idea was to use a python-like syntax for a functional programming language. All parts of the interpreter were written in fsharp, and I specifically worked on the Parser.
 
 The project codebase was broken down into different modules following the structure below. All major functions are tested using automated test cases and property-based tests where possible.
 
@@ -23,7 +23,7 @@ Combinator Runtime System (Aimilios) | CombinatorRS: AstT -> ‘T | Evaluates ex
 
 The idea was to make the syntax as simple as possible, so, as an example, here's what a simple factorial function would look like:
 
-```F#
+```fsharp
 def factorial x:
     if (x==0):
         1 
@@ -50,7 +50,7 @@ The parser architecture I think is quite interesting. It's a demonstration of ho
 
 First, we define a Parser of type *T* as a **Type** that takes a list of Tokens as input and an *int* (a position within that Token list), and returns an **Option** which is a tuple of type (*T* and *int*).
 
-```F#
+```fsharp
 /// Single Case D.U. used as a wrapper to create a type
 type Parser<'T> = P of (list<Token> -> int -> Option<'T * int>)
 ```
@@ -60,28 +60,28 @@ type Parser<'T> = P of (list<Token> -> int -> Option<'T * int>)
 
 Next we start with the simplest building block *pToken* that takes in a token list and an index *i* and returns either some tuple of the token at *i* and the incrememnted *i* or None
 
-```F#
+```fsharp
 let pToken: Parser<Token> =
     P <| fun tokenList i ->
         if i < tokenList.Length then Some(tokenList.[i], i + 1) else None
 ```
 
-```F#
+```fsharp
 /// Helper function: Helps to run *aParser* easily
 let pRun (P aParser) tokL = aParser tokL 0
 ```
 
-```F#
+```fsharp
 /// Takes a *Token* and always returns Some tuple of *Token* and an unaltered index *i*
 let pReturn tok: Parser<'T> = P <| fun t i -> Some(tok, i)
 ```
 
-```F#
+```fsharp
 /// Takes unit and always returns None
 let pFail(): Parser<'T> = P <| fun t i -> None
 ```
 
-```F#
+```fsharp
 /// Following standard functional pattern, takes output of one parser and feeds it
 /// as input to another parser. This allows the chaining of parsers together.
 /// *ufunc* is a function that takes a type T and returns a parser of some type U
@@ -95,23 +95,23 @@ let pBind (ufunc: 'T -> Parser<'U>) (P tparser): Parser<'U> =
             uparser tokenList newI
 ```
 
-```F#
+```fsharp
 /// Combines two parsers together
 let pCombine (uParser: Parser<'U>) (tParser: Parser<'T>): Parser<'U> = tParser |> pBind (fun _ -> uParser)
 ```
 
-```F#
+```fsharp
 /// Applies two parsers and only keeps result of right parser
 let pKeepRight uParser tParser = pCombine uParser tParser
 ```
 
-```F#
+```fsharp
 /// Applies two parsers and only keeps result of left parser
 let pKeepLeft (uParser: Parser<'U>) (tParser: Parser<'T>): Parser<'T> =
     tParser |> pBind (fun tokenValue -> uParser |> pBind (fun _ -> pReturn tokenValue))
 ```
 
-```F#
+```fsharp
 /// Takes parser of a list of *tparser* and returns Some tuple of values
 /// and the index *i* at which the parser fails (if it does!)
 /// Can be used to parse sequences of tokens
@@ -125,9 +125,9 @@ let pMany (P t): Parser<'T list> =
         loop [] index // call the loop
 ```
 
-```F#
+```fsharp
 /// Similar to pMany but requires parsing success at least once
-/// Note: is left associative and loop is tail recursive so optimised for F#
+/// Note: is left associative and loop is tail recursive so optimised for fsharp
 let pChainlMin1 (term: Parser<'T>) (sep: Parser<'T -> 'T -> 'T>): Parser<'T> =
     let (P termfun) = term
     let (P sepfun) = sep
@@ -144,8 +144,8 @@ let pChainlMin1 (term: Parser<'T>) (sep: Parser<'T -> 'T -> 'T>): Parser<'T> =
         | Some(termValue, termI) -> loop termValue termI
 ```
 
-```F#
-/// F# Computation expression: makes it easier to build more complex parsers
+```fsharp
+/// fsharp Computation expression: makes it easier to build more complex parsers
 /// Standard FP pattern using earlier defined building block functions
 type ParserBuilder() =
     class
@@ -157,11 +157,11 @@ type ParserBuilder() =
     end
 ```
 
-```F#
+```fsharp
 let parser = ParserBuilder()
 ```
 
-```F#
+```fsharp
 /// Token -> bool; token type checking functions used for unpacking annotation noise
 let isLiteral (tok: Token) =
     match tok with
@@ -169,14 +169,14 @@ let isLiteral (tok: Token) =
     | _ -> false
 ```
 
-```F#
+```fsharp
 let isIdentifier (tok: Token) =
     match tok with
     | TokIdentifier _ -> true
     | _ -> false
 ```
 
-```F#
+```fsharp
 /// Parses token and if satisfy evaluates to true then returns token, else returns fail
 let pSatisfy (satisfy: Token -> bool): Parser<Token> =
     parser {
@@ -185,7 +185,7 @@ let pSatisfy (satisfy: Token -> bool): Parser<Token> =
     }
 ```
 
-```F#
+```fsharp
 /// Takes a mapping function that maps a type T to type U and a parser of T
 let pMap mappingFunc tParser =
     parser {
@@ -194,7 +194,7 @@ let pMap mappingFunc tParser =
     }
 ```
 
-```F#
+```fsharp
 /// Combines two parsers into a Parser of a Pair
 let pPair uParser tParser =
     parser {
@@ -204,7 +204,7 @@ let pPair uParser tParser =
     }
 ```
 
-```F#
+```fsharp
 /// Combines two parsers such that if uParser fails it tries tParser
 let pOrElse (P uParser) (P tParser) =
     P <| fun str pos ->
@@ -213,7 +213,7 @@ let pOrElse (P uParser) (P tParser) =
         | Some(tvalue, tpos) -> Some(tvalue, tpos)
 ```
 
-```F#
+```fsharp
 /// (AND combinator) applies first parser to source stream, then applies second to remaining part of stream
 let pAnd (P uParser) (P tParser) =
     P <| fun str pos ->
@@ -222,7 +222,7 @@ let pAnd (P uParser) (P tParser) =
         | _ -> None
 ```
 
-```F#
+```fsharp
 /// Define combinators: using static member to attach methods specifically to Parser type
 /// *member* keyword shows that this is a member function (i.e. a method)
 /// After this we can express parsers using combinators to make things even more readable!
@@ -236,7 +236,7 @@ type Parser<'T> with
     static member (<&>) (t, u) = pAnd u t
 ```
 
-```F#
+```fsharp
 /// Similar to pMany but requires 1 or more 'T instead of 0 or more
 let pManyMin1 tparser =
     parser {
@@ -246,7 +246,7 @@ let pManyMin1 tparser =
     }
 ```
 
-```F#
+```fsharp
 /// Skips a specific token given as input
 let pSkipToken tok =
     parser {
@@ -255,7 +255,7 @@ let pSkipToken tok =
     }
 ```
 
-```F#
+```fsharp
 /// Like pSkipToken but fails if the token is missing with specific error message
 let pSkipTokenOrFail tok = 
     parser {
@@ -264,7 +264,7 @@ let pSkipTokenOrFail tok =
     }    
 ```
 
-```F#
+```fsharp
 /// Get AST Type from Literal (Const), Identifier (Var)
 let pConst = pSatisfy isLiteral |>> fun tok ->
     match tok with
@@ -275,14 +275,14 @@ let pConst = pSatisfy isLiteral |>> fun tok ->
     | _ -> failwith "Expected Literal but did not receive literal"
 ```
 
-```F#
+```fsharp
 let pVariable = pSatisfy isIdentifier |>> fun tok ->
     match tok with
     | TokIdentifier str -> str |> Variable
     | _ -> failwith "Expected Identifier but did not receive Identifier"
 ```
 
-```F#
+```fsharp
 let ignoreList =
     let reducer list =
         match list with
@@ -291,7 +291,7 @@ let ignoreList =
     pMap reducer
 ```
 
-```F#
+```fsharp
 let combineLambdas args body =
     let rec addLambda lambdas definition =
         match lambdas with
@@ -301,7 +301,7 @@ let combineLambdas args body =
     addLambda (List.rev args) body
 ```
 
-```F#
+```fsharp
 let combineCalls left right =
     let rec addArgs l r =
         match r with
@@ -310,7 +310,7 @@ let combineCalls left right =
     addArgs left right
 ```
 
-```F#
+```fsharp
 let combinePairs left right =
     let rec addPair l r =
         match r with
@@ -319,7 +319,7 @@ let combinePairs left right =
     addPair left right
 ```
 
-```F#
+```fsharp
 /// Top Level AST expression parser
 let rec pAst: Parser<Ast> =
     let pFuncDefExp =
@@ -486,7 +486,7 @@ let rec pAst: Parser<Ast> =
      <|> pListFunctionApp <|> pBracketed <|> pFullPair <|> pHalfPair <|> pEmptyPair <|> pConst <|> pVariable)
 ```
 
-```F#
+```fsharp
 let parseCode =
     parser {
         let! res = pAst
@@ -495,7 +495,7 @@ let parseCode =
     }
 ```
 
-```F#
+```fsharp
 let Parse (input:list<Token>) = 
     let numTokens = input.Length
     let parseResult = pRun parseCode input
