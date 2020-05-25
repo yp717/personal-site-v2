@@ -68,7 +68,8 @@ export default ({ menuLinks }) => {
         </div>
         <div className="burger-navbar">
           <button 
-            type="button" 
+            type="button"
+            aria-label="burger menu icon" 
             onClick={() => setMenuOpen(!menuOpen)}
             className={`${
               menuOpen ? "nav-open-icon" : "nav-closed-icon"

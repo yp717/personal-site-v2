@@ -12,7 +12,7 @@ $color-palette:
 ("regal-blue", #182848, #182848),
 ("supernova-yellow", #FCB233, #FCB233),
 ("red-orange", #FD3D37, #FD3D37),
-("deep-sky-blue", #1EB6FF, #1EB6FF),
+("deep-sky-blue", #2CA4A4, #1EB6FF),
 ("greeting-blue", #2CA4A4, #44bce3),
 ("dark-grey", #4A4A4A, #4A4A4A),
 ("light-grey", #7E7E7E, #7E7E7E),
@@ -38,6 +38,10 @@ $color-palette:
     background-color: nth($color,2);
   }
 
+  .is-#{nth($color,1)}-border{
+    border: 3px solid nth($color,2);
+  }
+
   body.dark-mode {
     .is-#{nth($color,1)}-text {
       color: nth($color, 3);
@@ -46,9 +50,9 @@ $color-palette:
     .is-#{nth($color,1)}-bg {
       background-color: nth($color, 3);
     }
-  }
 
-  .is-#{nth($color,1)}-border{
-    border: 3px solid nth($color,2);
+    .is-#{nth($color,1)}-border{
+      border: 3px solid nth($color,3);
+    }
   }
 }

@@ -21,7 +21,7 @@ const ProjectsPage = ({ data }) => {
             </div>    
                 {posts.map(post => (
                         <div key={post.node.id} className={`container__row content-card padding-0`} style={{width: '90%'}}>
-                            <div className="container__col-sm-12 is-deep-sky-blue-border" style={{ padding: '2%', borderRadius: '4px', width: '100%'}}>
+                            <div className="container__col-sm-12 is-deep-sky-blue-border is-white-bg" style={{ padding: '2%', borderRadius: '4px', width: '100%'}}>
                             <Link to={post.node.fields.slug} className="margin-0 padding-0">
                                 <h2 
                                     style={{fontSize: '25px'}} 

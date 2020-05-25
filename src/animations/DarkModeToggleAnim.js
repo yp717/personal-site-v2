@@ -30,7 +30,8 @@ export default class DarkModeToggleAnim extends Component {
 
         return(
             <button
-                style={{width: '65px'}}   
+            className="grow"
+                style={{width: '65px', cursor: 'pointer'}}   
                 onClick={this.handleClick}
             >
             <Lottie

@@ -10,7 +10,7 @@ const BlogPost = ({ data }) => {
   return (
     <Layout>
       <SEO title={frontmatter.title} keywords={frontmatter.tags}/>
-        <div className="container margin-b-5 margin-t-5">
+        <div className="container margin-b-5 margin-t-10">
           <div className="container__row">
             <div className="container__col-sm-12">
               <h1 className="is-background-blue-text" style={{marginLeft: '5%', marginRight: '5%'}}>{frontmatter.title}</h1>

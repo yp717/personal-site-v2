@@ -3,10 +3,10 @@ path: /projects/personal-website-v2
 title: Personal-website V2
 date: 2020-05-30
 thumbnail: "./thumbnail.png"
-tags: ['portfolio', 'blog', 'cute']
+tags: ['portfolio', 'GatsbyJS', 'GraphQL', 'ReactJS']
 posttype: 'project'
 published: true
-description: subtitle could go here
+description: Revamping my personal site from a static one page site
 color: regal-blue
 ---
 

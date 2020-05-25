@@ -15,13 +15,14 @@ a {
 p {
     font-family: Karla;
     color: #17171D;
-    font-size: 1.1em;
+    // font-size: 1.1em;
+    font-size: 1.3em;
 }
   
 h1 {
     display: block;
     font-family: Karla;
-    font-size: 2em;
+    font-size: 3em;
     font-weight: 900;
     margin: 0em;
     margin-block-end: 0;
@@ -31,7 +32,7 @@ h1 {
 h2 {
     display: block;
     font-family: Karla;
-    font-size: 1.5em;
+    font-size: 1.8em;
     font-weight: bold;
     margin: 0em;
 }
@@ -122,4 +123,18 @@ span {
 .blog-text{
     @extend .is-background-blue-text;
     font-family: Karla;
+
+    p, h1, h2, h3, h4, h6, li, em {
+        @extend .is-background-blue-text;
+    }
+
+    p {    
+        margin-bottom: 8px;
+        margin-top: 8px;
+    }
+
+    h2 {
+        margin-bottom: 10px;
+        margin-top: 20px;
+    }
 }
