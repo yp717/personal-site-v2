@@ -45,8 +45,6 @@ The parser architecture I think is quite interesting. It's a demonstration of ho
 
 // Here we define a Parser of *T* as a **Type** that takes a *string* and an *int* (a position
 // within that string), and returns an **Option** which is a tuple of (*T* and *int*).
-// See also: https://fsharpforfunandprofit.com/posts/designing-with-types-single-case-dus/
-// 1+2
 
 First, we define a Parser of type *T* as a **Type** that takes a list of Tokens as input and an *int* (a position within that Token list), and returns an **Option** which is a tuple of type (*T* and *int*).
 

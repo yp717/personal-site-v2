@@ -4,7 +4,6 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import LegoYannisFront from '../images/LEGOs/lego-yannis-front.svg';
 import ReactRotatingText from 'react-rotating-text';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const IndexPage = () => (  
   <>
@@ -13,7 +12,7 @@ const IndexPage = () => (
     <div className="container">
       <div className="container__col-sm-12 text-align-center">
           <div style={{zIndex: '99'}}>
-            <LazyLoadImage 
+            <img 
               src={LegoYannisFront} 
               style={{height: '24vh'}} 
               alt="lego-icon-front"

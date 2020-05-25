@@ -68,6 +68,9 @@ $map-grid-props: (
 
 .container {
     max-width: $grid__bp-lg * 1px; // used to be md here - might have to change back
+
+    // use media queries to limit 100% on smaller screen sizes
+    // use larger when it actually reaches larger screen sizes
     margin: 0 auto;
     &--fluid {
         margin: 0;

@@ -1,15 +1,31 @@
 .gatsby-highlight {
   background-color: #1d1f21;
   border-radius: 0.3em;
-  margin: 0.5em 0;
+  margin: 0;
   padding: 1em;
   overflow: auto;
-  max-width: 90vw;
+  text-align: center;
+  // max-width: 70vw;
+  // width: 100%;
+
+  @media (min-width: 576px) {
+    max-width: 576px;
+    width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    max-width: 768px;
+    width: 768px;
+  }
+
+  @media (min-width: 992px) {
+    max-width: 992px;
+  }
 }
 
 .gatsby-highlight pre[class*="language-"].line-numbers {
   padding: 0;
   padding-left: 2.8em;
-  overflow: initial;
+  overflow: auto;
   word-wrap: normal;
 }
