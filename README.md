@@ -8,7 +8,7 @@
 </h1>
 
 You can see it live here: 
-[yannispanagis.com](yannispanagis.com)
+[yannispanagis.com](https://www.yannispanagis.com)
 
 This website was developed from the default boilerplate gatsby starter project, together with the main Gatsby configuration files. It has been built out and developed using JavaScript, ReactJS, GraphQL, and, of course, my favourite react framework GatsbyJS.
 
@@ -16,11 +16,11 @@ This website was developed from the default boilerplate gatsby starter project, 
   ⚠️Forking this Repo ️⚠️
 </h2>
 
-I've recently been asked by someone if they could use this code for their own website. The answer to that question is usually **yes, but with attribution**. I'm very happy for anyone to fork this repo but please give me the proper credit by linking back to my website [yannispanagis.com](yannispanagis.com). Thanks!
+I've recently been asked by someone if they could use this code for their own website. The answer to that question is usually **yes, but with attribution**. I'm very happy for anyone to fork this repo but please give me the proper credit by linking back to my website [yannispanagis.com](https://www.yannispanagis.com). Thanks!
 
 I want to keep this site open source because an open source community means we can all learn things better and faster from each other. I want to keep this site open source howevers it's always disheartening to find that someone has copied my work without giving me credit. 
 
-I put in a lot of effort into building and designing [yannispanagis.com](yannispanagis.com), and I am proud of it! All I ask of you is to not claim this effort as your own.
+I put in a lot of effort into building and designing [yannispanagis.com](https://www.yannispanagis.com), and I am proud of it! All I ask of you is to not claim this effort as your own.
 
 If you have any questions about the implementation of this site, please refer to the [Gatsby docs](https://www.gatsbyjs.org/docs/) or check out the site because I post some blogs, tutorials and explanations there sometimes.
 
