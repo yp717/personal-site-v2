@@ -1,0 +1,62 @@
+.flex {
+    display: flex;
+}
+  
+.align-horizontal {
+    align-items: center;
+}
+  
+.align-vertical {
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text-align-left {
+    text-align: left;
+}
+
+.text-align-right {
+    text-align: right;
+}
+  
+.text-align-center {
+    text-align: center;
+}
+  
+.lato {
+    font-family: Lato;
+}
+  
+.bold {
+    font-weight: bold;
+}
+  
+.line {
+    border-bottom: 7px solid;
+    max-width: 30%;
+}
+  
+.line-sm {
+    border-bottom: 3px solid;
+    max-width: 100%;
+    opacity: 0.5;
+}
+  
+  
+.grow {
+    transition: all 0.2s ease-in-out;
+  
+    &:hover {
+        transform: scale(1.02);
+    }
+}
+    
+.border-radius {
+    border-radius: 8px;
+}
+  
+.animated-expansion{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 3s ease-out;
+}

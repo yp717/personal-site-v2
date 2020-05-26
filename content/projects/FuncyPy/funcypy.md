@@ -23,8 +23,7 @@ Combinator Runtime System (Aimilios) | CombinatorRS: AstT -> ‘T | Evaluates ex
 
 The idea was to make the syntax as simple as possible, so, as an example, here's what a simple factorial function would look like:
 
-```fsharp
-def factorial x:
+```fsharp def factorial x:
     if (x==0):
         1 
     else:
@@ -43,8 +42,7 @@ I worked primarily on developing the parser and integrating the parser with the 
 
 The parser architecture I think is quite interesting. It's a demonstration of how powerful functional programming concepts can be because of how extendable the language is. You'll see as we go through this how we used smaller building blocks to compose progressively more complicated Parsers that we combined to parse the tokensied input into the abstract syntax tree (AST). 
 
-// Here we define a Parser of *T* as a **Type** that takes a *string* and an *int* (a position
-// within that string), and returns an **Option** which is a tuple of (*T* and *int*).
+Here we define a Parser of *T* as a **Type** that takes a *string* and an *int* (a position within that string), and returns an **Option** which is a tuple of (*T* and *int*).
 
 First, we define a Parser of type *T* as a **Type** that takes a list of Tokens as input and an *int* (a position within that Token list), and returns an **Option** which is a tuple of type (*T* and *int*).
 
@@ -192,7 +190,7 @@ let pMap mappingFunc tParser =
     }
 ```
 
-```fsharp
+```fsharp 
 /// Combines two parsers into a Parser of a Pair
 let pPair uParser tParser =
     parser {

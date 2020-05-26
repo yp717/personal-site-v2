@@ -19,7 +19,7 @@ const SoftwarePackageSkills = () => {
     ]
     return (
         <>
-            <div className="content-card is-supernova-yellow-border">
+            <div className="col-xs-12 content-card pad-5-l is-supernova-yellow-border is-white-bg">
                 <h2 className="is-background-blue-text">Software and App Skills</h2>
                 <table>
                     <tbody>

@@ -1,128 +1,210 @@
-$grid__bp-sm: 576;
-$grid__bp-md: 768;
-$grid__bp-lg: 992;
-$grid__bp-xl: 1200;
-$grid__cols: 12;
+@import './_flex';
 
-.text-align-center {
-    text-align: center;
+$flexboxgrid-grid-columns: 12 !default;
+$flexboxgrid-gutter-width: 1rem !default;
+$flexboxgrid-outer-margin: 2rem !default;
+$flexboxgrid-breakpoints: sm 48em 46rem,
+  md 62em 61rem,
+  lg 75em 71rem !default;
+$flexboxgrid-max-width: 1200px !default;
+
+$gutter-compensation: $flexboxgrid-gutter-width * 0.5 * -1;
+$half-gutter-width: $flexboxgrid-gutter-width * 0.5;
+
+.margin-0 {
+  margin: 0;
 }
 
-.text-align-right {
-    text-align: right;
+.wrapper {
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: $flexboxgrid-max-width;
 }
 
-.text-align-left {
-    text-align: left;
+.container-fluid {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $flexboxgrid-outer-margin;
+  padding-right: $flexboxgrid-outer-margin;
 }
 
-$map-grid-props: (
-    '': 0,
-    '-sm': $grid__bp-sm,
-    '-md': $grid__bp-md,
-    '-lg': $grid__bp-lg,
-    '-xl': $grid__bp-xl
-);
+.row {
+  @include flexbox();
+  @include flex(0, 1, auto);
+  @include flex-direction(row);
+  @include flex-wrap(wrap);
+  box-sizing: border-box;
+}
 
-@mixin create-mq($breakpoint, $min-or-max) {
-    @if($breakpoint == 0) {
-        @content;
+.row.reverse {
+  @include flex-direction(row-reverse);
+}
+
+.col.reverse {
+  @include flex-direction(column-reverse);
+}
+
+@mixin flexboxgrid-sass-col-common {
+  @include flex-grow(0);
+  @include flex-shrink(0);
+  box-sizing: border-box;
+  padding-left: $half-gutter-width;
+  padding-right: $half-gutter-width;
+}
+
+$name: xs;
+.col-#{$name} {
+  @include flexboxgrid-sass-col-common;
+  @include flex-basis(auto);
+}
+@for $i from 1 through $flexboxgrid-grid-columns {
+  .col-#{$name}-#{$i} {
+    @include flexboxgrid-sass-col-common;
+    @include flex-basis(100% / $flexboxgrid-grid-columns * $i);
+    max-width: 100% / $flexboxgrid-grid-columns * $i;
+  }
+}
+@for $i from 0 through $flexboxgrid-grid-columns {
+  .col-#{$name}-offset-#{$i} {
+    @include flexboxgrid-sass-col-common;
+    @if $i == 0 {
+      margin-left: 0;
     } @else {
-            @media screen and (#{$min-or-max}-width: $breakpoint *1px) {
-            @content;
+      margin-left: 100% / $flexboxgrid-grid-columns * $i;
+    }
+  }
+}
+.col-#{$name} {
+  @include flex-grow(1);
+  @include flex-basis(0);
+  max-width: 100%;
+}
+.start-#{$name} {
+  @include justify-content(flex-start);
+  text-align: left;
+}
+
+.center-#{$name} {
+  @include justify-content(center);
+  text-align: center;
+}
+
+.end-#{$name} {
+  @include justify-content(flex-end);
+  text-align: right;
+}
+
+.top-#{$name} {
+  @include align-items(flex-start);
+}
+
+.middle-#{$name} {
+  @include align-items(center);
+}
+
+.bottom-#{$name} {
+  @include align-items(flex-end);
+}
+
+.around-#{$name} {
+  @include justify-content(space-around);
+}
+
+.between-#{$name} {
+  @include justify-content(space-between);
+}
+
+.first-#{$name} {
+  order: -1;
+}
+
+.last-#{$name} {
+  order: 1;
+}
+
+
+@each $breakpoint in $flexboxgrid-breakpoints {
+  $name: nth($breakpoint, 1);
+  $size: nth($breakpoint, 2);
+  $container: nth($breakpoint, 3);
+  @media only screen and (min-width: $size) {
+    .container {
+      margin: auto;
+      max-width: $container;
+    }
+
+    .container-small {
+      margin: auto;
+      max-width: $container*1.2;
+    }
+
+    .col-#{$name} {
+      @include flexboxgrid-sass-col-common;
+      @include flex-basis(auto);
+    }
+    .col-#{$name} {
+      @include flex-grow(1);
+      @include flex-basis(0);
+      max-width: 100%;
+    }
+    .start-#{$name} {
+      @include justify-content(flex-start);
+      text-align: left;
+    }
+
+    .center-#{$name} {
+      @include justify-content(center);
+      text-align: center;
+    }
+
+    .end-#{$name} {
+      @include justify-content(flex-end);
+      text-align: right;
+    }
+
+    .top-#{$name} {
+      @include align-items(flex-start);
+    }
+
+    .middle-#{$name} {
+      @include align-items(center);
+    }
+
+    .bottom-#{$name} {
+      @include align-items(flex-end);
+    }
+
+    .around-#{$name} {
+      @include justify-content(space-around);
+    }
+
+    .between-#{$name} {
+      @include justify-content(space-between);
+    }
+
+    .first-#{$name} {
+      order: -1;
+    }
+
+    .last-#{$name} {
+      order: 1;
+    }
+    @for $i from 1 through $flexboxgrid-grid-columns {
+      .col-#{$name}-#{$i} {
+        @include flexboxgrid-sass-col-common;
+        @include flex-basis(100% / $flexboxgrid-grid-columns * $i);
+        max-width: 100% / $flexboxgrid-grid-columns * $i;
+      }
+    }
+    @for $i from 0 through $flexboxgrid-grid-columns {
+      .col-#{$name}-offset-#{$i} {
+        @include flexboxgrid-sass-col-common;
+        @if $i == 0 {
+          margin-left: 0;
+        } @else {
+          margin-left: 100% / $flexboxgrid-grid-columns * $i;
         }
+      }
     }
-}
-
-@mixin create-col-classes($modifier, $grid-cols, $breakpoint) {
-    @include create-mq($breakpoint, 'min') {
-        &__col#{$modifier}-offset-0 {
-        margin-left: 0;
-        }
-        @for $i from 1 through $grid-cols {
-            &__col#{$modifier}-#{$i} {
-                flex-basis: (100 / ($grid-cols / $i) ) * 1%;
-            }
-            &__col#{$modifier}-offset-#{$i} {
-                margin-left: (100 / ($grid-cols / $i) ) * 1%;
-            }
-        }
-    }
-}
-
-@each $modifier , $breakpoint in $map-grid-props {
-    @if($modifier == '') {
-        $modifier: '-xs';
-    }
-    @include create-mq($breakpoint - 1, 'max') {
-        .hidden#{$modifier}-down {
-        display: none !important;
-        }
-    }
-    @include create-mq($breakpoint, 'min') {
-        .hidden#{$modifier}-up {
-        display: none !important;
-        }
-    }
-}
-
-.container {
-    max-width: $grid__bp-lg * 1px; // used to be md here - might have to change back
-
-    // use media queries to limit 100% on smaller screen sizes
-    // use larger when it actually reaches larger screen sizes
-    margin: 0 auto;
-    &--fluid {
-        margin: 0;
-        max-width: 100%;
-    }
-    &__row {
-        display: flex;
-        flex-wrap: wrap;
-        width: 100%;
-    }
-    @each $modifier , $breakpoint in $map-grid-props {
-        @include create-col-classes($modifier, $grid__cols, $breakpoint);
-    }
-}
-
-.page-wrap {
-    min-height: 100vh;
-    /* equal to footer height */
-    margin-bottom: -80px;
-}
-  
-.footer {
-    text-align: center;
-    bottom: 0px; 
-    height: 80px;
-    width: 100vw;
-    position: relative;
-}
-
-.position-left {
-    left: 0px;
-}
-
-.position-right {
-    margin-left: auto;
-    margin-right: 5%;
-}
-
-#page-container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-  
-#content-wrap {
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#footer {
-    width: 100%;
-    height: 80px;            /* Footer height */
+  }
 }

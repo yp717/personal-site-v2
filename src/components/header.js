@@ -40,7 +40,7 @@ export default ({ menuLinks }) => {
     <>
     <nav className="heightOffset navbar is-white-bg" style={{ zIndex: 100 }} ref={wrapperRef}>
       <div className="innerContainer" >
-        <div className="margin-l-5 position-left">
+        <div className="position-left" style={{marginLeft: '5%'}}>
           <Link to="/">
           <h2 className="name-text is-background-blue-text">Yannis Panagis</h2>
           </Link>
@@ -52,6 +52,7 @@ export default ({ menuLinks }) => {
               className="navLinks expanded-navbar is-background-blue-text" 
               to={link.link}  
               activeClassName="active"
+              key={link.name}
             >
               <span className="squiggle nav-link-text">
                   {link.name}
@@ -91,7 +92,7 @@ export default ({ menuLinks }) => {
       menuOpen ? "nav-open-list" : "nav-closed-list"
     }`}>
       {menuLinks.map(link => (
-        <div className="container__col-sm-12 burger-navlinks">
+        <div className="container__col-sm-12 burger-navlinks" key={link.name}>
         <Link 
           className="is-background-blue-text" 
           to={link.link}  

@@ -10,12 +10,12 @@ import VolunteeringSection from "../components/pageSections/volunteeringSection"
 const AboutPage = () => (
     <Layout>
         <SEO title="About" keywords={[`gatsby`, `application`, `react`]} />  
-        <div className="container margin-t-5">
-            <div className="container__col-sm-12">
-                <h1 className="text-align-left is-background-blue-text margin-l-r-5">In <em>short</em></h1>
+        <div className="container row margin-10-t">
+            <div className="col-sm-12 pad-5-lr">
+                <h1 className="text-align-left is-background-blue-text">In <em>short</em></h1>
             </div>
-            <div className="container__col-xs-12">
-                <p className="text-align-left is-background-blue-text margin-l-r-5">
+            <div className="col-sm-12 pad-5-lr">
+                <p className="text-align-left is-background-blue-text">
                 I’m currently a third year MEng Electrical and Electornic Engineering student at Imperial College London <span role="img" aria-label="student graduate">👨🏼‍🎓</span>. I’m originally from Switzerland <span role="img" aria-label="swiss flag">🇨🇭</span>and currently live in London 🇬🇧.
                 <br/><br/>
                 The tools I use daily in my work are HTML, CSS/SASS, JavaScript, Python, Tensorflow, and Git, but I have some experience with Express, MATLAB, SciKit, F#, and SQL. My current goal is to strengthen my programming fundamentals, improve my web development (vanilla JavaScript and React in particular) and machine learning. I also want to continue to build more personal projects for fun and become more familiar with the different tools and technology across the frontend and the backend. Currently, I'm most excited about the JAMstack ecoysystem.
@@ -23,8 +23,8 @@ const AboutPage = () => (
                 When I'm not in front of a computer, I'm probably running or writing music. 
                 </p>
             </div>            
-            <div className="container__col-sm-12 margin-b-3">
-                <h1 className="text-align-left is-background-blue-text margin-l-r-5 padding-t-2">The <em>long</em> version</h1>
+            <div className="col-sm-12 pad-5-lr">
+                <h1 className="text-align-left is-background-blue-text">The <em>long</em> version</h1>
             </div>
         </div>
         
