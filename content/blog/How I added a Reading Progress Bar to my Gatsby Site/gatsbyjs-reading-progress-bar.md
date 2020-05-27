@@ -69,12 +69,12 @@ plugins: [
             color: '#663391', 
             // set the height of the scroll indicator
             height: '3px', 
-            // Set specific paths for pages where you want the scroll indicator using regex
+            // Set specific paths where you want the scroll indicator using regex
             paths: ['/', '/blog/**'],
             // Configure the z-index of the indicator element
             zIndex: `9999`,
         },
-    },
+    }, 
 ];
 ```
 

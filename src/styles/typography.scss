@@ -121,22 +121,3 @@ span {
 .timeline-heading-size {
     font-size: 1.5em;
 }
-
-.blog-text{
-    @extend .is-background-blue-text;
-    font-family: Karla;
-
-    p, h1, h2, h3, h4, h6, li, em {
-        @extend .is-background-blue-text;
-    }
-
-    p {    
-        margin-bottom: 8px;
-        margin-top: 8px;
-    }
-
-    h2 {
-        margin-bottom: 10px;
-        margin-top: 20px;
-    }
-}

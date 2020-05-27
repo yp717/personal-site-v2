@@ -9,5 +9,5 @@
 // require('prismjs/themes/prism.css');
 // require("prism-themes/themes/prism-atom-dark.css");
 // require("prismjs/plugins/line-numbers/prism-line-numbers.css");
-require(`katex/dist/katex.min.css`);
+// require(`katex/dist/katex.min.css`);
 require("./src/styles/global.scss");
