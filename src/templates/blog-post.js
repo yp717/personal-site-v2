@@ -10,17 +10,17 @@ const BlogPost = ({ data }) => {
   return (
     <Layout>
       <SEO title={frontmatter.title} keywords={frontmatter.tags}/>
-        <div className="container margin-b-5 margin-t-10">
-          <div className="container__row">
-            <div className="container__col-sm-12">
-              <h1 className="is-background-blue-text">{frontmatter.title}</h1>
-              <span className="is-background-blue-text">{frontmatter.date}</span>
-              <div className="blog-text" style={{width: '90%'}}>
-                {ReactHtmlParser(html)}
-              </div>
-            </div>
-          </div>
+      <div className="container row margin-10-t margin-10-b">
+        <div className="col-xs-12 pad-5-lr margin-5-b">          
+          <h1 className="text-align-left is-background-blue-text">{frontmatter.title}</h1>
+        </div>      
+        <div className="col-xs-12 pad-5-lr">
+          <span className="is-background-blue-text">{frontmatter.date}</span>
         </div>
+        <div className="col-xs-12 pad-5-lr blog-text">
+          {ReactHtmlParser(html)}
+        </div>
+      </div>
       </Layout>
   );
 };

@@ -8,18 +8,17 @@ const ProjectPost = ({ data }) => {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
   return (
-    <Layout>
+    <Layout> 
       <SEO title={frontmatter.title} keywords={frontmatter.tags}/>
-        <div className="container margin-b-5 margin-t-5">
-          <div className="container__row">
-            <div className="container__col-sm-12">
-              <h1 className="is-background-blue-text" style={{marginLeft: '5%', marginRight: '5%'}}>{frontmatter.title}</h1>
-              <span className="is-background-blue-text" style={{marginLeft: '5%', marginRight: '5%'}}>{frontmatter.date}</span>
-              {/* is there a way to do this without dangerously setting inner HTML */}
-              <div className="blog-text" style={{marginLeft: '5%', marginRight: '5%'}}>
-                {ReactHtmlParser(html)}
-              </div>
-            </div>
+        <div className="container row margin-10-t margin-10-b">
+          <div className="col-xs-12 pad-5-lr margin-2-b">          
+            <h1 className="is-background-blue-text">{frontmatter.title}</h1>
+          </div>  
+          <div className="col-xs-12 pad-5-lr margin-2-b">
+            <span className="is-background-blue-text">{frontmatter.date}</span>
+          </div>
+          <div className="col-xs-12 pad-5-lr blog-text">
+            {ReactHtmlParser(html)}
           </div>
         </div>
     </Layout>

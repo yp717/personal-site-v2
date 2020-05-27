@@ -22,12 +22,7 @@ const ProjectsPage = ({ data }) => {
                 {posts.map(post => (
                     <div key={post.node.id} className="content-card is-white-bg margin-5-b is-deep-sky-blue-border">
                         <Link to={post.node.fields.slug} className="margin-0">
-                            <h2 
-                                style={{fontSize: '25px'}} 
-                                className="post-tags"
-                            >
-                                {post.node.frontmatter.title}
-                            </h2>
+                            <h2 className="post-tags">{post.node.frontmatter.title}</h2>
                         </Link>
                         <p className="is-background-blue-text" style={{paddingLeft: '12px'}}>{post.node.frontmatter.date}</p>
                         {post.node.frontmatter.tags ? (

@@ -12,10 +12,8 @@ const BlogPage = ({ data }) => {
         <Layout>
             <SEO title="Blog" keywords={[`gatsby`, `blog`, `instructional`, `tutorials`, `software engineering`, `coding`]}/>
             <div className="container row margin-10-t">
-                <div className="container__row">
-                    <div className="col-xs-12 pad-5-lr margin-5-b">
-                        <h1 className="text-align-left is-background-blue-text">Blog</h1>
-                    </div>
+                <div className="col-xs-12 pad-5-lr margin-5-b">
+                    <h1 className="text-align-left is-background-blue-text">Blog</h1>
                 </div>
                 <div className="col-xs-12 pad-5-lr">
                     {posts.map(post => (
