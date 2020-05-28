@@ -16,6 +16,8 @@ Try navigating a website as someone who is visually impaired: Turn on voice comm
 
 Auxilium is a chrome extension that we built at IC Hack 20, Imperial College London's annual 24 hour hackathon. We tried to focus on building a proof of concept for different areas of accessibility design. 
 
+![logo](/logo.png)
+
 ## Designing for the masses isn't enough.
 
 Dyslexia is a learning disability that involves difficulty reading due to problems identifying speech sounds and learning how they relate to letters and words (decoding). 🔠 Reading is a pretty fundamental part of the web experience. Designers, engineers, and developers should consider this fraction of their user-base in their design process. Unfortunately, this typically not the case. 😞 It is difficult to justify ignoring 15% of your userbase.
@@ -24,6 +26,14 @@ Dyslexia is a learning disability that involves difficulty reading due to proble
 
 Visual elements need to be considered carefully to ensure that accessibility is not lost for users with visual impairments. Such users often access websites with special high-contrast web browsers, screen readers, or by replacing CSS styles with a set of rules designed to remove visual barriers. The chrome extension we developed allows developers to visualise how the sites would look to people with different types of color blindness.
 
-## Vision for Learning disabilities.
+![simulation](/simulation.png)
+
+You had either the option to upload a screenshot of a page to the website we built alongside the extension or to visualise examples of the different types of color blindness with a slider over the screenshots.
+
+## Vision for Learning difficulties.
 
 Many people find it difficult to read large blocks of text or extract key data points from passages. The final feature we included in our chome extension was a simple css swapping feature that swaps out the colours on alternate lines of text with more accessible colors. The idea is that this would make it easier to stay focused on your browsing session by helping you distinguish the lines on any longer page of text.
+
+## Takeaways
+
+None of the other projects have a section like this but I thought it might be interesting to discuss what I learned from this hack beyond working with chrome extensions and user experience design. This hackathon wasn't as productive or as much of a success as the last one and I think the reason is because we got carried away with the details and lost site of what we were trying to build. I had convinced myself I wanted to use react inside the chrome extension and so spend many hours trying to get this to work, fixing the issue by editing the webpack compiler which is a terrible idea (especially at a hackathon). Nonetheless, I had a great weekend at the hack and it was still a fun experience to work with my team and learn about chrome extensions, and designing the web more inclusively. If you're interested in knowing more about how we built this hackathon project, check out the repository on [github](https://github.com/SamuelTrew/Auxilium)!

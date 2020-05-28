@@ -69,13 +69,13 @@ plugins: [
             color: '#663391', 
             // set the height of the scroll indicator
             height: '3px', 
-            // Set specific paths for pages where you want the scroll indicator using regex
+            // Set specific paths where you want the scroll indicator using regex
             paths: ['/', '/blog/**'],
             // Configure the z-index of the indicator element
             zIndex: `9999`,
         },
-    },
-];
+    }, 
+]
 ```
 
 What I really like about this approach is that you don't have to make another React component and import it into every single file. The plugin, out of the box, does exactly what you want it to with minimal configuration which gets you up and running as fast as possible with your beautiful new plugin scroll indicator.

@@ -1,32 +1,32 @@
-$sizes: 12;
+// $sizes: 12;
 
-@mixin margin-classes {
-  @for $i from 0 through $sizes {
-     $margin: $i * 1%;
-    /* margin #{$margin} */
-    .margin-#{$i}  {margin: $margin;}
-    .margin-l-#{$i} {margin-left: $margin;}
-    .margin-r-#{$i} {margin-right: $margin;}
-    .margin-t-#{$i} {margin-top: $margin;}
-    .margin-b-#{$i} {margin-bottom: $margin;}
-    .margin-l-r-#{$i} {margin-left: $margin; margin-right: $margin;}
-    .margin-t-b-#{$i} {margin-top: $margin; margin-bottom: $margin;}
-  }
-}
-@include margin-classes;
+// @mixin margin-classes {
+//   @for $i from 0 through $sizes {
+//      $margin: $i * 1%;
+//     /* margin #{$margin} */
+//     .margin-#{$i}  {margin: $margin;}
+//     .margin-l-#{$i} {margin-left: $margin;}
+//     .margin-r-#{$i} {margin-right: $margin;}
+//     .margin-t-#{$i} {margin-top: $margin;}
+//     .margin-b-#{$i} {margin-bottom: $margin;}
+//     .margin-l-r-#{$i} {margin-left: $margin; margin-right: $margin;}
+//     .margin-t-b-#{$i} {margin-top: $margin; margin-bottom: $margin;}
+//   }
+// }
+// @include margin-classes;
 
-@mixin padding-classes {
-  @for $i from 0 through $sizes {
-    $padding: $i * 1%;
-    /* padding #{$padding} */
-    .padding-#{$i} {padding: $padding;}
-    .padding-l-#{$i} {padding-left: $padding;}
-    .padding-r-#{$i} {padding-right: $padding;}
-    .padding-t-#{$i} {padding-top: $padding;}
-    .padding-b-#{$i} {padding-bottom: $padding;}
-    .padding-l-r-#{$i} {padding-left: $padding; padding-right: $padding;}
-    .padding-t-b-#{$i} {padding-top: $padding; padding-bottom: $padding;}
-  }
-}
-@include padding-classes;
+// @mixin padding-classes {
+//   @for $i from 0 through $sizes {
+//     $padding: $i * 1%;
+//     /* padding #{$padding} */
+//     .padding-#{$i} {padding: $padding;}
+//     .padding-l-#{$i} {padding-left: $padding;}
+//     .padding-r-#{$i} {padding-right: $padding;}
+//     .padding-t-#{$i} {padding-top: $padding;}
+//     .padding-b-#{$i} {padding-bottom: $padding;}
+//     .padding-l-r-#{$i} {padding-left: $padding; padding-right: $padding;}
+//     .padding-t-b-#{$i} {padding-top: $padding; padding-bottom: $padding;}
+//   }
+// }
+// @include padding-classes;
 

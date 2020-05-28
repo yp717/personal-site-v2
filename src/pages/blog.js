@@ -11,36 +11,34 @@ const BlogPage = ({ data }) => {
     return (
         <Layout>
             <SEO title="Blog" keywords={[`gatsby`, `blog`, `instructional`, `tutorials`, `software engineering`, `coding`]}/>
-            <div className="container margin-b-5 margin-t-5">
-                <div className="container__row">
-                    <div className="container__col-sm-12" style={{width: '90%'}}>
-                        <h1 className="is-background-blue-text margin-l-r-5">Blog</h1>
-                    </div>
-                </div>    
+            <div className="container row margin-10-t">
+                <div className="col-xs-12 pad-5-lr margin-5-b">
+                    <h1 className="text-align-left is-background-blue-text">Blog</h1>
+                </div>
+                <div className="col-xs-12 pad-5-lr">
                     {posts.map(post => (
-                        <div key={post.node.id} className={`container__row content-card padding-0`} style={{width: '90%'}}>
-                        <div className="container__col-sm-12 is-deep-sky-blue-border" style={{ padding: '2%', borderRadius: '4px', width: '100%'}}>
-                        <Link to={post.node.fields.slug} className="margin-0 padding-0">
-                            <h2 
-                                style={{fontSize: '25px'}} 
-                                className="post-tags"
-                            >
-                                {post.node.frontmatter.title}
-                            </h2>
-                        </Link>
-                                <p className="is-background-blue-text" style={{paddingLeft: '12px'}}>{post.node.frontmatter.date}</p>
-                                {post.node.frontmatter.tags ? (
-                                    <div className="margin-t-b-2">
-                                        {post.node.frontmatter.tags.map(tag => (
-                                            <Link className="post-tags margin-r-2" to={`/tags/${kebabCase(tag)}/`}>
-                                                {tag}
-                                            </Link>
-                                        ))}
-                                    </div>    
-                                ) : null}
-                        </div>
-                    </div>       
+                        <div key={post.node.id} className="content-card is-white-bg margin-5-b is-deep-sky-blue-border">
+                            <Link to={post.node.fields.slug} className="margin-0 padding-0">
+                                <h2 
+                                    style={{fontSize: '25px'}} 
+                                    className="post-tags"
+                                >
+                                    {post.node.frontmatter.title}
+                                </h2>
+                            </Link>
+                            <p className="is-background-blue-text" style={{paddingLeft: '12px'}}>{post.node.frontmatter.date}</p>
+                            {post.node.frontmatter.tags ? (
+                                <div className="margin-t-b-2">
+                                    {post.node.frontmatter.tags.map(tag => (
+                                        <Link className="post-tags margin-r-2" to={`/tags/${kebabCase(tag)}/`}>
+                                            {tag}
+                                        </Link>
+                                    ))}
+                                </div>    
+                            ) : null}
+                        </div>       
                     ))}
+                </div>    
             </div>
             {/* <BuyMeCoffeeCard/> */}
         </Layout>

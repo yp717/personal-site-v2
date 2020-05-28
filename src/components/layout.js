@@ -37,9 +37,9 @@ const Layout = ({ children }) => {
         {/* <div className="burger-navbar"> 
           <Sidebar/>
         </div> */}
-        <div id="content-wrap" className="is-very-light-grey-bg">
-          <main>{children}</main>
-        </div>
+        {/* <div id="content-wrap" > */}
+          <main className="is-very-light-grey-bg">{children}</main>
+        {/* </div> */}
         <Footer/>
       </div>
     </>
