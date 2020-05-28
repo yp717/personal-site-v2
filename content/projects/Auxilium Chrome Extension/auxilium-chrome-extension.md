@@ -27,3 +27,7 @@ Visual elements need to be considered carefully to ensure that accessibility is 
 ## Vision for Learning disabilities.
 
 Many people find it difficult to read large blocks of text or extract key data points from passages. The final feature we included in our chome extension was a simple css swapping feature that swaps out the colours on alternate lines of text with more accessible colors. The idea is that this would make it easier to stay focused on your browsing session by helping you distinguish the lines on any longer page of text.
+
+## Takeaways
+
+None of the other projects have a section like this but I thought it might be interesting to discuss what I learned from this hack beyond working with chrome extensions and user experience design. This hackathon wasn't as productive or as much of a success as the last one and I think the reason is because we got carried away with the details and lost site of what we were trying to build. I had convinced myself I wanted to use react inside the chrome extension and so spend many hours trying to get this to work, fixing the issue by editing the webpack compiler which is a terrible idea (especially at a hackathon). Nonetheless, I had a great weekend at the hack and it was still a fun experience to work with my team and learn about chrome extensions, and designing the web more inclusively. If you're interested in knowing more about how we built this hackathon project, check out the repository on [github](https://github.com/SamuelTrew/Auxilium)!
