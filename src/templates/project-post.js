@@ -17,7 +17,7 @@ const ProjectPost = ({ data }) => {
           <div className="col-xs-12 pad-5-lr margin-2-b">
             <span className="is-background-blue-text">{frontmatter.date}</span>
           </div>
-          <div className="col-xs-12 pad-5-lr blog-text">
+          <div className="col-xs-12 pad-5-lr article">
             {ReactHtmlParser(html)}
           </div>
         </div>

@@ -23,7 +23,8 @@ Combinator Runtime System (Aimilios) | CombinatorRS: AstT -> ‘T | Evaluates ex
 
 The idea was to make the syntax as simple as possible, so, as an example, here's what a simple factorial function would look like:
 
-```fsharp def factorial x:
+```fsharp 
+def factorial x:
     if (x==0):
         1 
     else:
@@ -37,6 +38,7 @@ y + (factorial 4)
 
 I worked primarily on developing the parser and integrating the parser with the lexer and combinator runtime. This meant writing lexer, parser, and end-to-end unit tests to find edge cases and improve the code's ability to handle errors.
 
+*DISCLAIMER: This post requires quite a bit of familiarity with F# and may not make much sense without some practice or background with the language. If you have any questions feel free to get in touch and we can discuss any parts of the code or talk about potential improvements. (I wrote this as an exercise to learn about F# and parsing so there are definetely a lot of improvements to be made).*
 
 ## How I built the Parser
 
@@ -51,9 +53,6 @@ First, we define a Parser of type *T* as a **Type** that takes a list of Tokens 
 type Parser<'T> = P of (list<Token> -> int -> Option<'T * int>)
 ```
 
-// Basic building block *pToken*: Takes in token list and index *i*; Returns either Some 
-/// tuple of the token at *i* and the incremented *i* or None
-
 Next we start with the simplest building block *pToken* that takes in a token list and an index *i* and returns either some tuple of the token at *i* and the incrememnted *i* or None
 
 ```fsharp
@@ -62,18 +61,21 @@ let pToken: Parser<Token> =
         if i < tokenList.Length then Some(tokenList.[i], i + 1) else None
 ```
 
+At this stage it would also be useful to have a helper function to run our parsers easily so we know they're behaving as we expect. *pRun* does exactly that and is a helper function that "helps" run *aParser* easily.
+
 ```fsharp
-/// Helper function: Helps to run *aParser* easily
 let pRun (P aParser) tokL = aParser tokL 0
 ```
 
+Before we move on, let's define one more helper function that takes in a *Token* and simply always returns Some tuple of *Token* and an unaltered index *i*. Some of you will have an idea but to most I imagine it may not make much sense why we need these just yet. It didn't make much sense to me either and I didn't do this in the most logical order when I wrote the code because it was quite hacky intially 🤓.
+
 ```fsharp
-/// Takes a *Token* and always returns Some tuple of *Token* and an unaltered index *i*
 let pReturn tok: Parser<'T> = P <| fun t i -> Some(tok, i)
 ```
 
+One more and then I promise we're done with these helpers. This helper is almost exactly the same as the last one. From the name, *pFail*, you can probably guess that it takes in a unit and always returns None.
+
 ```fsharp
-/// Takes unit and always returns None
 let pFail(): Parser<'T> = P <| fun t i -> None
 ```
 

@@ -75,7 +75,7 @@ plugins: [
             zIndex: `9999`,
         },
     }, 
-];
+]
 ```
 
 What I really like about this approach is that you don't have to make another React component and import it into every single file. The plugin, out of the box, does exactly what you want it to with minimal configuration which gets you up and running as fast as possible with your beautiful new plugin scroll indicator.

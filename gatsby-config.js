@@ -41,7 +41,7 @@ module.exports = {
             resolve: `gatsby-remark-prismjs`,
             options: {
               aliases:{sh: "bash", js:"javascript", fsharp:"fsharp"},
-              showLineNumbers: true,
+              showLineNumbers: false,
             }
           },
           `gatsby-remark-copy-linked-files`,

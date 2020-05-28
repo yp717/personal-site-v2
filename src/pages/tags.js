@@ -12,27 +12,23 @@ const TagsPage = ({ data }) => {
     return (
         <Layout>
             <SEO title="Tags" keywords={[`gatsby`, `application`, `react`, `portfolio`]}/>
-            <div className="container">
-                <div className="container__row">
-                    <div className="container__col-sm-12 margin-l-r-5">
-                        <h1>Tags</h1>
-                        <p>The following is a list of all the tags on this site. Maybe now you can find what you were looking for <span role="img" aria-label="winking">😉</span></p>
-                    </div>
+            <div className="container row margin-10-t margin-10-b">
+                <div className="col-xs-12 pad-5-lr margin-5-b">                             
+                    <h1 className="is-background-blue-text">Tags</h1>
+                    <p className="is-background-blue-text">The following is a list of all the tags on this site. Maybe now you can find what you were looking for <span role="img" aria-label="winking">😉</span></p>
                 </div>
-                <div className="container__row">
-                    <div className="container__col-sm-12 margin-l-r-5">
-                        <ul>
-                            {allTags.map(tag => (
-                                <li key={tag.fieldValue}>
-                                <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-                                    {tag.fieldValue} ({tag.totalCount})
-                                </Link>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
+                <div className="col-xs-12 pad-5-lr margin-5-b">          
+                    <ul>
+                        {allTags.map(tag => (
+                            <li className="tag-list" key={tag.fieldValue}>
+                            <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+                                <p className="link">{tag.fieldValue} ({tag.totalCount})</p>
+                            </Link>
+                            </li>
+                        ))}
+                    </ul>
                 </div>
-        </div>
+            </div>
         </Layout>
     );
 };

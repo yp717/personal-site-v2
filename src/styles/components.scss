@@ -11,13 +11,13 @@
     padding-right: 12px;
     margin-top: 3px;
     margin-bottom: 3px;
-    color: #17171D;
+    color: #2CA4A4;
     display: inline-block;
     transition: all .2s ease-in-out;
 }
 
 .post-tags:hover {
-    color: #2CA4A4;
+    color: darken(#2CA4A4, 5%);
 }
 
 body.dark-mode{
@@ -36,6 +36,35 @@ body.dark-mode{
     .post-tags:hover{
         color: #3CF0B9;
     }
+}
+
+.link { 
+    color: #2CA4A4;
+    transition: all .2s ease-in-out;
+}
+
+.link:hover {
+    color: darken(#2CA4A4, 5%);
+}
+
+.tag-list {
+    color: #2CA4A4;
+}
+
+body.dark-mode{
+    .link{
+        color: #1EB6FF;
+        transition: all .2s ease-in-out;
+    }
+
+    .tag-list {
+        color: #1EB6FF;
+    }
+
+    .link:hover{
+        color: #3CF0B9;
+    }
+
 }
 
 // .card-heading{

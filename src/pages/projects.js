@@ -14,7 +14,7 @@ const ProjectsPage = ({ data }) => {
     // is-deep-sky-blue-border
     <Layout>
         <SEO title="Projects" keywords={[`gatsby`, `application`, `react`, `portfolio`]}/>
-        <div className="container row margin-10-t">
+        <div className="container row margin-10-tb">
             <div className="col-xs-12 pad-5-lr margin-5-b">
                 <h1 className="text-align-left is-background-blue-text">Projects</h1>
             </div>

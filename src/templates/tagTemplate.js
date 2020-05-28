@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, graphql } from 'gatsby';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-import Img from 'gatsby-image';
+// import Img from 'gatsby-image';
 import { kebabCase } from 'lodash';
 
 const Tags = ({ pageContext, data }) => {
@@ -24,7 +24,7 @@ const Tags = ({ pageContext, data }) => {
               </div>
               <div className="col-xs-12 pad-5-lr margin-5-b">          
                 {edges.map(({ node }) => {
-                  const { title, date, tags, description, thumbnail } = node.frontmatter;
+                  const { title, date, tags } = node.frontmatter;
                   const { slug } = node.fields;
                   return (
                     <Link to={slug} className="margin-0 padding-0">
