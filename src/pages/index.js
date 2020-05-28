@@ -17,7 +17,7 @@ const IndexPage = () => (
               style={{height: '24vh', width: '100%'}} 
               alt="lego-icon-front"
             />
-              <p className="is-greeting-blue-text greeting-text text-align-center">
+              <p className="is-java-green-text greeting-text text-align-center">
                 Hi, my name is
               </p>         
               <h1 className="is-background-blue-text text-align-center" style={{ fontSize: '2.8em' }}>Yannis Panagis</h1>
