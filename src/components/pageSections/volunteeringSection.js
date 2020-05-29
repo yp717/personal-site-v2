@@ -5,7 +5,7 @@ const VolunteeringSection = () => {
     return (
         <>
             <div className="container padding-t-b-5 margin-10-b">
-                <h2 className="is-background-blue-text pad-5-lr">Volunteering<span role="img" aria-label="rocket">🚀</span></h2>
+                <h2 className="is-background-blue-text pad-5-lr  margin-5-t">Volunteering<span role="img" aria-label="rocket">🚀</span></h2>
                 <div className="row pad-5-lr pad-5-t">
                     {/* Academic Representative */}
                     <ContentCard 

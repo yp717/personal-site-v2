@@ -5,7 +5,7 @@ const AchievementsSection = () => {
     return (
         <>
             <div className="container">
-                <h2 className="is-background-blue-text pad-5-lr">Achievements<span role="img" aria-label="trophy">🏆</span></h2>
+                <h2 className="is-background-blue-text pad-5-lr margin-5-t">Achievements<span role="img" aria-label="trophy">🏆</span></h2>
                 <div className="row pad-5-lr pad-5-t">
                     {/* IC Hack winner */}
                     <ContentCard 
