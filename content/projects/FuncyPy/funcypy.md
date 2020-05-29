@@ -79,11 +79,9 @@ One more and then I promise we're done with these helpers. This helper is almost
 let pFail(): Parser<'T> = P <| fun t i -> None
 ```
 
+The next step is to start making parsers that combine other parsers in interesting ways. Following a standard functional pattern, this next parser takes the output of one parser and feeds it as an input to another parser. This is useful because it's how we're going to chain multiple parsers together. Here *ufunc* is a function that takes a type T and returns a parser of some type U and *tparser* is a parser of the same type U
+
 ```fsharp
-/// Following standard functional pattern, takes output of one parser and feeds it
-/// as input to another parser. This allows the chaining of parsers together.
-/// *ufunc* is a function that takes a type T and returns a parser of some type U
-/// *tparser* is a parser of the same type U
 let pBind (ufunc: 'T -> Parser<'U>) (P tparser): Parser<'U> =
     P <| fun tokenList i ->
         match tparser tokenList i with
@@ -93,26 +91,26 @@ let pBind (ufunc: 'T -> Parser<'U>) (P tparser): Parser<'U> =
             uparser tokenList newI
 ```
 
+This next parser essentially combines two parsers together. Which should be a little easier to visualize. I highly recommend if anyone is following through this that you actually try to play with and test these parsers as you go through this. It's not the most obvious thing to see, but the end result shows that when you combine these "building blocks", we can build a powerful, extendible, functional language.
+
 ```fsharp
-/// Combines two parsers together
 let pCombine (uParser: Parser<'U>) (tParser: Parser<'T>): Parser<'U> = tParser |> pBind (fun _ -> uParser)
 ```
 
-```fsharp
-/// Applies two parsers and only keeps result of right parser
-let pKeepRight uParser tParser = pCombine uParser tParser
-```
+Bear with me. It will all make sense in the end. The next two parsers apply two parsers in sequence but with one key difference. The first parser applies two parsers and only keeps the result of the right parser. Meanwhile the second parser applies two parsers and only keeps the result of the left parser.
 
 ```fsharp
-/// Applies two parsers and only keeps result of left parser
+let pKeepRight uParser tParser = pCombine uParser tParser
+
 let pKeepLeft (uParser: Parser<'U>) (tParser: Parser<'T>): Parser<'T> =
     tParser |> pBind (fun tokenValue -> uParser |> pBind (fun _ -> pReturn tokenValue))
 ```
 
+We're almost at the light at the end of the tunnel. We've looked at combining two parsers but if you think about the expressions that you find in programming language, often they have more than two parts.
+
+*pMany* is a parser that takes a list of *tparser* and returns Some tuple of values and the index *i* at which the parser fails (if it does!) This can be used to parse sequences of tokens and consume larger token streams.
+
 ```fsharp
-/// Takes parser of a list of *tparser* and returns Some tuple of values
-/// and the index *i* at which the parser fails (if it does!)
-/// Can be used to parse sequences of tokens
 let pMany (P t): Parser<'T list> =
     P <| fun tokL index ->
         // define tail recursive "loop"
@@ -123,9 +121,9 @@ let pMany (P t): Parser<'T list> =
         loop [] index // call the loop
 ```
 
+Some token sequences need at least one token to start, say, for example, an If statement. That's exactly why we need this next parser *pMany* which requires the parser to succeed at least ones. The inner loop inside this function is tail recursive and so is optimized for fsharp.
+
 ```fsharp
-/// Similar to pMany but requires parsing success at least once
-/// Note: is left associative and loop is tail recursive so optimised for fsharp
 let pChainlMin1 (term: Parser<'T>) (sep: Parser<'T -> 'T -> 'T>): Parser<'T> =
     let (P termfun) = term
     let (P sepfun) = sep
@@ -142,9 +140,9 @@ let pChainlMin1 (term: Parser<'T>) (sep: Parser<'T -> 'T -> 'T>): Parser<'T> =
         | Some(termValue, termI) -> loop termValue termI
 ```
 
+FSharp's Computation expressions are one of my favorite parts of the language. They make it really easy to build much more complex parsers, while using a standard functional programming pattern and making the functions we spend so long working through before really useful.
+
 ```fsharp
-/// fsharp Computation expression: makes it easier to build more complex parsers
-/// Standard FP pattern using earlier defined building block functions
 type ParserBuilder() =
     class
         member x.Bind(t, uf) = pBind uf t // Enables let!
@@ -153,29 +151,27 @@ type ParserBuilder() =
         member x.ReturnFrom p: Parser<'T> = p // Enables return!
         member x.Zero() = pReturn() // allows if x then expr with no else
     end
-```
 
-```fsharp
 let parser = ParserBuilder()
 ```
 
+The next couple of functions are just a bunch of simple type checking functions that we're going to have to use to unpack the annotation noise of the tokens. It would have been much more efficient not to pass a token list to the parser and instead deal with characters directly. However, there's also a benefit to splitting up the tokenizing and parsing work into different separate and identifiable modules. The names should be pretty intuitive. *isLiteral* simply checks the token type passed as input
+
 ```fsharp
-/// Token -> bool; token type checking functions used for unpacking annotation noise
 let isLiteral (tok: Token) =
     match tok with
     | TokLit _ -> true
     | _ -> false
-```
 
-```fsharp
 let isIdentifier (tok: Token) =
     match tok with
     | TokIdentifier _ -> true
     | _ -> false
 ```
 
+*pSatisfy* parses a token and if it satisfies the parser evaluates to true and returns the token, else it returns fail.
+
 ```fsharp
-/// Parses token and if satisfy evaluates to true then returns token, else returns fail
 let pSatisfy (satisfy: Token -> bool): Parser<Token> =
     parser {
         let! tok = pToken
@@ -183,8 +179,9 @@ let pSatisfy (satisfy: Token -> bool): Parser<Token> =
     }
 ```
 
+*pMap* also makes use of the power computation expression structure, just like *pSatisfy* and it takes mapping function that maps a type T to a type U and a parser of type T.
+
 ```fsharp
-/// Takes a mapping function that maps a type T to type U and a parser of T
 let pMap mappingFunc tParser =
     parser {
         let! tokenType = tParser
@@ -192,38 +189,40 @@ let pMap mappingFunc tParser =
     }
 ```
 
-```fsharp 
-/// Combines two parsers into a Parser of a Pair
+Following the same pattern, the next stages combine two parsers into a parser of a pair, combine two parsers such that if one parser fails, it tries another, and even an AND combinator that applies a first parser to the source stream and then applies the second parser to the remaining part of the stream. 
+
+```fsharp
 let pPair uParser tParser =
     parser {
         let! first = tParser
         let! second = uParser
         return first, second 
     }
-```
 
-```fsharp
-/// Combines two parsers such that if uParser fails it tries tParser
 let pOrElse (P uParser) (P tParser) =
     P <| fun str pos ->
         match tParser str pos with
         | None -> uParser str pos
         | Some(tvalue, tpos) -> Some(tvalue, tpos)
-```
 
-```fsharp
-/// (AND combinator) applies first parser to source stream, then applies second to remaining part of stream
 let pAnd (P uParser) (P tParser) =
     P <| fun str pos ->
         match tParser str pos with
         | Some(tvalue, tpos) -> uParser tvalue tpos
         | _ -> None
+
+/// Similar to pMany but requires 1 or more 'T instead of 0 or more
+let pManyMin1 tparser =
+    parser {
+        let! head = tparser
+        let! tail = pMany tparser
+        return head::tail
+    }
 ```
 
+At this stage, its time to define the combinators. I used a static member here to attach methods specifically to the Parser type. The *member* keyword shows that this is a member function (i.e. a method). After this stage, we can express parsers using parser combinators to make things even more readable!
+
 ```fsharp
-/// Define combinators: using static member to attach methods specifically to Parser type
-/// *member* keyword shows that this is a member function (i.e. a method)
-/// After this we can express parsers using combinators to make things even more readable!
 type Parser<'T> with
     static member (>>=) (t, uf) = pBind uf t
     static member (>>.) (t, u) = pKeepRight u t
@@ -234,24 +233,17 @@ type Parser<'T> with
     static member (<&>) (t, u) = pAnd u t
 ```
 
-```fsharp
-/// Similar to pMany but requires 1 or more 'T instead of 0 or more
-let pManyMin1 tparser =
-    parser {
-        let! head = tparser
-        let! tail = pMany tparser
-        return head::tail
-    }
-```
+Sometimes with specific constructs like if statements that we might want to have in our tiny functional language, we might want to skip some tokens - for example, the if key word in an if statement. *pSkipToken* skips a specific token given as input.
 
 ```fsharp
-/// Skips a specific token given as input
 let pSkipToken tok =
     parser {
         let! token = pToken
         if tok = token then return () else return! pFail()
     }
 ```
+
+
 
 ```fsharp
 /// Like pSkipToken but fails if the token is missing with specific error message
@@ -317,8 +309,9 @@ let combinePairs left right =
     addPair left right
 ```
 
+The entire language was run from one top level abstract syntax tree parser that parses a token stream given as input and returns the complete abstract syntax tree to be evaluated by the runtime.
+
 ```fsharp
-/// Top Level AST expression parser
 let rec pAst: Parser<Ast> =
     let pFuncDefExp =
         parser {
@@ -334,7 +327,7 @@ let rec pAst: Parser<Ast> =
             let definition = combineLambdas arguments body
             return FuncDefExp(name, definition, expr)
         }
-         
+
     let pBracketed =
         parser {
             do! pSkipToken (TokSpecOp LRB)
@@ -352,72 +345,7 @@ let rec pAst: Parser<Ast> =
             return Lambda(id, body)
         }
 
-    let pNextPair = 
-        parser {
-            do! pSkipToken (TokSpecOp COMMA) 
-            let! nextTerm = pAst
-            return nextTerm
-        }
-
-    // parse full pair
-    let pFullPair =
-        parser {
-            do! pSkipToken (TokSpecOp LSB)
-            let! leftArg = pAst
-            let! rightArg = pManyMin1 pNextPair
-            do! pSkipTokenOrFail (TokSpecOp RSB)
-            let list = combinePairs leftArg rightArg
-            return list
-        }
-
-    // parse single pair
-    let pHalfPair =
-        parser {
-            do! pSkipToken (TokSpecOp LSB)
-            let! arg = pAst
-            do! pSkipTokenOrFail (TokSpecOp RSB)
-            return DPair(arg, Null)
-        }
-
-    // parse empty pair
-    let pEmptyPair =
-        parser {
-            do! pSkipToken (TokSpecOp LSB)
-            do! pSkipToken (TokSpecOp RSB)
-            return DPair(Null, Null)
-        }
-
-    let pListFunctionApp = 
-        parser {
-            let pListOp opTok operator =
-                pSkipToken opTok |>> fun c -> BuiltInFunc operator
-            let pIsList = pListOp (TokBuiltInOp (ListF IsList)) (ListF IsList)
-            let pIsEmpty = pListOp (TokBuiltInOp (ListF IsEmpty)) (ListF IsEmpty)
-            let pHead = pListOp (TokBuiltInOp (ListF Head)) (ListF Head)
-            let pTail = pListOp (TokBuiltInOp (ListF Tail)) (ListF Tail)
-            let pImplode = pListOp (TokBuiltInOp (ListF ImplodeStr)) (ListF ImplodeStr)
-            let pExplode = pListOp (TokBuiltInOp (ListF ExplodeStr)) (ListF ExplodeStr)
-            
-            let! listOperator = pIsList <|> pIsEmpty <|> pHead <|> pTail <|> pImplode <|> pExplode  
-            let! listTerm = pConst <|> pVariable <|> pFullPair <|> pHalfPair <|> pEmptyPair <|> pBracketed
-            return DCall(listOperator, listTerm)
-        }
-
-    let pListAppend = 
-        parser {
-            do! pSkipToken (TokBuiltInOp (ListF Append))
-            let! listTerm = pVariable <|> pFullPair <|> pHalfPair <|> pEmptyPair <|> pBracketed
-            let! element = pConst <|> pVariable <|> pFullPair <|> pHalfPair <|> pEmptyPair <|> pBracketed
-            return DCall(DCall(BuiltInFunc (ListF Append), listTerm), element)
-        }
-    let pListInsert = 
-        parser {
-            do! pSkipToken (TokBuiltInOp (ListF Insert))
-            let! listTerm = pVariable <|> pFullPair <|> pHalfPair <|> pEmptyPair <|> pBracketed
-            let! element = pConst <|> pVariable <|> pFullPair <|> pHalfPair <|> pEmptyPair <|> pBracketed
-
-            return DCall(DCall(BuiltInFunc (ListF Insert), listTerm), element)
-        }
+    ...
 
     let pOperatorApp =
         parser {
@@ -479,30 +407,9 @@ let rec pAst: Parser<Ast> =
             let! right = pManyMin1 (pConst <|> pVariable <|> pFullPair <|> pHalfPair <|> pEmptyPair <|> pBracketed)
             return combineCalls left right
         }
-        
+
     (pFuncDefExp <|> pIfThenElse <|> pLambda <|> pCall <|> pVariableDef <|> pOperatorApp <|> pListAppend <|> pListInsert
      <|> pListFunctionApp <|> pBracketed <|> pFullPair <|> pHalfPair <|> pEmptyPair <|> pConst <|> pVariable)
 ```
 
-```fsharp
-let parseCode =
-    parser {
-        let! res = pAst
-        do! pMany (pSkipToken (TokWhitespace LineFeed)) |> ignoreList
-        return res
-    }
-```
-
-```fsharp
-let Parse (input:list<Token>) = 
-    let numTokens = input.Length
-    let parseResult = pRun parseCode input
-    match parseResult with
-        | Some(tree, index) ->
-            if index = numTokens then 
-                tree
-            else
-                failwithf "Failed Parse: Not all tokens parsed. Check bracket pairs. %A last parsed" input.[index-1]    
-        | None -> failwithf "Failed Parse: Check bracket pairs and Function Definitions"
-```
-![Kitten Three](/thumbnail.png)
+There's definitely a lot that could be improved about this design, from the error handling to the efficiency of some of the implementations, as well as some repetitiveness in the code. However, given that this was my first real exposure to functional programming, parsing and the functional paradigm, I really enjoyed writing this parser. F# has come with a lot of challenges, particularly the documentation, which I think is often quite frustrating and poor. However, its easy to use maps, computation expressions and parser combinators make it a versatile language that I enjoyed working with.
