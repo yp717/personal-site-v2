@@ -3,7 +3,7 @@ path: /projects/project3
 title: FuncyPy
 date: 2020-03-30
 thumbnail: "./thumbnail.png"
-tags: ['f-sharp', 'fsharp', 'parser']
+tags: ['fsharp', 'fsharp', 'parser', 'computation expressions']
 posttype: 'project'
 published: true
 description: Writing an interpreter for a tiny functional language

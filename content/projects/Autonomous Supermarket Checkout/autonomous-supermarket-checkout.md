@@ -15,11 +15,11 @@ During my second year at Imperial, we were tasked with a second year project to 
 ![Kitten Three](/team-photo.png)
 
 We began planning this project in early October, with the vision to improve people’s daily lives.
-Six months later, we have developed an end-to-end instant, reliable, and secure super- market checkout system using UHF RFID technol- ogy. Wedecided to kick off our project at ICHACK2019 and built a first working prototype in under 24 hours, winning the DocSoc’s choice award.
+Six months later, we have developed an end-to-end instant, reliable, and secure super- market checkout system using UHF RFID technology. We decided to kick off our project at IC Hack-2019 and built a first working prototype in under 24 hours, winning the DocSoc’s choice award.
 
 ## What is UHF RFID?
 
-UHF RFID is an acronym for "Ultra high-frequency radio-frequency identification" and refers to a technology whereby digital data encoded in tags (consisting of an integrated circuit and an anten- na) is captured by a reader via radio waves. UHF RFID is similar to barcoding in that tag data can be used to identify supermarket items. It has, however, several advantages over systems that use barcodes. The most notable is that tag data can be read outside the line-of-sight and from large distances (up to 500m).
+UHF RFID is an acronym for "Ultra high-frequency radio-frequency identification" and refers to a technology whereby digital data encoded in tags (consisting of an integrated circuit and an antenna) is captured by a reader via radio waves. UHF RFID is similar to bar-coding in that tag data can be used to identify supermarket items. It has, however, several advantages over systems that use bar-codes. The most notable is that tag data can be read outside the line-of-sight and from large distances (up to 500m).
 
 ## Technology and Engineering
 
@@ -27,26 +27,26 @@ A range of technologies was used to develop both the initial prototype and the f
 
 ![System Level Schematic](/system-schematic.png)
 
-After the initial hackathon prototype the system was redesigned according to a new specifcation with metal beams that were tapped and fixed together to improve the positioning of the antenna array. Here's a quick preview of the CAF visualisation.  
+After the initial hackathon prototype the system was redesigned according to a new specification with metal beams that were tapped and fixed together to improve the positioning of the antenna array. Here's a quick preview of the CAD visualization.  
 
-![RFID CAD Visualisation](/rfid-cad-model.png)
+![RFID CAD Visualization](/rfid-cad-model.png)
 
-## Customer Exprience
+## Customer Experience
 
 Improving customer’s shopping experience is at the heart of our mission at RFID Checkout. We aim to get the customer out of the store faster, without the long queue time and stress associated with traditional checkout systems.
 
-![Customer Experience Infographic](/customer-experience-infographic.png)
+![Customer Experience Info-graphic](/customer-experience-infographic.png)
 
 We aimed for a traditional modular design where multiple units could be placed side by side. Our lightweight and strong aluminum frame gives us flexibility in design, allowing for hidden wiring and optimal antenna placement.
 
 ## Facial Recognition
+
 Our face identification feature speeds up payment phase even further by recognizing clients in a matter of seconds.
 
-We use OpenCV for predetection and Microsoft's Azure AI for customer recognition.
+We use OpenCV for pre-detection and Microsoft's Azure AI for customer recognition.
 
 ## Software
 
-The checkout software was designed with ease of use in mind. We’ve tried hard to keep it simple to minimize adaptation time for older consumers. The app was built using ElectornJS to provide a robust framework for developing the friendly user interface.
+The checkout software was designed with ease of use in mind. We’ve tried hard to keep it simple to minimize adaptation time for older consumers. The app was built using ElectronJS to provide a robust framework for developing the friendly user interface.
 
-![RIFD Checkout ElectronJS App screen](/app-screen.png)
-
+![RFID Checkout ElectronJS App screen](/app-screen.png)

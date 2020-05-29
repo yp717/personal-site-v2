@@ -16,14 +16,14 @@ const AboutPage = () => (
             </div>
             <div className="col-sm-12 pad-5-lr">
                 <p className="text-align-left is-background-blue-text">
-                I’m currently a third year MEng Electrical and Electornic Engineering student at Imperial College London <span role="img" aria-label="student graduate">👨🏼‍🎓</span>. I’m originally from Switzerland <span role="img" aria-label="swiss flag">🇨🇭</span>and currently live in London 🇬🇧.
+                I’m currently a third year MEng Electrical and Electronic Engineering student at Imperial College London <span role="img" aria-label="student graduate">👨🏼‍🎓</span>. I’m originally from Switzerland <span role="img" aria-label="swiss flag">🇨🇭</span>and currently live in London 🇬🇧.
                 <br/><br/>
                 The tools I use daily in my work are HTML, CSS/SASS, JavaScript, Python, Tensorflow, and Git, but I have some experience with Express, MATLAB, SciKit, F#, and SQL. My current goal is to strengthen my programming fundamentals, improve my web development (vanilla JavaScript and React in particular) and machine learning. I also want to continue to build more personal projects for fun and become more familiar with the different tools and technology across the frontend and the backend. Currently, I'm most excited about the JAMstack ecoysystem.
                 <br/><br/>
                 When I'm not in front of a computer, I'm probably running or writing music. 
                 </p>
             </div>            
-            <div className="col-sm-12 pad-5-lr">
+            <div className="col-sm-12 pad-5-lr margin-5-t">
                 <h1 className="text-align-left is-background-blue-text">The <em>long</em> version</h1>
             </div>
         </div>

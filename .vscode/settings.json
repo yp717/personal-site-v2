@@ -1,5 +1,10 @@
 {
     "cSpell.words": [
-        "combinators"
+        "combinators",
+        "rfid"
+    ],
+    "cSpell.ignoreWords": [
+        "doc",
+        "soc"
     ]
 }

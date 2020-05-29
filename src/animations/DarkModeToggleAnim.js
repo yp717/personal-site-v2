@@ -30,7 +30,7 @@ export default class DarkModeToggleAnim extends Component {
 
         return(
             <button
-            className="grow"
+            className="grow-moon"
                 style={{width: '65px', cursor: 'pointer'}}   
                 onClick={this.handleClick}
             >

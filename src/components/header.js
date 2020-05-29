@@ -45,7 +45,7 @@ export default ({ menuLinks }) => {
           <h2 className="name-text is-background-blue-text">Yannis Panagis</h2>
           </Link>
         </div>
-        {/* Full Explanded Navbar - display:None when too small */}
+        {/* Full Expanded Navbar - display:None when too small */}
         <div className="wideMenuParent">
           {menuLinks.map(link => (
             <Link 
@@ -82,7 +82,7 @@ export default ({ menuLinks }) => {
             delay(darkMode.value ? darkMode.disable : darkMode.enable)
           }}
           className="burger-navbar"
-          style={{marginRight: '25px'}}
+          style={{marginRight: '35px'}}
         >
           <DarkModeAnim/>
         </button>
