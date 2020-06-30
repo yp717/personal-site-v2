@@ -14,10 +14,10 @@ This project was quite different from anything I worked on before. The objective
 
 We called it FuncyPy because the idea was to use a friendly, python-like syntax for a functional programming language. All parts of the interpreter were written in fsharp. The idea was to make the syntax as simple as possible, so, as an example, here's what a simple factorial function would look like:
 
-```fsharp 
+```fsharp
 def factorial x:
     if (x==0):
-        1 
+        1
     else:
         x * (factorial (x-1))
 
@@ -39,4 +39,4 @@ FSharp's Computation expressions are one of my favorite parts of the language. T
 
 ## Want to know more?
 
-I tried to keep this post brief. If you're interested in finding out more about the project, don't hestitate to reach out somewhere in the footer. The git repository has to be kept private for now because this project was part of a course at Imperial in 2020, and publishing it may give some students an unfair advantage and goes against department guidelines. I'm happy to discuss any aspects of the project if you're interested in more of the details or building something similar.
+I tried to keep this post brief. If you're interested in finding out more about the project, don't hesitate to reach out somewhere in the footer. The git repository has to be kept private for now because this project was part of a course at Imperial in 2020, and publishing it may give some students an unfair advantage and goes against department guidelines. I'm happy to discuss any aspects of the project if you're interested in more of the details or building something similar.
