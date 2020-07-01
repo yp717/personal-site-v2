@@ -1,8 +1,8 @@
 import { Link } from "gatsby"
 import React, { useRef, useState, useEffect } from "react"
 // import SmoothCollapse from "react-smooth-collapse"
-import useDarkMode from "use-dark-mode"
-import DarkModeAnim from "../animations/DarkModeToggleAnim";
+// import useDarkMode from "use-dark-mode"
+// import DarkModeAnim from "../animations/DarkModeToggleAnim";
 
 function useOutsideAlerter(ref, fn) {
   useEffect(() => {
@@ -22,7 +22,7 @@ export default ({ menuLinks }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const wrapperRef = useRef(null)
   useOutsideAlerter(wrapperRef, setMenuOpen)
-  const darkMode = useDarkMode(false) //defaults to false 
+  // const darkMode = useDarkMode(false) //defaults to false 
   
   useEffect(() => {
     window.addEventListener("resize", () => {
@@ -32,9 +32,9 @@ export default ({ menuLinks }) => {
     })
   })
 
-  const delay = (fn) => {
-    setTimeout(() => fn(), 300)
-  }
+  // const delay = (fn) => {
+  //   setTimeout(() => fn(), 300)
+  // }
 
   return(
     <>
@@ -59,13 +59,12 @@ export default ({ menuLinks }) => {
               </span>
             </Link>
           ))}
-          <button 
+          {/* <button 
             className="expanded-navbar" 
             onClick={darkMode.value ? darkMode.disable : darkMode.enable}
           >
-            {/* <DarkModeToggle/> */}
             <DarkModeAnim/>
-          </button>
+          </button> */}
         </div>
         <div className="burger-navbar">
           <button 
@@ -77,7 +76,7 @@ export default ({ menuLinks }) => {
             }`}
           />
         </div>
-        <button 
+        {/* <button 
           onClick={() => {
             delay(darkMode.value ? darkMode.disable : darkMode.enable)
           }}
@@ -85,7 +84,7 @@ export default ({ menuLinks }) => {
           style={{marginRight: '35px'}}
         >
           <DarkModeAnim/>
-        </button>
+        </button> */}
       </div>
     </nav>
     <div className={`${
