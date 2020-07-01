@@ -27,9 +27,9 @@ const Tags = ({ pageContext, data }) => {
                   const { title, date, tags } = node.frontmatter;
                   const { slug } = node.fields;
                   return (
-                    <Link to={slug} className="margin-0 padding-0">
+                    <Link to={`/${slug}`} className="margin-0 padding-0">
                       <div key={node.id} className="content-card is-white-bg margin-5-b is-deep-sky-blue-border">
-                        <Link to={slug} className="margin-0">
+                        <Link to={`/${slug}`} className="margin-0">
                           <h2 className="post-tags">{title}</h2>
                         </Link>
                         <p className="is-background-blue-text" style={{paddingLeft: '12px'}}>{date}</p>
