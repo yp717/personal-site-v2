@@ -91,6 +91,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
         createNodeField({
             node,
             name: `slug`,
+            // value: node.frontmatter.title.trim().split(" ").join("-"),
             value: "projects/" + node.frontmatter.title.trim().split(" ").join("-"),
         });
         }
@@ -98,6 +99,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
             createNodeField({
                 node,
                 name: `slug`,
+                // value: node.frontmatter.title.trim().split(" ").join("-"),
                 value: "blog/" + node.frontmatter.title.trim().split(" ").join("-"),
             });
         }

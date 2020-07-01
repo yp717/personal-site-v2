@@ -1,6 +1,6 @@
 ---
-path: /projects/personal-website-v2
-title: Personal-website V2
+path: /projects/Personal-Website-v2
+title: Personal-Website-V2
 date: 2020-05-30
 thumbnail: "./thumbnail.png"
 tags: ['portfolio', 'GatsbyJS', 'GraphQL', 'ReactJS']

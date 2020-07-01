@@ -7,6 +7,7 @@ import ReactHtmlParser from "react-html-parser";
 const BlogPost = ({ data }) => {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
+  
   return (
     <Layout>
       <SEO title={frontmatter.title} keywords={frontmatter.tags}/>

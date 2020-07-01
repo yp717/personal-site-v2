@@ -18,7 +18,7 @@ const BlogPage = ({ data }) => {
                 <div className="col-xs-12 pad-5-lr">
                     {posts.map(post => (
                         <div key={post.node.id} className="content-card is-white-bg margin-5-b is-deep-sky-blue-border">
-                            <Link to={post.node.fields.slug} className="margin-0 padding-0">
+                            <Link to={"/" + post.node.fields.slug} className="margin-0 padding-0" onClick={() => console.log(post.node.fields.slug)}>
                                 <h2 
                                     style={{fontSize: '25px'}} 
                                     className="post-tags"
