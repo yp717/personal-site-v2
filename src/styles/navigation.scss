@@ -179,3 +179,33 @@ $nav-height: 80px;
 .moonIcon:focus {
     outline:0 !important;
 }
+
+// Trying to improve navigation animations 
+
+.underline{
+    position: relative;
+}
+  
+.underline:after{
+    content: '';
+    position: absolute;
+    width: 0; height: 3px;
+    display: block;
+    // margin-top: 5px;
+    right: 0;
+    background: #1EB6FF;
+    transition: width .2s ease;
+    -webkit-transition: width .2s ease;
+}
+
+.underline:hover:after{
+    width: 100%;
+    left: 0;
+    background: #1EB6FF;
+}
+
+.underline:focus{
+    width: 100%;
+    left: 0;
+    background: #1EB6FF;
+}

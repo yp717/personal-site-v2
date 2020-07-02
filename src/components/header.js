@@ -1,6 +1,6 @@
 import { Link } from "gatsby"
 import React, { useRef, useState, useEffect } from "react"
-import SmoothCollapse from "react-smooth-collapse"
+// import SmoothCollapse from "react-smooth-collapse"
 import useDarkMode from "use-dark-mode"
 import DarkModeAnim from "../animations/DarkModeToggleAnim";
 
@@ -54,7 +54,7 @@ export default ({ menuLinks }) => {
               activeClassName="active"
               key={link.name}
             >
-              <span className="squiggle nav-link-text">
+              <span className="underline nav-link-text">
                   {link.name}
               </span>
             </Link>
@@ -97,7 +97,7 @@ export default ({ menuLinks }) => {
           to={link.link}  
           activeClassName="active"
         >              
-          <span className="squiggle nav-link-text is-nav-color-text">
+          <span className="underline nav-link-text is-nav-color-text">
               {link.name}
           </span>
         </Link>
