@@ -17,7 +17,7 @@ const BlogPage = ({ data }) => {
                 </div>
                 <div className="col-xs-12 pad-5-lr">
                     {posts.map(post => (
-                        <div key={post.node.id} className="content-card is-white-bg margin-5-b is-deep-sky-blue-border">
+                        <div key={post.node.id} className="content-card is-white-bg margin-5-b is-deep-sky-blue-bg">
                             <Link to={"/" + post.node.fields.slug} className="margin-0 padding-0" onClick={() => console.log(post.node.fields.slug)}>
                                 <h2 
                                     style={{fontSize: '25px'}} 
@@ -26,7 +26,7 @@ const BlogPage = ({ data }) => {
                                     {post.node.frontmatter.title}
                                 </h2>
                             </Link>
-                            <p className="is-background-blue-text" style={{paddingLeft: '12px'}}>{post.node.frontmatter.date}</p>
+                            <p className="is-white-text-fixed" style={{paddingLeft: '12px'}}>{post.node.frontmatter.date}</p>
                             {post.node.frontmatter.tags ? (
                                 <div className="margin-t-b-2">
                                     {post.node.frontmatter.tags.map(tag => (

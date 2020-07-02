@@ -28,7 +28,7 @@ const AboutPage = () => (
             </div>
         </div>
         
-        <EducationSection/>
+        <EducationSection/> 
         <ExperienceSection/>
         <SkillsSection/>
         <AchievementsSection/> 
