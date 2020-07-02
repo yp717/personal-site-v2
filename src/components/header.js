@@ -87,11 +87,12 @@ export default ({ menuLinks }) => {
         </button>
       </div>
     </nav>
+    {/* Menu on Narrow Screens */}
     <div className={`${
       menuOpen ? "nav-open-list" : "nav-closed-list"
     }`}>
       {menuLinks.map(link => (
-        <div className="container__col-sm-12 burger-navlinks" key={link.name}>
+        <div className="col-sm-12 burger-navlinks" key={link.name}>
         <Link 
           className="is-background-blue-text" 
           to={link.link}  

@@ -32,7 +32,7 @@ const Layout = ({ children }) => {
       should have a helmet here with extra information
       </Helmet> */}
       <div id="page-container">
-        <Header menuLinks={data.site.siteMetadata.menuLinks} siteTitle={data.site.siteMetadata.title} />
+        <Header menuLinks={data.site.siteMetadata.menuLinks} />
         {/* Burger Navbar - display:None when too big */}
         {/* <div className="burger-navbar"> 
           <Sidebar/>

@@ -12,6 +12,7 @@ const IndexPage = () => (
     <div className="row container margin-30-t">
       <div className="col-xs-12 text-align-center pad-10-lr">
           <div style={{zIndex: '99'}}>
+            {/* <LegoSection/> */}
             <img 
               src={LegoYannisFront} 
               style={{height: '24vh', width: '100%'}} 
