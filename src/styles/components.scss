@@ -57,3 +57,50 @@ body.dark-mode{
 
 // .card-body{
 // }
+
+// 
+
+.skill-link{
+    background: #FCB233;
+    border: none;
+    border-radius: .2em;
+    color: #FFFFFF; 
+    cursor: pointer;
+    float: left;
+    margin: .4em .8em .4em 0;
+    padding: .45em .8em .4em;
+    position: relative;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+
+.skill-link:hover{
+    background: darken($color: #FCB233, $amount: 10%)
+}
+
+// Tooltip function
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+  
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+}
+  
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}

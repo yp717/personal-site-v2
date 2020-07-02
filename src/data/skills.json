@@ -1,0 +1,129 @@
+[
+    {
+        "name": "HTML5",
+        "link": "https://html5.org/",
+        "description": "Learning"
+    },
+    {
+        "name": "CSS3",
+        "link": "https://developer.mozilla.org/en-US/docs/Web/CSS",
+        "description": "Learning"
+    },
+    {
+        "name": "JavaScript",
+        "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/About_JavaScript",
+        "description": "Learning"
+    },
+    {
+        "name": "SCSS/SASS",
+        "link": "https://sass-lang.com/",
+        "description": "Learning"
+    },
+    {
+        "name": "ReactJS",
+        "link": "https://reactjs.org/",
+        "description": "Learning"
+    },
+    {
+        "name": "Github",
+        "link": "https://github.com/",
+        "description": "Learning"
+    },
+    {
+        "name": "Sketch",
+        "link": "https://www.sketch.com/",
+        "description": "Learning"
+    },
+    {
+        "name": "Python",
+        "link": "https://www.python.org/",
+        "description": "Learning"
+    },
+    {
+        "name": "TensorFlow",
+        "link": "https://www.tensorflow.org/",
+        "description": "Learning"
+    },
+    {
+        "name": "Sci-kit",
+        "link": "https://scikit-learn.org/stable/",
+        "description": "Learning"
+    },
+    {
+        "name": "NodeJS",
+        "link": "https://nodejs.org/en/",
+        "description": "Learning"
+    },
+    {
+        "name": "GatsbyJS ",
+        "link": "https://www.gatsbyjs.org/",
+        "description": "Learning"
+    },
+    {
+        "name": "GraphQL",
+        "link": "https://graphql.org/",
+        "description": "Learning"
+    },
+    {
+        "name": "Machine Learning",
+        "link": "https://en.wikipedia.org/wiki/Machine_learning",
+        "description": "Learning"
+    }, 
+    {
+        "name": "Deep Learning",
+        "link": "http://intranet.ee.ic.ac.uk/electricalengineering/eecourses_t4/course_content.asp?c=EE3-25&s=E3#start",
+        "description": "Learning"
+    },
+    {
+        "name": "C++",
+        "link": "https://www.cplusplus.com/",
+        "description": "Learning"
+    },
+    {
+        "name": "Java",
+        "link": "https://www.java.com/en/",
+        "description": "Learning"
+    }
+    ,
+    {
+        "name": "R",
+        "link": "https://www.r-project.org/about.html",
+        "description": "Learning"
+    },
+    {
+        "name": "Invision",
+        "link": "https://www.invisionapp.com/",
+        "description": "Learning"
+    },
+    {
+        "name": "Netlify",
+        "link": "https://www.netlify.com/",
+        "description": "Learning"
+    },
+    {
+        "name": "Gatsby Cloud",
+        "link": "https://www.gatsbyjs.com/",
+        "description": "Learning"
+    },
+    {
+        "name": "NPM",
+        "link": "https://www.npmjs.com/",
+        "description": "Learning"
+    },
+    {
+        "name": "Advanced Signal Processing",
+        "link": "http://intranet.ee.ic.ac.uk/electricalengineering/eecourses_t4/course_content.asp?c=EE3-08&s=E3#start",
+        "description": "Learning"
+    },
+    {
+        "name": "High Level Programming",
+        "link": "http://intranet.ee.ic.ac.uk/electricalengineering/eecourses_t4/course_content.asp?c=EE3-22&s=E3#start",
+        "description": "Learning"
+        
+    },
+    {
+        "name": "Data Science",
+        "link": "https://en.wikipedia.org/wiki/Data_science",
+        "description": "Learning"
+    }
+]
