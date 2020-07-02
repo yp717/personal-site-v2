@@ -11,9 +11,9 @@ function useOutsideAlerter(ref, fn) {
         fn(false)
       }
     }
-    document.addEventListener("mousedown", handleClickOutside)
+    document.addEventListener("click", handleClickOutside)
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside)
+      document.removeEventListener("click", handleClickOutside)
     }
   }, [ref, fn])
 }
@@ -33,7 +33,7 @@ export default ({ menuLinks }) => {
   })
 
   const delay = (fn) => {
-    setTimeout(() => fn(), 300)
+    fn()
   }
 
   return(
