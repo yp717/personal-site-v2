@@ -4,6 +4,7 @@ import Img from "gatsby-image"
 import SEO from '../components/seo';
 import Layout from '../components/layout';
 import ReactHtmlParser from "react-html-parser";
+import BuyMeCoffee from "../components/cards/buyMeCoffeeCard";
 
 const BlogPost = ({ data }) => {
   const { markdownRemark } = data;
@@ -25,6 +26,7 @@ const BlogPost = ({ data }) => {
         <div className="col-xs-12 pad-5-lr blog-text article">
           {ReactHtmlParser(html)}
         </div>
+        <BuyMeCoffee/>
       </div>
       </Layout>
   );

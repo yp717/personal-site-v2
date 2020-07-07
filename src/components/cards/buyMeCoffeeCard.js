@@ -3,22 +3,19 @@ import BuyMeCoffeeButton from "../buyMeCoffee";
 import LegoYannisFront from "../../images/LEGOs/lego-yannis-front.svg";
 
 const BuyMeCoffeeCard = () => (
-    <div className="container">
-        <div className={`container__row content-card padding-0`} style={{width: '90%'}}>
-            <div className="is-deep-sky-blue-border" style={{ padding: '2%', borderRadius: '4px', width: '100%'}}>
-                <div className="container__col-sm-6">
-                    <img src={LegoYannisFront} alt="lego-icon-front"/>
+    <>
+        <div className="container row content-card margin-5-lr margin-3-t is-white-bg">
+            <div className="col-xs-3 text-align-center">
+                <img src={LegoYannisFront} alt="lego-icon-front"/>
+            </div>
+            <div className="col-xs-9">
+                <p className="is-background-blue-text">I don't have any ads or sponsors. If you enjoyed the content on this site and found it helpful, interesting or fun, please consider supporting this site by buying me a coffee.</p>
+                <div className="margin-2 margin-l-0">
+                    <BuyMeCoffeeButton/>
                 </div>
-                <div className="container__col-sm-6">
-                    <p className="is-background-blue-text">I don't have any ads or sponsors. If you enjoyed the content on this site and found it helpful, interesting or fun, please consider supporting this site by buying me a coffee.</p>
-                    <div className="margin-2">
-                        <BuyMeCoffeeButton/>
-                    </div>  
-                </div>
-                
             </div>
         </div>
-    </div>
+    </>
 );
 
 export default BuyMeCoffeeCard;
