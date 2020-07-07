@@ -7,7 +7,7 @@ tags: ['writing', 'blogging', 'personal development']
 posttype: 'blog'
 published: true
 subtitle: Improving productivity through documentation and reflection
-color: red-orange
+description: Why I'm developing a writing habit for my learning and sharing with others
 ---
 
 Just before Corona Virus hit and the UK put the country in a state of lock-down on the 23rd of March, I set out to redesign my personal website and continue developing my programming skills. I know I want to work in software and my degree has not always given me the most direct exposure to the field and the technologies I want to work with. The more that I think about it, I've also lost touch with something I once loved to do: writing.

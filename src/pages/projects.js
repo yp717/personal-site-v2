@@ -6,6 +6,8 @@ import SEO from '../components/seo';
 import { kebabCase } from 'lodash';
 // import BuyMeCoffeeCard from '../components/cards/buyMeCoffeeCard';
 // import ReadMoreButton from '../components/ReadMoreButton';
+import PostPreviewCard from "../components/cards/postPreviewCard";
+import Img from "gatsby-image"
 
 const ProjectsPage = ({ data }) => {
     const posts = data.allMarkdownRemark.edges;
@@ -17,23 +19,23 @@ const ProjectsPage = ({ data }) => {
             <div className="col-xs-12 pad-5-lr margin-5-b">
                 <h1 className="text-align-left is-background-blue-text">Projects</h1>
             </div>
-            <div className="col-xs-12 pad-5-lr">
+            <div className="pad-5-lr">
                 {posts.map(post => (
-                    <div key={post.node.id} className="content-card is-white-bg margin-5-b is-deep-sky-blue-bg">
-                        <Link to={"/" + post.node.fields.slug} className="margin-0">
-                            <h2 className="post-tags">{post.node.frontmatter.title}</h2>
-                        </Link>
-                        <p className="is-white-text-fixed" style={{paddingLeft: '12px'}}>{post.node.frontmatter.date}</p>
-                        {post.node.frontmatter.tags ? (
-                            <div className="margin-t-b-2">
-                                {post.node.frontmatter.tags.map(tag => (
-                                    <Link className="post-tags margin-r-2" to={`/tags/${kebabCase(tag)}/`}>
-                                        {tag}
-                                    </Link>
-                                ))}
-                            </div>    
-                        ) : null}
-                    </div>   
+                    // <div className="col-sm-12">
+                    //     <Img
+                    //         fluid={post.node.frontmatter.thumbnail.childImageSharp.fluid}
+                    //         style={{ maxHeight: 250, maxWidth: '280' }}
+                    //     />
+                    // </div>
+                    <PostPreviewCard
+                        id={post.node.id}
+                        slug={post.node.fields.slug}
+                        title={post.node.frontmatter.title}
+                        thumbnail={post.node.frontmatter.thumbnail.childImageSharp.fluid}
+                        date={post.node.frontmatter.date}
+                        tags={post.node.frontmatter.tags}
+                        desc={post.node.frontmatter.description}
+                    />    
                 ))}
             </div>
         </div>

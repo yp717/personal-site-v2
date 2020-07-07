@@ -1,16 +1,21 @@
 .content-card {
     padding: 20px;
-    border-radius: 4px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-radius: 8px;
     margin-bottom: 20px;
 }
 
 .post-tags { 
-    border-radius: 5px;
-    padding: 4px;
-    padding-left: 12px;
-    padding-right: 12px;
-    margin-top: 3px;
-    margin-bottom: 3px;
+    background: #FCB233;
+    border: none;
+    border-radius: .2em;
+    color: #FFFFFF; 
+    cursor: pointer;
+    font-size: 1em;
+    margin: .4em .8em .4em 0;
+    padding: .4em .4em .4em .4em;
+
     font-weight: 600;
     display: inline-block;
     color: #FFFFFF;
@@ -18,7 +23,7 @@
 }
 
 .post-tags:hover {
-    color: darken(#FFFFFF, 5%);
+    background: darken(#FCB233, 10%);
 }
 
 // .link { 
@@ -67,6 +72,7 @@ body.dark-mode{
     color: #FFFFFF; 
     cursor: pointer;
     float: left;
+    font-size: 1.3em;
     margin: .4em .8em .4em 0;
     padding: .45em .8em .4em;
     position: relative;

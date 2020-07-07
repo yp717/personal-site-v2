@@ -7,7 +7,7 @@ tags: ['gatsby', 'javascript', 'reading progress bar']
 posttype: 'blog'
 published: true
 subtitle: The quickest way to add a reading progress bar to a GatsbyJS site
-color: red-orange
+description: The quickest way to add a reading progress bar to a GatsbyJS site
 ---
 
 This is how I added a scroll indicator on the top of my site that shows how far a user. One of the reasons I'm such a huge fan of Gatsby is its plugin eco-system. There are plenty of tutorials and ways to do this from scratch or using other libraries but today I'll run you through how I used the simplest new Gatsby plugin: Scroll Indicator. 
