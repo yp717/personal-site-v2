@@ -5,7 +5,7 @@ $flexboxgrid-gutter-width: 1rem !default;
 $flexboxgrid-outer-margin: 2rem !default;
 $flexboxgrid-breakpoints: sm 48em 46rem,
   md 49.7em 49.7rem,
-  lg 49.7em 49.7rem !default;
+  lg 61em 61rem !default;
 $flexboxgrid-max-width: 1200px !default;
 
 $gutter-compensation: $flexboxgrid-gutter-width * 0.5 * -1;
