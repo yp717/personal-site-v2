@@ -13,6 +13,7 @@ const PostPreviewCard = ( { id, slug, title, thumbnail, date, tags, desc } ) => 
                     <Img 
                         fluid={thumbnail}
                     />
+                    {console.log('card: ', thumbnail)}
                 </div>
                 <div className="col-xs-12 col-md-6">
                     <h2 className=" is-background-blue-text">{title}</h2>

@@ -1,13 +1,10 @@
 import React from 'react';
-import { graphql, Link } from 'gatsby';
+import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-// import Img from 'gatsby-image';
-import { kebabCase } from 'lodash';
 // import BuyMeCoffeeCard from '../components/cards/buyMeCoffeeCard';
 // import ReadMoreButton from '../components/ReadMoreButton';
 import PostPreviewCard from "../components/cards/postPreviewCard";
-import Img from "gatsby-image"
 
 const ProjectsPage = ({ data }) => {
     const posts = data.allMarkdownRemark.edges;
@@ -21,12 +18,6 @@ const ProjectsPage = ({ data }) => {
             </div>
             <div className="pad-5-lr">
                 {posts.map(post => (
-                    // <div className="col-sm-12">
-                    //     <Img
-                    //         fluid={post.node.frontmatter.thumbnail.childImageSharp.fluid}
-                    //         style={{ maxHeight: 250, maxWidth: '280' }}
-                    //     />
-                    // </div>
                     <PostPreviewCard
                         id={post.node.id}
                         slug={post.node.fields.slug}

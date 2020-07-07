@@ -3,6 +3,7 @@ path: /blog/a-commitment-to-writing
 title: A Commitment to Writing
 date: 2020-06-30
 thumbnail: "./thumbnail.png"
+hero: "./hero.png"
 tags: ['writing', 'blogging', 'personal development']
 posttype: 'blog'
 published: true

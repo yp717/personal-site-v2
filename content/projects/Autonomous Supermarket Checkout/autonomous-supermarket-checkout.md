@@ -3,6 +3,7 @@ path: /projects/supermarket-checkout
 title: RFID Supermarket Checkout
 date: 2019-01-27
 thumbnail: "./thumbnail.png"
+hero: "./hero.png"
 tags: ['RFID', 'electrical engineering']
 posttype: 'project'
 published: true
@@ -12,7 +13,7 @@ color: regal-blue
 
 During my second year at Imperial, we were tasked with a second year project to design a problem that solves a solution. The actual brief was quite vague and when we started, I never thought this was the project we would end up working on.
 
-![Kitten Three](/team-photo.png)
+![IC Hack 2019 Team Photo](/team-photo.png)
 
 We began planning this project in early October, with the vision to improve people’s daily lives. Six months later, we developed an end-to-end instant, reliable, and secure super-market checkout system using UHF RFID technology. We decided to kick off our project at IC Hack-2019 and built the first working prototype in under 24 hours, winning the DocSoc’s choice award for "Best Overall Hack."
 

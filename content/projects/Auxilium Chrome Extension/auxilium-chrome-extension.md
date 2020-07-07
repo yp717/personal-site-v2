@@ -3,6 +3,7 @@ path: /projects/auxilium
 title: Auxilium Chrome Extension
 date: 2020-02-09
 thumbnail: "./thumbnail.png"
+hero: "./hero.png"
 tags: ['chrome extension', 'accessibility']
 posttype: 'project'
 published: true
