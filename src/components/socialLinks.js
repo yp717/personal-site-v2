@@ -1,4 +1,6 @@
 import React from 'react';
+import useDarkMode from "use-dark-mode";
+
 import SpotifyIcon from '../images/icons/social/spotify.svg';
 import SpotifyIconWhite from '../images/icons/social/spotify-white.svg';
 import GithubIcon from '../images/icons/social/github.svg';
@@ -13,7 +15,8 @@ const linkedinLink = `https://www.linkedin.com/in/yannis-panagis/`;
 const spotifyLink = `https://open.spotify.com/artist/4tCn4Wkn4cf0CWLUFvQO58?si=XUyEXMPASyqdhksoCx587g`;
 const mailLink = `mailto:yannis.panagis1998@gmail.com`;
 
-const SocialLinks = ({darkMode}) => {
+const SocialLinks = () => {
+    const darkMode = useDarkMode(false) //defaults to false 
     return (
         <>
             <div className="text-align-center">
