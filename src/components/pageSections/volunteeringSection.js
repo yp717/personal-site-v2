@@ -11,7 +11,7 @@ const VolunteeringSection = () => {
                     <ContentCard 
                         title="Third Year Academic Representative"
                         subheading="Imperial College London"
-                        date ="June 2019 - Aug 2020"
+                        date ="June 2019 - August 2020"
                         color="java-green"
                         description="Collaborated with the deparment on improving the academic aspects of the student experience in the department."
                     />
@@ -20,7 +20,7 @@ const VolunteeringSection = () => {
                     <ContentCard 
                         title="Departmental Representative"
                         subheading="Imperial College London"
-                        date ="June 2018 - Aug 2019"
+                        date ="June 2018 - August 2019"
                         color="java-green"
                         description="Identified issues, led initiatives and raised awareness on areas affecting student academics, health, financial concerns, rela- tionships, equality, diversity and personal safety at Imperial."
                     />
@@ -29,7 +29,7 @@ const VolunteeringSection = () => {
                     <ContentCard 
                         title="Half Marathon to raise money for Alzheimer’s Research and Treatment"
                         subheading="Alzheimer’s Society"
-                        date ="Date still missing here"
+                        date ="October 2018"
                         color="java-green"
                         description="Raised over £300 by running a half marathon for the Alzheimer’s society. I plan on running again this year too!"
                     />
