@@ -1,14 +1,14 @@
 import React from 'react';
 import useDarkMode from "use-dark-mode";
 
-import SpotifyIcon from '../images/icons/spotify.svg';
-import SpotifyIconWhite from '../images/icons/spotify-white.svg';
-import GithubIcon from '../images/icons/github.svg';
-import GithubIconWhite from '../images/icons/github-white.svg';
-import LinkedInIcon from '../images/icons/linked-in.svg';
-import LinkedInIconWhite from '../images/icons/linked-in-white.svg';
-import MailIcon from '../images/icons/mail.svg';
-import MailIconWhite from '../images/icons/mail-white.svg';
+import SpotifyIcon from '../images/icons/social/spotify.svg';
+import SpotifyIconWhite from '../images/icons/social/spotify-white.svg';
+import GithubIcon from '../images/icons/social/github.svg';
+import GithubIconWhite from '../images/icons/social/github-white.svg';
+import LinkedInIcon from '../images/icons/social/linked-in.svg';
+import LinkedInIconWhite from '../images/icons/social/linked-in-white.svg';
+import MailIcon from '../images/icons/social/mail.svg';
+import MailIconWhite from '../images/icons/social/mail-white.svg';
 
 const githubLink = `https://github.com/yp717`;
 const linkedinLink = `https://www.linkedin.com/in/yannis-panagis/`;
