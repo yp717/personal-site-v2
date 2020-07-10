@@ -66,11 +66,11 @@ body.dark-mode{
 // 
 
 .skill-link{
-    background: #FCB233;
+    background: rgb(53, 203, 115);
     border: none;
     border-radius: .2em;
     color: #FFFFFF; 
-    cursor: pointer;
+    cursor: pointer; 
     float: left;
     font-size: 1.3em;
     margin: .4em .8em .4em 0;
@@ -81,7 +81,7 @@ body.dark-mode{
 }
 
 .skill-link:hover{
-    background: darken($color: #FCB233, $amount: 10%)
+    background: darken($color: rgb(53, 203, 115), $amount: 10%)
 }
 
 // Tooltip function

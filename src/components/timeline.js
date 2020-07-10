@@ -4,14 +4,14 @@ import { Timeline, TimelineItem }  from 'vertical-timeline-component-for-react';
 const TimelineComponent = () => {
     return (
         <>
-        <Timeline lineColor={'#F64755'}>
+        <Timeline lineColor={'#FD3D37'}>
         <TimelineItem
             key="001"
             dateText="10/2017 – Present"
-            dateInnerStyle={{ background: '#F64755', color: '#FFFFFF' }}
+            dateInnerStyle={{ background: '#FD3D37', color: '#FFFFFF' }}
             dateStyle={{ background: 'transparent' }}
             bodyContainerStyle={{
-            background: '#F64755',
+            background: '#FD3D37',
             padding: '20px',
             borderRadius: '8px',
             // boxShadow: '0.5rem 0.5rem 2rem 0 rgba(0, 0, 0, 0.2)',
@@ -24,10 +24,10 @@ const TimelineComponent = () => {
         <TimelineItem
             key="002"
             dateText="06/2018 – 08/2018"
-            dateInnerStyle={{ background: '#F64755', color: '#FFFFFF' }}
+            dateInnerStyle={{ background: '#FD3D37', color: '#FFFFFF' }}
             dateStyle={{ background: 'transparent' }}
             bodyContainerStyle={{
-            background: '#F64755',
+            background: '#FD3D37',
             padding: '20px',
             borderRadius: '8px',
             // boxShadow: '0.5rem 0.5rem 2rem 0 rgba(0, 0, 0, 0.2)',
@@ -40,10 +40,10 @@ const TimelineComponent = () => {
         <TimelineItem
             key="003"
             dateText="06/2018 – 08/2018"
-            dateInnerStyle={{ background: '#F64755', color: '#FFFFFF' }}
+            dateInnerStyle={{ background: '#FD3D37', color: '#FFFFFF' }}
             dateStyle={{ background: 'transparent' }}
             bodyContainerStyle={{
-            background: '#F64755',
+            background: '#FD3D37',
             padding: '20px',
             borderRadius: '8px',
             // boxShadow: '0.5rem 0.5rem 2rem 0 rgba(0, 0, 0, 0.2)',

@@ -12,7 +12,7 @@ const ExperienceSection = () => {
                     title="Private Tutoring"
                     subheading="Self-organised"
                     date ="June 2019 - Present"
-                    color="red-orange"
+                    color="supernova-yellow"
                     description="Tutoring A-Level, GCSE and University students in Python, Computer Science concepts, Mathematics and English Literature."
                 />
                  
@@ -21,7 +21,7 @@ const ExperienceSection = () => {
                     title="Technology Summer Intern"
                     subheading="American Express"
                     date ="June 2019 - August 2019"
-                    color="red-orange"
+                    color="supernova-yellow"
                     description="Designed, developed and put in production a fully functional research archive solution with ReactJS, GatsbyJS, ExpressJS, and python for the machine learning based backend. Participated in design sprints to determine product requirements, develop wireframes, prototype UX/UI designs"
                 />
 
@@ -30,7 +30,7 @@ const ExperienceSection = () => {
                     title="Firetech Camp Tutor"
                     subheading="Firetech"
                     date ="June 2019 - Present"
-                    color="red-orange"
+                    color="supernova-yellow"
                     description="Teaching courses to young students to explore coding, robotics, app design, making electronics and more during term-time"
                 />
 
@@ -39,7 +39,7 @@ const ExperienceSection = () => {
                     title="Corporate Investment Intern"
                     subheading="Investcorp B.S.C."
                     date ="June 2016 - August 2016"
-                    color="red-orange"
+                    color="supernova-yellow"
                     description="Analysed corporate financial data to build models to examine companies and markets to determine investment viability for 10 potential acquisitions"
                 />
             </div>

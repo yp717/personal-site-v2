@@ -12,7 +12,7 @@ const VolunteeringSection = () => {
                         title="Third Year Academic Representative"
                         subheading="Imperial College London"
                         date ="June 2019 - August 2020"
-                        color="java-green"
+                        color="matisse-blue"
                         description="Collaborated with the deparment on improving the academic aspects of the student experience in the department."
                     />
                 
@@ -21,7 +21,7 @@ const VolunteeringSection = () => {
                         title="Departmental Representative"
                         subheading="Imperial College London"
                         date ="June 2018 - August 2019"
-                        color="java-green"
+                        color="matisse-blue"
                         description="Identified issues, led initiatives and raised awareness on areas affecting student academics, health, financial concerns, rela- tionships, equality, diversity and personal safety at Imperial."
                     />
 
@@ -30,7 +30,7 @@ const VolunteeringSection = () => {
                         title="Half Marathon to raise money for Alzheimer’s Research and Treatment"
                         subheading="Alzheimer’s Society"
                         date ="October 2018"
-                        color="java-green"
+                        color="matisse-blue"
                         description="Raised over £300 by running a half marathon for the Alzheimer’s society. I plan on running again this year too!"
                     />
 
@@ -39,7 +39,7 @@ const VolunteeringSection = () => {
                         title="Music society involvement"
                         subheading="Imperial College London"
                         date="June 2017 - Present"
-                        color="java-green"
+                        color="matisse-blue"
                         description="Active member of Jazz & Rock Society, Events Manager at Guitar Society and Bass, Baritone & Tenor at the Scopes (A Capella group), Original compositions & performances for large and small venues (largest audience: 5000 people)"
                     />
                 </div>

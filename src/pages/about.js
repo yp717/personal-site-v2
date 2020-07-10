@@ -22,7 +22,7 @@ const AboutPage = () => (
                 <br/><br/>
                 When I'm not in front of a computer, I'm probably running or writing music. 
                 </p>
-            </div>            
+            </div>  
             <div className="col-sm-12 pad-5-lr margin-5-t">
                 <h1 className="text-align-left is-background-blue-text">The <em>long</em> version</h1>
             </div>

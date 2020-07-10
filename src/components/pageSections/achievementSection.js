@@ -12,7 +12,7 @@ const AchievementsSection = () => {
                         title="IC Hack winner"
                         subheading="Imperial College London"
                         date="January 2019"
-                        color="green"
+                        color="java-green"
                         description="Collaborated to build and design a long-range, instant supermarket checkout system using UHF RFID in only 24 hours and won first place overall. The project integrated a JAVA based back-end with an SQL database, a web-app developed with Javascript, and a laser-cut and 3D-printed structural framework controlled by ultrasonic sensors, servos, an Arduino, and Raspberry Pi using Python and C++."
                     />
                     {/* Old Centralian Trust Scholarship */}
@@ -21,14 +21,14 @@ const AchievementsSection = () => {
                         subheading="Imperial College London"
                         date ="June 2018"
                         description="Scholarship for summer exchange at Stanford University"
-                        color="green"
+                        color="java-green"
                     />
                     {/* Gulf Finance House Leadership Award */}
                     <ContentCard 
                         title="Gulf Finance House Leadership Award"
                         subheading="British School of Bahrain"
                         date ="June 2017"
-                        color="green"
+                        color="java-green"
                         description="$5000 Scholarship for exemplary community impact, academic excellence and leadership"
                     />
                 </div>
