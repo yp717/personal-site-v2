@@ -34,9 +34,9 @@ const NotFoundPage = ({ data, location }) => {
       </div>
       <div className="col-xs-12 pad-5-lr margin-3-t">
         <h3 className="is-background-blue-text margin-3-b">That wasn't what you were looking for?</h3>
-        <h3 className="is-background-blue-text margin-3-b">Okay. Take a deep breath. I'll go contact the other legos on the server. In the meantime, how about you go back to the ... {" "}
+        <h3 className="is-background-blue-text margin-3-b">Okay. Take a deep breath. I'll go contact the other LEGOs on the server. In the meantime, how about you go back to the ... {" "}
           <Link className="is-background-blue-text active underline bold" to="/">
-            home page
+            Home Page
           </Link>
         </h3>
       </div>
