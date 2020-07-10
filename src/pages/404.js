@@ -17,7 +17,7 @@ const NotFoundPage = ({ data, location }) => {
         <h1 className="text-align-center is-background-blue-text">We're um...having some technical difficulties</h1>
       </div>
       <div className="text-align-center col-xs-12 pad-5-lr margin-3-t">
-        <img className="text-align-center" style={{margin: '0px'}} alt="angry lego smashes computer" src="https://media.giphy.com/media/ReImZejkBnqYU/giphy.gif"/>
+        <img className="text-align-center" alt="angry lego smashes computer" src="https://media.giphy.com/media/ReImZejkBnqYU/giphy.gif"/>
       </div>
       <div className="col-xs-12 pad-5-lr margin-3-t">
         <p className="is-background-blue-text">The link to this mage might not exist or be out of date.</p>

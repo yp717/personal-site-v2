@@ -49,7 +49,7 @@ export default ({ menuLinks }) => {
         <div className="wideMenuParent">
           {menuLinks.map(link => (
             <Link 
-              className="navLinks expanded-navbar is-background-blue-text" 
+              className="navLinks bold expanded-navbar is-background-blue-text" 
               to={link.link}  
               activeClassName="active"
               key={link.name}
@@ -92,7 +92,7 @@ export default ({ menuLinks }) => {
       menuOpen ? "nav-open-list" : "nav-closed-list"
     }`}>
       {menuLinks.map(link => (
-        <div className="col-sm-12 burger-navlinks" key={link.name}>
+        <div className="col-sm-12 bold burger-navlinks" key={link.name}>
         <Link 
           className="is-background-blue-text" 
           to={link.link}  
