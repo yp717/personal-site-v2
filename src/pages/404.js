@@ -23,7 +23,7 @@ const NotFoundPage = ({ data, location }) => {
         <p className="is-background-blue-text">The link to this mage might not exist or be out of date.</p>
       </div>
       <div className="col-xs-12 pad-5-lr margin-3-t">
-        {result.rating > 0.7 && (
+        {result.rating > 0.6 && (
             <h3 className="is-background-blue-text margin-3-t margin-3-b">
               My LEGO minions tell me that you may have been looking for...{" "}
               <Link to={result.target} className="is-background-blue-text active underline bold">
