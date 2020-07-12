@@ -17,7 +17,7 @@ There are pros and cons to having a scrolling progress indicator, but chances ar
 
 The basic idea of the scrolling progress indicator is that it gives your readers an indication of their progress as they digest your content. Some people argue that it subconsciously makes the content, particularly in longer articles, feel shorter. That's probably the reason why they are predominantly used on blogs like this one. If that were true it would be great for improving your user's engagement with your content!
 
-<!-- As a quick disclaimer, all the information presented is based on my personal opinions and experience and in no way reflects researched design theory and best UX practices. I have however coroborated the information presented with other sources.  -->
+<!-- As a quick disclaimer, all the information presented is based on my personal opinions and experience and in no way reflects researched design theory and best UX practices. I have however, confirmed, the information presented with other sources.  -->
 
 On the opposite site of the spectrum, many argue that the feature is completely useless and redundant. Further, some even find it distracting from the actual content they are trying to read because a lot of browsers still have native scroll bars anyway and some users just don't know what it is or expect it (my mum actually said this when she saw the site 😛). Particularly on mobile, there's another level of confusion for users because a loading progress bar is often used in the exact same location to indicate new content being loaded onto the site.
 
@@ -33,15 +33,15 @@ Install all the necessary dependencies (in this case there's only one):
 npm install --save gatsby-plugin-scroll-indicator
 ```
 
-For those of you less experienced with web development let's break this phrase down a litte. Otherwise, if you're just looking for step by step instructions skip to step 2.
+For those of you less experienced with web development let's break this phrase down a little. Otherwise, if you're just looking for step by step instructions skip to step 2.
 
-The NPM at the start is an abbreviation for the Node Package Manager. [NPM](link) is a package manager for the [JavaScript](link) programming language. You will see a lot of other tutorials also talk about another package manager called [yarn](link) but for simplicity let's stick with NPM here. I've been using NPM for most of the projects I worked on because its simple, consistent and comes as the default package manager for the JavaScript runtime environment [Node.js](link).
+The NPM at the start is an abbreviation for the Node Package Manager. [NPM](https://www.npmjs.com/) is a package manager for the [JavaScript](https://en.wikipedia.org/wiki/JavaScript) programming language. You will see a lot of other tutorials also talk about another package manager called [yarn](https://yarnpkg.com/) but for simplicity let's stick with NPM here. I've been using NPM for most of the projects I worked on because its simple, consistent and comes as the default package manager for the JavaScript runtime environment [Node.js](https://nodejs.org/en/).
 
 The next keyword `install` will install the package and any packages that it depends on. The `--save` bit just means that we want to save the package in our project, which means that next time we start everything up it'll all still be there. The last bit of the command is just the name of the package. Sounds simple enough right?
 
 ## Step 2
 
-The second step is to add the plugin to your `gatsby-config.js` file. BUT before you do there are two ways to do this. 
+The second step is to add the plugin to your `gatsby-config.js` file. BUT before you do there are two ways to do this.
 
 The simple way is just to add the plugin the way it comes out of the box.
 
@@ -56,7 +56,7 @@ plugins: [
 
 This should give you a progress bar on every single page on your site in which you can scroll, with a height of 3px and the timeless Gatsby purple `#663391`.
 
-Chances are that you probably want to customise this a bit. Not to worry, it's actually quite simple to tweak the package to the needs of your site. All the values filled in below are the defaults directly from the github repository of the package.
+Chances are that you probably want to customize this a bit. Not to worry, it's actually quite simple to tweak the package to the needs of your site. All the values filled in below are the defaults directly from the github repository of the package.
 
 ```js
 // gatsby-config.js
