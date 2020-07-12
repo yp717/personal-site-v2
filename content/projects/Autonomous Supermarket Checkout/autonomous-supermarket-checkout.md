@@ -1,5 +1,4 @@
 ---
-path: /projects/supermarket-checkout
 title: RFID Supermarket Checkout
 date: 2019-01-27
 thumbnail: "./thumbnail.png"

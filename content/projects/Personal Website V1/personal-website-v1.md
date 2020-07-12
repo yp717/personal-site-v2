@@ -1,5 +1,4 @@
 ---
-path: /projects/personal-website-v1
 title: Personal Website V1
 date: 2018-11-29
 thumbnail: "./thumbnail.png"

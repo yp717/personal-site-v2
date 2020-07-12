@@ -1,5 +1,4 @@
 ---
-path: /projects/personal-website-v2
 title: COVID Machine Learning integration in EPiC IMPOC
 date: 2020-04-27
 thumbnail: "./thumbnail.png"

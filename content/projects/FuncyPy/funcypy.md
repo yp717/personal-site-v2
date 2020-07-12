@@ -1,5 +1,4 @@
 ---
-path: /projects/project3
 title: FuncyPy
 date: 2020-03-30
 thumbnail: "./thumbnail.png"

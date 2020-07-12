@@ -1,5 +1,4 @@
 ---
-path: /projects/auxilium
 title: Auxilium Chrome Extension
 date: 2020-02-09
 thumbnail: "./thumbnail.png"
