@@ -7,7 +7,6 @@ tags: ['data science', 'hate crimes']
 posttype: 'project'
 published: true
 description: subtitle could go here
-color: regal-blue
 ---
 
 This is an exercise to pose a research question using data science techniques. The following explains the relevance of the topic, describes the statistical methodology used to answer the question and present new findings. This project is loosely structured as an introduction, a survey of related work, methods, data and useful summaries, results and conclusions.

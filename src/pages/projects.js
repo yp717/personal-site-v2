@@ -62,7 +62,6 @@ export const projectsQuery = graphql`
                         }
                     }
                 }
-                color
             }
         }
       }

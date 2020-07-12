@@ -7,8 +7,7 @@ hero: "./hero.png"
 tags: ['chrome extension', 'accessibility']
 posttype: 'project'
 published: true
-description: Auxilium - An accessibility tool for developers
-color: regal-blue
+description: An accessibility Chrome Extension for developers and users that allows you to visualize how your site looks with different types of color blindness, and that performs optimizations to improve readability
 ---
 
 Most web developers aren't typically trained to think about accessibility. When you designed your site, did you ever think whether it would be legible and provide the same experience to say, someone with colour blindness? The internet can be a hostile space for 15% of the world's population who experience some form of disability and this can significantly impact their user experience.

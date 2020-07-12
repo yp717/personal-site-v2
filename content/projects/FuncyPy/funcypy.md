@@ -4,11 +4,10 @@ title: FuncyPy
 date: 2020-03-30
 thumbnail: "./thumbnail.png"
 hero: "./hero.png"
-tags: ['fsharp', 'fsharp', 'parser', 'computation expressions']
+tags: ['fsharp', 'parser', 'computation expressions']
 posttype: 'project'
 published: true
-description: Writing an interpreter for a tiny functional language
-color: regal-blue
+description: An interpreter for a tiny functional language with a friendly python-like syntax to make functional programming easier to learn and understand
 ---
 
 This project was quite different from anything I worked on before. The objective was to write an interpreter for a tiny functional programming language.

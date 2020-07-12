@@ -7,7 +7,6 @@ tags: ['mathematics', 'introduction', 'cute']
 posttype: 'blog'
 published: true
 subtitle: subtitle could go here
-color: regal-blue
 ---
 
 This section of the website is in progress and is coming soon.<span aria-label="image">🤭</span>

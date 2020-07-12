@@ -7,8 +7,7 @@ hero: "./hero.png"
 tags: ['portfolio', 'GatsbyJS', 'GraphQL', 'ReactJS']
 posttype: 'project'
 published: true
-description: Revamping my personal site from a static one page site
-color: regal-blue
+description: The second iteration of my personal website, re-built from scratch with ReactJS, GatsbyJS, GraphQL, SASS, Gatsby Cloud, Netlify, and Markdown
 ---
 
 This is the second version of my personal portfolio website made with GatsbyJS, ReactJS, SASS and designed with Sketch. This design started earlier in 2020 when I decided that a simple static content site wasn't interesting enough anymore and I wanted to develop something more complicated with the JAMStack ecosystem. The second iteration of my personal site also includes project posts, blog posts, tags and  programmatically generated projects using GraphQL.

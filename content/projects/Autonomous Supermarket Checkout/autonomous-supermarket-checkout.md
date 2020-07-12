@@ -7,8 +7,7 @@ hero: "./hero.png"
 tags: ['RFID', 'electrical engineering']
 posttype: 'project'
 published: true
-description: An autonomous RFID Supermarket Checkout system
-color: regal-blue
+description: An autonomous RFID Supermarket Checkout system that uses Ultra High Frequency RFID tags and a custom-built antenna array to optimise the checkout process so your groceries never leave your bag
 ---
 
 During my second year at Imperial, we were tasked with a second year project to design a problem that solves a solution. The actual brief was quite vague and when we started, I never thought this was the project we would end up working on.
