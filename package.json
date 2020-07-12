@@ -46,6 +46,8 @@
     "react-lottie": "^1.2.3",
     "react-rotating-text": "^1.4.1",
     "react-smooth-collapse": "^2.1.0",
+    "remark-emoji": "^2.1.0",
+    "remark-unwrap-images": "^2.0.0",
     "sass": "^1.26.9",
     "string-similarity": "^4.0.1",
     "use-dark-mode": "^2.3.1",

@@ -13,25 +13,25 @@ Most web developers aren't typically trained to think about accessibility. When 
 
 Try navigating a website as someone who is visually impaired: Turn on voice command on your computer and go to Amazon's store. You'll quickly find out that those who rely on voice commands can't skip around and are doomed to listen to every notation about every page element before getting to the one piece of information they need. A 2016 Pew Research survey found that only 40% of disabled Americans feel comfortable using the internet compared to 80% of able-bodied users. In the UK, less than 30% are online.
 
-Auxilium is a chrome extension that we built at IC Hack 20, Imperial College London's annual 24 hour hackathon. We tried to focus on building a proof of concept for different areas of accessibility design. 
+Auxilium is a chrome extension that we built at IC Hack 20, Imperial College London's annual 24 hour hackathon. We tried to focus on building a proof of concept for different areas of accessibility design.
 
 ![logo](/logo.png)
 
 ## Designing for the masses isn't enough.
 
-Dyslexia is a learning disability that involves difficulty reading due to problems identifying speech sounds and learning how they relate to letters and words (decoding). 🔠 Reading is a pretty fundamental part of the web experience. Designers, engineers, and developers should consider this fraction of their user-base in their design process. Unfortunately, this typically not the case. 😞 It is difficult to justify ignoring 15% of your userbase.
+Dyslexia is a learning disability that involves difficulty reading due to problems identifying speech sounds and learning how they relate to letters and words (decoding). Reading is a pretty fundamental part of the web experience. Designers, engineers, and developers should consider this fraction of their user-base in their design process. Unfortunately, this typically not the case. It is difficult to justify ignoring 15% of your use-base.
 
 ## Never Depend on Color Alone to Convey Critical Information
 
-Visual elements need to be considered carefully to ensure that accessibility is not lost for users with visual impairments. Such users often access websites with special high-contrast web browsers, screen readers, or by replacing CSS styles with a set of rules designed to remove visual barriers. The chrome extension we developed allows developers to visualise how the sites would look to people with different types of color blindness.
+Visual elements need to be considered carefully to ensure that accessibility is not lost for users with visual impairments. Such users often access websites with special high-contrast web browsers, screen readers, or by replacing CSS styles with a set of rules designed to remove visual barriers. The chrome extension we developed allows developers to visualize how the sites would look to people with different types of color blindness.
 
 ![simulation](/simulation.png)
 
 You had either the option to upload a screenshot of a page to the website we built alongside the extension or to visualise examples of the different types of color blindness with a slider over the screenshots.
 
-## Vision for Learning difficulties.
+## Vision for Learning difficulties
 
-Many people find it difficult to read large blocks of text or extract key data points from passages. The final feature we included in our chome extension was a simple css swapping feature that swaps out the colours on alternate lines of text with more accessible colors. The idea is that this would make it easier to stay focused on your browsing session by helping you distinguish the lines on any longer page of text.
+Many people find it difficult to read large blocks of text or extract key data points from passages. The final feature we included in our chrome extension was a simple css swapping feature that swaps out the colours on alternate lines of text with more accessible colors. The idea is that this would make it easier to stay focused on your browsing session by helping you distinguish the lines on any longer page of text.
 
 ## Takeaways
 

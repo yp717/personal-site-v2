@@ -1,3 +1,5 @@
+const remarkPlugins = [require("remark-unwrap-images"), require("remark-emoji")]
+
 module.exports = {
   siteMetadata: {
     title: `Yannis Panagis`,

@@ -1,9 +1,8 @@
 import React from "react"
-// import { Link } from "gatsby"
+
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import LegoYannisFront from '../images/LEGOs/lego-yannis-front.svg';
-// import ReactRotatingText from 'react-rotating-text';
 
 const IndexPage = () => (  
   <>
