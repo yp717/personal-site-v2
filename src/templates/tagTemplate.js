@@ -32,11 +32,11 @@ const Tags = ({ pageContext, data }) => {
                         <Link to={`/${slug}`} className="margin-0">
                           <h2 className="post-tags">{title}</h2>
                         </Link>
-                        <p className="is-background-blue-text" style={{paddingLeft: '12px'}}>{date}</p>
+                        <p className="is-background-blue-text">{date}</p>
                         {tags ? (
                             <div>
                                 {tags.map(tag => (
-                                    <Link className="post-tags" to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                                    <Link className="active underline" to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
                                 ))}
                             </div>    
                         ) : null}
