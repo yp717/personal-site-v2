@@ -1,5 +1,6 @@
 import React from 'react';
 import ContentCard from '../cards/contentCard';
+import Achievements from '../../data/achievements.json';
 
 const AchievementsSection = () => {
     return (
@@ -7,30 +8,17 @@ const AchievementsSection = () => {
             <div className="container">
                 <h2 className="is-background-blue-text pad-5-lr margin-5-t">Achievements<span role="img" aria-label="trophy">🏆</span></h2>
                 <div className="row pad-5-lr pad-5-t">
-                    {/* IC Hack winner */}
-                    <ContentCard 
-                        title="IC Hack winner"
-                        subheading="Imperial College London"
-                        date="January 2019"
-                        color="java-green"
-                        description="Collaborated to build and design a long-range, instant supermarket checkout system using UHF RFID in only 24 hours and won first place overall. The project integrated a JAVA based back-end with an SQL database, a web-app developed with Javascript, and a laser-cut and 3D-printed structural framework controlled by ultrasonic sensors, servos, an Arduino, and Raspberry Pi using Python and C++."
-                    />
-                    {/* Old Centralian Trust Scholarship */}
-                    <ContentCard 
-                        title="Old Centralian Trust Scholarship"
-                        subheading="Imperial College London"
-                        date ="June 2018"
-                        description="Scholarship for summer exchange at Stanford University"
-                        color="java-green"
-                    />
-                    {/* Gulf Finance House Leadership Award */}
-                    <ContentCard 
-                        title="Gulf Finance House Leadership Award"
-                        subheading="British School of Bahrain"
-                        date ="June 2017"
-                        color="java-green"
-                        description="$5000 Scholarship for exemplary community impact, academic excellence and leadership"
-                    />
+                    {
+                        Achievements.map((achievement) => (
+                            <ContentCard 
+                                title={achievement.title}
+                                subheading={achievement.subheading}
+                                date ={achievement.date}
+                                color={achievement.color}
+                                description={achievement.description}
+                            />
+                        ))
+                    }
                 </div>
             </div>    
         </>

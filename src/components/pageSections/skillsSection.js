@@ -1,11 +1,6 @@
 import React from 'react';
 
-// import WebDevelopment from '../WebDevelopment';
-// import TechnicalSkills from '../TechnicalSkills';
-
 import Skills from '../../data/skills.json';
-
-// import Profile from './components/profile';
 
 const SkillsSection = () => {
     return (
