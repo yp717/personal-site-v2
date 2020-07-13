@@ -1,6 +1,8 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import Img from "gatsby-image"
+import { kebabCase } from 'lodash';
+
 import SEO from '../components/seo';
 import Layout from '../components/layout';
 import ReactHtmlParser from "react-html-parser";
@@ -9,7 +11,8 @@ import BuyMeCoffee from "../components/cards/buyMeCoffeeCard";
 const BlogPost = ({ data }) => {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
-  
+  const tags = frontmatter.tags;
+
   return (
     <Layout>
       <SEO title={frontmatter.title} keywords={frontmatter.tags}/>
@@ -22,6 +25,17 @@ const BlogPost = ({ data }) => {
         </div>      
         <div className="col-xs-12 pad-5-lr margin-1-b">
           <span className="is-background-blue-text">{frontmatter.date}</span>
+        </div>
+        <div className="col-xs-12 pad-5-lr margin-1-b">
+          {tags ? (
+            <div className="margin-t-b-2">
+                {tags.map(tag => (
+                    <Link className="post-tags" to={`/tags/${kebabCase(tag)}/`}>
+                        {tag}
+                    </Link>
+                ))}
+            </div>    
+          ) : null}
         </div>
         <div className="col-xs-12 pad-5-lr blog-text article">
           {ReactHtmlParser(html)}

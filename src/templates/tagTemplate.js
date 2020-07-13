@@ -3,7 +3,7 @@ import { Link, graphql } from 'gatsby';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 // import Img from 'gatsby-image';
-import { kebabCase } from 'lodash';
+// import { kebabCase } from 'lodash';
 import PostPreviewCard from '../components/cards/postPreviewCard';
 
 const Tags = ({ pageContext, data }) => {

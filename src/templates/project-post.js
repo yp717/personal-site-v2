@@ -1,5 +1,7 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
+import { kebabCase } from 'lodash';
+
 import Img from "gatsby-image"
 import SEO from '../components/seo';
 import Layout from '../components/layout';
@@ -9,6 +11,7 @@ import BuyMeCoffee from "../components/cards/buyMeCoffeeCard";
 const ProjectPost = ({ data }) => {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
+  const tags = frontmatter.tags;
 
   return (
     <Layout> 
@@ -22,6 +25,17 @@ const ProjectPost = ({ data }) => {
         </div>  
         <div className="col-xs-12 pad-5-lr margin-1-b">
           <span className="is-background-blue-text">{frontmatter.date}</span>
+        </div>
+        <div className="col-xs-12 pad-5-lr margin-1-b">
+          {tags ? (
+            <div className="margin-t-b-2">
+                {tags.map(tag => (
+                    <Link className="post-tags" to={`/tags/${kebabCase(tag)}/`}>
+                        {tag}
+                    </Link>
+                ))}
+            </div>    
+          ) : null}
         </div>
         <div className="col-xs-12 pad-5-lr article">
           {ReactHtmlParser(html)}
