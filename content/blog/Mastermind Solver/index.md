@@ -6,7 +6,6 @@ thumbnail: "./thumbnail.png"
 hero: "./hero.png"
 tags: ['mastermind', 'code breaking', 'C++']
 posttype: 'blog'
-published: true
 description: A clever but simple Mastermind Solver in C++ using Knuth's MinMax algorithm
 ---
 

@@ -33,13 +33,7 @@ const Layout = ({ children }) => {
       </Helmet> */}
       <div id="page-container">
         <Header menuLinks={data.site.siteMetadata.menuLinks} siteTitle={data.site.siteMetadata.title} />
-        {/* Burger Navbar - display:None when too big */}
-        {/* <div className="burger-navbar"> 
-          <Sidebar/>
-        </div> */}
-        {/* <div id="content-wrap" > */}
           <main className="is-very-light-grey-bg">{children}</main>
-        {/* </div> */}
         <Footer/>
       </div>
     </>

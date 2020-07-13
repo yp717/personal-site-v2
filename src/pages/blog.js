@@ -7,8 +7,9 @@ import SEO from "../components/seo";
 // import BuyMeCoffeeCard from '../components/cards/buyMeCoffeeCard';
 import PostPreviewCard from '../components/cards/postPreviewCard';
 
-const BlogPage = ({ data }) => {
+const BlogPage = ( { data } ) => {
     const posts = data.allMarkdownRemark.edges;
+    
     return (
         <Layout>
             <SEO title="Blog" keywords={[`gatsby`, `blog`, `instructional`, `tutorials`, `software engineering`, `coding`]}/>

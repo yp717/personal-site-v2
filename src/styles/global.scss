@@ -46,6 +46,10 @@ body.dark-mode {
   transition: background-color 0.5s ease;
 }
 
+.page-section {
+  width: 100vw;  
+}
+
 #page-container {
   display: flex;
   flex-direction: column;

@@ -5,7 +5,6 @@ thumbnail: "./thumbnail.png"
 hero: "./hero.png"
 tags: ['data science', 'hate crimes', 'r-programming']
 posttype: 'blog'
-published: true
 description: A brief analysis of hate crimes and their distribution in the United States, shortly after the 2016 election
 ---
 
