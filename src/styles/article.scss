@@ -18,8 +18,6 @@
 .article {
   p, h1, h2, h3, h4, h6, li, em {
     @extend .is-background-blue-text;
-    // font-family: Karla;
-    @extend .is-background-blue-text;
   }
 
   p {    
@@ -46,7 +44,14 @@
 
   img {
     max-width: 100%;
+    margin-bottom: 20px;
+    margin-top: 20px;
   }
+
+  li, em {
+    font-family: Karla;
+  }
+
 }
 
 .blog-poster {

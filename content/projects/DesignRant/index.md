@@ -6,7 +6,7 @@ hero: "./hero.png"
 tags: ['DesignRant', 'UX', 'Design']
 posttype: 'project'
 published: true
-description: DesignRant; the new home for short, sharp, user experience complaints
+description: DesignRant is a blog site made for the authors first. Some have called it the new home for short, sharp, user experience complaints for developers and designers alike.
 ---
 
 (DesignRant) [https://designrant.app] is about to be the home of "Short, sharp, user experience complaints". It's exactly what it sounds like: short - capped at 1000 word - rants about our experiences on the internet. The project was started by a close mentor and friend of mine called Sam Larsen Disney. As an aside, if you haven't already, you should absolutely check out his (website) [https://sld.codes], it's brilliant.
