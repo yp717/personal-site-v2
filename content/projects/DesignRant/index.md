@@ -9,7 +9,7 @@ published: true
 description: DesignRant is a blog site made for authors first. Some have called it the new home for short, sharp, user experience complaints for developers and designers alike.
 ---
 
-(DesignRant) [https://designrant.app] is about to be the home of "Short, sharp, user experience complaints". It's exactly what it sounds like: short - capped at 1000 word - rants about our experiences on the internet. The project was started by a close mentor and friend of mine called Sam Larsen Disney. As an aside, if you haven't already, you should absolutely check out his (website) [https://sld.codes], it's brilliant.
+[DesignRant](https://designrant.app) is about to be the home of "Short, sharp, user experience complaints". It's exactly what it sounds like: short - capped at 1000 word - rants about our experiences on the internet. The project was started by a close mentor and friend of mine called Sam Larsen Disney. As an aside, if you haven't already, you should absolutely check out his [website](https://sld.codes), it's brilliant.
 
 What started as a place for him and a few friends to write quickly evolved into a much larger project, and eventually, the perfect place for young UX designers and developers to share their rants, their critiques, and their visions for the User Experiences and User Interfaces that live on the web.
 
@@ -19,4 +19,4 @@ A key element of DesignRant, is that while many of the posts are often critical,
 
 The large number of reader sign-ups on the site before it even launched, suggest it will be a great place for developers and designers to get exposure. Every author has an author page and bio with links to their social media and a place to "buy them a coffee." For this reason, if this sounds like you or you know someone who might be interested, please do share and get involved.
 
-The site launches at (DesignRant) [https://designrant.app] later this week and I can't wait to see you there.
+The site launches at [DesignRant](https://designrant.app) later this week and I can't wait to see you there.
