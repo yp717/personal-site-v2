@@ -32,9 +32,9 @@ export default ({ menuLinks }) => {
     })
   })
 
-  const delay = (fn) => {
-    fn()
-  }
+  // const delay = (fn) => {
+  //   fn()
+  // }
 
   return(
     <>
@@ -73,8 +73,13 @@ export default ({ menuLinks }) => {
                 aria-label="burger menu open"
                 onClick={() => setMenuOpen(!menuOpen)}
                 className="nav-button"
+                
               >
-                <img className="nav-open-icon" src={OpenBurger} />
+                <img 
+                  className="nav-open-icon"  
+                  alt="close navigation menu" 
+                  src={OpenBurger} 
+                />
               </button>
             ) :
             (
@@ -83,8 +88,13 @@ export default ({ menuLinks }) => {
                 aria-label="burger menu closed"
                 onClick={() => setMenuOpen(!menuOpen)}
                 className="nav-button"
+                alt="open navigation menu"
               >
-                <img className="nav-closed-icon" src={ClosedBurger} />
+                <img 
+                  className="nav-closed-icon" 
+                  alt="open navigation menu"
+                  src={ClosedBurger} 
+                />
               </button>
             )
           }

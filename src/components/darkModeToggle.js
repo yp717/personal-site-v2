@@ -15,16 +15,25 @@ export default props => {
             onClick={darkMode.disable}
             className="nav-button"
           >
-            <img className="sunIcon" src={Sun} />
+            <img 
+              className="sunIcon"  
+              alt="dark mode toggle"
+              src={Sun}
+            />
           </button>
         ) : (
           <button
             type="button"
             aria-label="dark mode"
+            
             onClick={darkMode.enable}
             className="nav-button"
           >
-            <img className="moonIcon" src={Moon} />
+            <img 
+              className="moonIcon" 
+              alt="dark mode toggle"
+              src={Moon} 
+            />
           </button>
         )}
       </>
