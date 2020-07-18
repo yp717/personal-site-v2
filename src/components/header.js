@@ -1,9 +1,9 @@
 import { Link } from "gatsby"
 import React, { useRef, useState, useEffect } from "react"
 // import SmoothCollapse from "react-smooth-collapse"
-import useDarkMode from "use-dark-mode"
-import DarkModeAnim from "../animations/DarkModeToggleAnim";
 import DarkModeToggle from "./darkModeToggle";
+import ClosedBurger from "../images/icons/closed-burger.svg"
+import OpenBurger from "../images/icons/open-burger.svg"
 
 function useOutsideAlerter(ref, fn) {
   useEffect(() => {
@@ -23,7 +23,6 @@ export default ({ menuLinks }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const wrapperRef = useRef(null)
   useOutsideAlerter(wrapperRef, setMenuOpen)
-  const darkMode = useDarkMode(false) //defaults to false 
   
   useEffect(() => {
     window.addEventListener("resize", () => {
@@ -62,25 +61,43 @@ export default ({ menuLinks }) => {
           ))}
           <div 
             className="expanded-navbar" 
-            onClick={darkMode.value ? darkMode.disable : darkMode.enable}
           >
             <DarkModeToggle/>
           </div>
         </div>
         <div className="burger-navbar">
-          <button 
+          {
+            menuOpen ? (
+              <button 
+                type="button"
+                aria-label="burger menu open"
+                onClick={() => setMenuOpen(!menuOpen)}
+                className="nav-button"
+              >
+                <img className="nav-open-icon" src={OpenBurger} />
+              </button>
+            ) :
+            (
+              <button 
+                type="button"
+                aria-label="burger menu closed"
+                onClick={() => setMenuOpen(!menuOpen)}
+                className="nav-button"
+              >
+                <img className="nav-closed-icon" src={ClosedBurger} />
+              </button>
+            )
+          }
+          {/* <button 
             type="button"
             aria-label="burger menu icon" 
             onClick={() => setMenuOpen(!menuOpen)}
             className={`${
               menuOpen ? "nav-open-icon" : "nav-closed-icon"
             }`}
-          />
+          /> */}
         </div>
         <div 
-          onClick={() => {
-            delay(darkMode.value ? darkMode.disable : darkMode.enable)
-          }}
           className="burger-navbar"
           style={{marginRight: '35px'}}
         >

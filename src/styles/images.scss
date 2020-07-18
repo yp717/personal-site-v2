@@ -57,20 +57,27 @@ img {
     outline:0 !important;
 }
 
-.moonIcon {
-    height: 20px;
-    width: 20px;
+.nav-button {
     margin: 0px;
     background-size: 100%;
     border: 0;
     padding: 0;
+}
+
+.nav-button:focus {
+    outline:0 !important;
+}
+
+.nav-button:hover {
+    transform: scale(1.1);
+}
+
+.moonIcon {
+    height: 30px;
+    width: 30px;
     display: inline-block;
     transition: all .2s ease-in-out;
     background-color: transparent;
-}
-
-.moonIcon:hover {
-    transform: scale(1.1);
 }
 
 .moonIcon:focus {
@@ -78,11 +85,10 @@ img {
 }
 
 .nav-closed-icon {
-    height: 25px;
-    width: 25px;
+    height: 30px;
+    width: 30px;
     margin: 0px;
     padding: 0px;
-    background: url("../images/icons/burger-menu.svg") no-repeat;
     background-size: 100%;
     border: none;
     display: inline-block;
@@ -90,8 +96,8 @@ img {
 }
 
 .nav-closed-icon:focus{
-    height: 25px;
-    width: 25px;
+    height: 30px;
+    width: 30px;
     margin: 0px;
     padding: 0px;
     outline: none;
@@ -101,36 +107,11 @@ img {
     transition: all .2s ease-in-out;
 }
 
-.nav-closed-icon:hover{
-    height: 25px;
-    width: 25px;
-    margin: 0px;
-    padding: 0px;
-    background: url("../images/icons/burger-menu-on-hover.svg") no-repeat;
-    background-size: 100%;
-    border: none;
-    display: inline-block;
-    transition: all .2s ease-in-out;
-}
-
 .nav-open-icon {
-    height: 25px;
-    width: 25px;
+    height: 30px;
+    width: 30px;
     margin: 0px;
     padding: 0px;
-    background: url("../images/icons/burger-menu-open.svg") no-repeat;
-    background-size: 100%;
-    border: none;
-    display: inline-block;
-    transition: all .2s ease-in-out;
-}
-
-.nav-open-icon:hover {
-    height: 25px;
-    width: 25px;
-    margin: 0px;
-    padding: 0px;
-    background: url("../images/icons/burger-menu-open-on-hover.svg") no-repeat;
     background-size: 100%;
     border: none;
     display: inline-block;
@@ -138,8 +119,8 @@ img {
 }
 
 .nav-open-icon:focus{
-    height: 25px;
-    width: 25px;
+    height: 30px;
+    width: 30px;
     margin: 0px;
     padding: 0px;
     outline: none;
