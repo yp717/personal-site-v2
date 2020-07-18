@@ -28,7 +28,7 @@ const Tags = ({ pageContext, data }) => {
                   edges.map(({ node }) => (
                     <PostPreviewCard 
                       id={node.id}
-                      slug={node.frontmatter.slug}
+                      slug={node.fields.slug}
                       title={node.frontmatter.title}
                       thumbnail={node.frontmatter.thumbnail.childImageSharp.fluid}
                       date={node.frontmatter.date}

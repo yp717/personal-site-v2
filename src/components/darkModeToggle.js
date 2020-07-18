@@ -16,7 +16,7 @@ export default props => {
             className="nav-button"
           >
             <img 
-              className="sunIcon"  
+              className="nav-icon"  
               alt="dark mode toggle"
               src={Sun}
             />
@@ -30,7 +30,7 @@ export default props => {
             className="nav-button"
           >
             <img 
-              className="moonIcon" 
+              className="nav-icon" 
               alt="dark mode toggle"
               src={Moon} 
             />

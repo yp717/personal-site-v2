@@ -48,7 +48,7 @@ const IndexPage = () => {
         </div>          
         <div className="container row pad-5-tb pad-5-lr">
           <div className="col-xs-12">
-            <h2 className="is-background-blue-text margin-4-b margin-5-t">Recent Blogs</h2>
+            <h2 className="is-background-blue-text margin-4-b margin-5-t">Recent Posts</h2>
           </div>
           <RecentBlogs />
           <div className="col-xs-12">

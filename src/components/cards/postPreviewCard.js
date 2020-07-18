@@ -8,7 +8,6 @@ const PostPreviewCard = ( { id, slug, title, thumbnail, date, tags, desc } ) => 
         <>
         <Link to={"/" + slug}>
         <div key={id} className="container row content-card margin-5-b is-white-bg grow">
-            
                 <div className="col-xs-12 col-lg-6">
                     <Img 
                         fluid={thumbnail}

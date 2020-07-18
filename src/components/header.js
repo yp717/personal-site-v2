@@ -57,7 +57,8 @@ export default ({ menuLinks }) => {
             </Link>
           ))}
           <div 
-            className="expanded-navbar" 
+            className="expanded-navbar"
+            style={{ marginLeft: '10px' }} 
           >
             <DarkModeToggle/>
           </div>
@@ -73,7 +74,7 @@ export default ({ menuLinks }) => {
                 
               >
                 <img 
-                  className="nav-open-icon"  
+                  className="nav-icon"  
                   alt="close navigation menu" 
                   src={OpenBurger} 
                 />
@@ -88,25 +89,17 @@ export default ({ menuLinks }) => {
                 alt="open navigation menu"
               >
                 <img 
-                  className="nav-closed-icon" 
+                  className="nav-icon" 
                   alt="open navigation menu"
                   src={ClosedBurger} 
                 />
               </button>
             )
           }
-          {/* <button 
-            type="button"
-            aria-label="burger menu icon" 
-            onClick={() => setMenuOpen(!menuOpen)}
-            className={`${
-              menuOpen ? "nav-open-icon" : "nav-closed-icon"
-            }`}
-          /> */}
         </div>
         <div 
           className="burger-navbar"
-          style={{marginRight: '35px'}}
+          style={{ marginRight: '45px' }}
         >
           <DarkModeToggle/>
         </div>
