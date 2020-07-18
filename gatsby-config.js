@@ -12,15 +12,15 @@ module.exports = {
     author: `@gatsbyjs`,
     menuLinks:[
       {
-        name:'About',
+        name:'🚀 About',
         link:'/about'
       },
       {
-        name:'Projects',
+        name:'🔧 Projects',
         link:'/projects'
       },
       {
-        name: 'Blog',
+        name: '✏️ Blog',
         link:'/blog'
       }
     ]

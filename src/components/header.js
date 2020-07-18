@@ -4,6 +4,7 @@ import React, { useRef, useState, useEffect } from "react"
 import DarkModeToggle from "./darkModeToggle";
 import ClosedBurger from "../images/icons/closed-burger.svg"
 import OpenBurger from "../images/icons/open-burger.svg"
+import { Emojione } from "react-emoji-render"
 
 function useOutsideAlerter(ref, fn) {
   useEffect(() => {
@@ -32,10 +33,6 @@ export default ({ menuLinks }) => {
     })
   })
 
-  // const delay = (fn) => {
-  //   fn()
-  // }
-
   return(
     <>
     <nav className="heightOffset navbar is-white-bg" style={{ zIndex: 100 }} ref={wrapperRef}>
@@ -55,7 +52,7 @@ export default ({ menuLinks }) => {
               key={link.name}
             >
               <span className="underline nav-link-text">
-                  {link.name}
+                  <Emojione text={link.name} />
               </span>
             </Link>
           ))}
@@ -127,7 +124,7 @@ export default ({ menuLinks }) => {
           activeClassName="active"
         >              
           <span className="underline nav-link-text is-nav-color-text">
-              {link.name}
+            <Emojione text={link.name} />
           </span>
         </Link>
         </div>
