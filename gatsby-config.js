@@ -1,20 +1,8 @@
-const remarkPlugins = [require("remark-unwrap-images"), require("remark-emoji")]
-
 require("dotenv").config({
   path: `.env`,
 })
 
-const dynamicPlugins = []
-
-// if (process.env.GATSBY_PRODUCTION) {
-dynamicPlugins.push({
-  resolve: `gatsby-plugin-google-analytics`,
-  options: {
-    trackingId: process.env.GOOGLE_ANALYTICS_TRACKING_ID,
-    head: true,
-  },
-})
-// }
+const remarkPlugins = [require("remark-unwrap-images"), require("remark-emoji")]
 
 module.exports = {
   siteMetadata: {
@@ -39,6 +27,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-sass`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -140,6 +129,12 @@ module.exports = {
         zIndex: `9999`,
       },
     },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: process.env.GOOGLE_ANALYTICS_TRACKING_ID,
+      },
+    }
     // {
     //   resolve: 'gatsby-plugin-robots-txt',
     //   options: {
@@ -194,5 +189,5 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
-  ].concat(dynamicPlugins),
+  ],
 }
