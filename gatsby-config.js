@@ -6,14 +6,14 @@ require("dotenv").config({
 
 const dynamicPlugins = []
 
-if (process.env.GATSBY_PRODUCTION) {
-  dynamicPlugins.push({
-    resolve: `gatsby-plugin-google-analytics`,
-    options: {
-      trackingId: process.env.GOOGLE_ANALYTICS_TRACKING_ID,
-    },
-  })
-}
+// if (process.env.GATSBY_PRODUCTION) {
+dynamicPlugins.push({
+  resolve: `gatsby-plugin-google-analytics`,
+  options: {
+    trackingId: process.env.GOOGLE_ANALYTICS_TRACKING_ID,
+  },
+})
+// }
 
 module.exports = {
   siteMetadata: {
