@@ -3,6 +3,7 @@ import React, { useRef, useState, useEffect } from "react"
 // import SmoothCollapse from "react-smooth-collapse"
 import useDarkMode from "use-dark-mode"
 import DarkModeAnim from "../animations/DarkModeToggleAnim";
+import DarkModeToggle from "./darkModeToggle";
 
 function useOutsideAlerter(ref, fn) {
   useEffect(() => {
@@ -63,7 +64,7 @@ export default ({ menuLinks }) => {
             className="expanded-navbar" 
             onClick={darkMode.value ? darkMode.disable : darkMode.enable}
           >
-            <DarkModeAnim/>
+            <DarkModeToggle/>
           </div>
         </div>
         <div className="burger-navbar">
@@ -83,7 +84,7 @@ export default ({ menuLinks }) => {
           className="burger-navbar"
           style={{marginRight: '35px'}}
         >
-          <DarkModeAnim/>
+          <DarkModeToggle/>
         </div>
       </div>
     </nav>
