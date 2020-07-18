@@ -1,5 +1,9 @@
 const remarkPlugins = [require("remark-unwrap-images"), require("remark-emoji")]
 
+require("dotenv").config({
+  path: `.env`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `Yannis Panagis`,
