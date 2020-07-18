@@ -28,7 +28,7 @@ The entire process can be broken down into 4 steps and completed in a little und
 
 Install all the necessary dependencies (in this case there's only one):
 
-```js
+```{js}
 npm install --save gatsby-plugin-scroll-indicator
 ```
 
@@ -44,7 +44,7 @@ The second step is to add the plugin to your `gatsby-config.js` file. BUT before
 
 The simple way is just to add the plugin the way it comes out of the box.
 
-```js
+```{js}
 ...
 // gatsby-config.js
 plugins: [
@@ -57,7 +57,7 @@ This should give you a progress bar on every single page on your site in which y
 
 Chances are that you probably want to customize this a bit. Not to worry, it's actually quite simple to tweak the package to the needs of your site. All the values filled in below are the defaults directly from the github repository of the package.
 
-```js
+```{js}
 // gatsby-config.js
 plugins: [
     {

@@ -9,7 +9,7 @@ module.exports = {
     title: `Yannis Panagis`,
     siteUrl: 'https://www.yannispanagis.com',
     description: `Engineer. Designer. Developer. Student.`,
-    author: `@gatsbyjs`,
+    author: `@yannispanagis`,
     menuLinks:[
       {
         name:'🚀 About',

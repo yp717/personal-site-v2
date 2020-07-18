@@ -51,7 +51,7 @@ Two additional libraries - chrono and ctime - were included to include timers to
 
 To time the total time taken for all the tests the following statements were used, with the first statement where the timer should begin, the second where it should end, and the third as a variable declaration for the total time, which was used to compute the average.
 
-```c++
+```{c++}
 auto start_all_tests = std::chrono::high_resolution_clock::now();
 auto finish_all_tests = std::chrono::high_resolution_clock::now();
 std::chrono::duration<double> total_time = finish_all_tests - start_all_tests;
@@ -59,7 +59,7 @@ std::chrono::duration<double> total_time = finish_all_tests - start_all_tests;
 
 The time taken for a single secret code to be found by the algorithm used the fol- lowing timer where the first statement indicates the point at which the timer started and the second timer indicated when the timer stopped and printed the output for the elapsed time.
 
-```c++
+```{c++}
 const clock_t begin_time = clock();
 std::cout << "ELAPSED TIME: " << float( clock () - begin_time ) / CLOCKS_PER_SEC;
 ```
@@ -91,7 +91,6 @@ The peak in the graph at length 4, which is the cut-off point, after which, the 
 ![Performance of other approaches](/table4.png)
 
 It is also important to consider the limitations of the time testing that was carried out. Firstly, the two clocks used did not have the same level of precision, and this introduces random error in the experimental testing results. Further, for the initial test case with a length of two and two colours (numbers), the sum of the time for each of the tests was calculated manually, and the average was computed manually as well before the timer was included for the full test with all sequences. The manually computed total time was not equal to the total time measured by the clock, and so there was a discrepancy between the two means as well by the two methods. A possible reason for this is that there is a very small delay between iterations of the for loop and so this is another limitation of the timing methods used with the clocks. However, for longer sequences with more codes, it was not feasible to manually compute the mean-time, so despite an initial awareness of this systematic error, the tests were still carried out with the clocks.
-
 
 Given more time and fewer constraints, this algorithm could be improved by including an alternative algorithm that is more efficient regarding the average number of guesses than the random guessing algorithm used for higher order games. Specifically, the primary aim of an alternative algorithm for higher order games would be improved computational efficiency (speed). An example of such a program is Koyama and Lai’s ‘depth-first back-tracking’ algorithm [5], which based on background research had the
 optimal average number of attempts with only 4.3403.

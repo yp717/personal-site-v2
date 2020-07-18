@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "yannis-panagis-personal-site",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Yannis Panagis Personal Site",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Yannis Panagis <yannis.panagis1998@gmail.com>",
   "dependencies": {
     "dotenv": "^8.2.0",
     "gatsby": "^2.23.12",
@@ -33,7 +33,6 @@
     "gatsby-transformer-sharp": "^2.5.7",
     "graphql-playground-html": "^1.6.25",
     "katex": "^0.11.1",
-    "lottie-react-web": "^2.2.2",
     "node-sass": "^4.14.1",
     "prism-themes": "^1.4.0",
     "prismjs": "^1.20.0",
