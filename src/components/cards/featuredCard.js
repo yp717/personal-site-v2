@@ -5,7 +5,7 @@ import { kebabCase } from 'lodash';
 
 const FeaturedCard = ( { id, slug, title, hero, date, tags, desc } ) => {
     return (
-        <>
+        <> 
         <div className="col-xs-12 col-lg-6">
             <div key={id} className="content-card margin-5-b is-white-bg grow">
                 <Link to={"/" + slug}>

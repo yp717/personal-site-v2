@@ -1,6 +1,6 @@
 ---
 title: DesignRant
-date: 2020-07-13
+date: 2020-07-15
 thumbnail: "./thumbnail.png"
 hero: "./hero.png"
 tags: ['DesignRant', 'UX', 'Design']

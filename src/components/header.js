@@ -59,12 +59,12 @@ export default ({ menuLinks }) => {
               </span>
             </Link>
           ))}
-          <button 
+          <div 
             className="expanded-navbar" 
             onClick={darkMode.value ? darkMode.disable : darkMode.enable}
           >
             <DarkModeAnim/>
-          </button>
+          </div>
         </div>
         <div className="burger-navbar">
           <button 
@@ -76,7 +76,7 @@ export default ({ menuLinks }) => {
             }`}
           />
         </div>
-        <button 
+        <div 
           onClick={() => {
             delay(darkMode.value ? darkMode.disable : darkMode.enable)
           }}
@@ -84,7 +84,7 @@ export default ({ menuLinks }) => {
           style={{marginRight: '35px'}}
         >
           <DarkModeAnim/>
-        </button>
+        </div>
       </div>
     </nav>
     {/* Menu on Narrow Screens */}
