@@ -4,6 +4,17 @@ require("dotenv").config({
   path: `.env`,
 })
 
+const dynamicPlugins = []
+
+if (process.env.GATSBY_PRODUCTION) {
+  dynamicPlugins.push({
+    resolve: `gatsby-plugin-google-analytics`,
+    options: {
+      trackingId: process.env.GOOGLE_ANALYTICS_TRACKING_ID,
+    },
+  })
+}
+
 module.exports = {
   siteMetadata: {
     title: `Yannis Panagis`,
@@ -135,11 +146,11 @@ module.exports = {
     //   }
     // },
     // This still needs the tracking id
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        // The property ID; the tracking code won't be generated without it
-        trackingId: process.env.GOOGLE_ANALYTICS_TRACKING_ID || "none",
+    // {
+    //   resolve: `gatsby-plugin-google-analytics`,
+    //   options: {
+    //     // The property ID; the tracking code won't be generated without it
+    //     trackingId: process.env.GOOGLE_ANALYTICS_TRACKING_ID || "none",
         // Defines where to place the tracking script - `true` in the head and `false` in the body
       //   head: false,
       //   // Setting this parameter is optional
@@ -162,8 +173,8 @@ module.exports = {
       //   sampleRate: 5,
       //   siteSpeedSampleRate: 10,
       //   cookieDomain: "yannispanagis.com",
-      }
-    },
+    //   }
+    // },
     // Read more @ https://www.gatsbyjs.org/packages/gatsby-plugin-smoothscroll/
     // can be used for scroll to animations
     // `gatsby-plugin-smoothscroll`,
@@ -182,5 +193,5 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
-  ],
+  ].concat(dynamicPlugins),
 }
