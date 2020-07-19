@@ -4,7 +4,7 @@ date: 2020-03-30
 thumbnail: "./thumbnail.png"
 hero: "./hero.png"
 tags: ['fsharp', 'parser', 'computation expressions']
-posttype: 'project'
+type: 'project'
 published: true
 description: An interpreter for a tiny functional language with a friendly python-like syntax to make functional programming easier to learn and understand
 ---

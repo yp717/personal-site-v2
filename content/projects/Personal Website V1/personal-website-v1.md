@@ -4,7 +4,7 @@ date: 2018-11-29
 thumbnail: "./thumbnail.png"
 hero: "./hero.png"
 tags: ['portfolio', 'GatsbyJS', 'ReactJS']
-posttype: 'project'
+type: 'project'
 published: true
 description: The first iteration of my personal website; a simple single page static site for a personal website or portfolio made with ReactJS, GatsbyJS, SASS, and Netlify
 ---

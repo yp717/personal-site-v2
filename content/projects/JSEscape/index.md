@@ -4,7 +4,7 @@ date: 2020-07-13
 thumbnail: "./thumbnail.png"
 hero: "./hero.png"
 tags: ['JavaScript', 'ReactJS', 'Teaching']
-posttype: 'project'
+type: 'project'
 published: true
 description: JSEscape is an online learning platform that aims to teach and develop Javascript skills using interactive storytelling.
 ---

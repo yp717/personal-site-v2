@@ -4,7 +4,7 @@ date: 2020-06-30
 thumbnail: "./thumbnail.png"
 hero: "./hero.png"
 tags: ['writing', 'blogging', 'personal development']
-posttype: 'blog'
+type: 'blog'
 description: Why I'm developing a writing habit for my learning and sharing with others ; Improving productivity through a commitment to documentation and reflection
 ---
 

@@ -4,7 +4,7 @@ date: 2020-07-15
 thumbnail: "./thumbnail.png"
 hero: "./hero.png"
 tags: ['DesignRant', 'UX', 'Design']
-posttype: 'project'
+type: 'project'
 published: true
 description: DesignRant is a blog site made for authors first. Some have called it the new home for short, sharp, user experience complaints for developers and designers alike.
 ---

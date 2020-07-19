@@ -4,7 +4,7 @@ date: 2019-01-27
 thumbnail: "./thumbnail.png"
 hero: "./hero.png"
 tags: ['RFID', 'electrical engineering']
-posttype: 'project'
+type: 'project'
 published: true
 description: An autonomous RFID Supermarket Checkout system that uses Ultra High Frequency RFID tags and a custom-built antenna array to optimise the checkout process so your groceries never leave your bag
 ---

@@ -4,7 +4,7 @@ title: Welcome to my quick College Stats Guide
 date: 2020-05-05
 thumbnail: "./kitten3.jpeg"
 tags: ['statistics', 'introduction']
-posttype: 'blog'
+type: 'blog'
 published: true
 subtitle: subtitle could go here
 ---

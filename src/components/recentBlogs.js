@@ -7,7 +7,7 @@ const RecentProjects = () => {
         query {
             allMarkdownRemark(
                 sort: { order: DESC, fields: [frontmatter___date] }
-                filter: { frontmatter: { posttype: { eq: "blog" } } }
+                filter: { frontmatter: { type: { eq: "blog" } } }
             ) {
                 edges {
                     node {

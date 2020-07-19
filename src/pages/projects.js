@@ -7,11 +7,12 @@ import SEO from '../components/seo';
 import PostPreviewCard from "../components/cards/postPreviewCard";
 
 const ProjectsPage = ({ data }) => {
+    // const { currentPage, numPages } = data.sitePage.context
     const posts = data.allMarkdownRemark.edges;
     return (
     // is-deep-sky-blue-border
     <Layout>
-        <SEO title="Projects" keywords={[`gatsby`, `application`, `react`, `portfolio`]}/>
+        <SEO title="Projects" keywords={[`GatsbyJS`, `ReactJS`, `portfolio`]}/>
         <div className="container row margin-10-tb">
             <div className="col-xs-12 pad-5-lr margin-5-b">
                 <h1 className="text-align-left is-background-blue-text">Projects</h1>
@@ -30,7 +31,6 @@ const ProjectsPage = ({ data }) => {
                 ))}
             </div>
         </div>
-        {/* <BuyMeCoffeeCard/> */}
     </Layout>
     );
 };
@@ -38,10 +38,10 @@ const ProjectsPage = ({ data }) => {
 export default ProjectsPage;
 
 export const projectsQuery = graphql`
-  query {
+query {
     allMarkdownRemark(
         sort: { order: DESC, fields: [frontmatter___date] }
-        filter: { frontmatter: { posttype: { eq: "project" } } }
+        filter: { frontmatter: { type: { eq: "project" } } }
     ) {
       edges {
         node {

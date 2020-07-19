@@ -49,7 +49,12 @@ const ProjectPost = ({ data }) => {
 export default ProjectPost;
 
 export const projectPostQuery = graphql`
-    query($slug: String!) {
+    query ProjectBySlug($slug: String!) {
+      site {
+        siteMetadata {
+          title
+        }
+      }
       markdownRemark(fields: { slug: { eq: $slug } }) {
         html
         frontmatter {

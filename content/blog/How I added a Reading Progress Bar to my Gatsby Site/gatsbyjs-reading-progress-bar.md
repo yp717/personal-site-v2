@@ -4,7 +4,7 @@ date: 2020-05-09
 thumbnail: "./thumbnail.png"
 hero: "./hero.png"
 tags: ['gatsby', 'javascript', 'reading progress bar']
-posttype: 'blog'
+type: 'blog'
 description: The quickest way to add a reading progress bar to your GatsbyJS site
 ---
 

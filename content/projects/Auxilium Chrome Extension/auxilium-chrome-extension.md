@@ -4,7 +4,7 @@ date: 2020-02-09
 thumbnail: "./thumbnail.png"
 hero: "./hero.png"
 tags: ['chrome extension', 'accessibility']
-posttype: 'project'
+type: 'project'
 published: true
 description: An accessibility Chrome Extension for developers and users that allows you to visualize how your site looks with different types of color blindness, and that performs optimizations to improve readability
 ---

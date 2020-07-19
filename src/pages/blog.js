@@ -40,10 +40,10 @@ export default BlogPage;
 
 // Get all markdown data, in descending order by date, and grab the id, excerpt, slug, date, and title
 export const pageQuery = graphql`
-  query {
+query {
     allMarkdownRemark(
         sort: { order: DESC, fields: [frontmatter___date] }
-        filter: { frontmatter: { posttype: { eq: "blog" } } }
+        filter: { frontmatter: { type: { eq: "blog" } } }
     ) {
         edges {
             node {

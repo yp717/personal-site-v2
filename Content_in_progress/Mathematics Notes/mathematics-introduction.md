@@ -4,7 +4,7 @@ title: Mathematics Introduction
 date: 2018-11-29
 thumbnail: "./kitten2.jpeg"
 tags: ['mathematics', 'introduction', 'cute']
-posttype: 'blog'
+type: 'blog'
 published: true
 subtitle: subtitle could go here
 ---

@@ -4,7 +4,7 @@ date: 2020-04-27
 thumbnail: "./thumbnail.png"
 hero: "./hero.png"
 tags: ['COVID', 'Machine Learning', 'django', 'python']
-posttype: 'project'
+type: 'project'
 published: true
 description: Using ML to develop models to create patient risk scores for COVID-19 for a clinical decision support system in the NHS called EPiC IMPOC.
 ---

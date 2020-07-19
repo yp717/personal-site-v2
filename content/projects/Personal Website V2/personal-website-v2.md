@@ -5,7 +5,7 @@ date: 2020-05-30
 thumbnail: "./thumbnail.png"
 hero: "./hero.png"
 tags: ['portfolio', 'GatsbyJS', 'GraphQL', 'ReactJS']
-posttype: 'project'
+type: 'project'
 published: true
 description: The second iteration of my personal website, re-built from scratch with ReactJS, GatsbyJS, GraphQL, SASS, Gatsby Cloud, Netlify, and Markdown
 ---
