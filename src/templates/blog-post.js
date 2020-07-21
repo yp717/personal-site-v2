@@ -25,7 +25,7 @@ const BlogPost = ({ data, pageContext, location }) => {
         image={
           "https://yannispanagis.com" +
           post.frontmatter.hero.childImageSharp.fluid.src
-        } 
+        }
         keywords={frontmatter.tags}
       />
       <div className="container row margin-10-t margin-10-b">

@@ -8,8 +8,6 @@ type: 'legal'
 description: Cookie Policy for designrant.app
 ---
 
-# Cookie Policy
-
 This is the Cookie Policy for designrant.app, accessible from [https://designrant.app/cookie-policy](https://designrant.app/cookie-policy)
 
 ## What Are Cookies

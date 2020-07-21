@@ -1,41 +1,32 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 // import _ from "lodash"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import ReactHtmlParser from "react-html-parser";
 
 const LegalTemplate = ({ data, location }) => {
   const post = data.markdownRemark
+  const { markdownRemark } = data;
+  const { frontmatter, html } = markdownRemark;
   const siteTitle = data.site.siteMetadata.title
 
   return (
     <Layout location={location} title={siteTitle}>
       <SEO
         title={post.frontmatter.title}
+        location={location}
         description={post.frontmatter.description || post.excerpt}
       />
-
-      <div className="is-white-bg">
-        <div className=" pad-3">  
-          <div className="margin-5-b">
-            <section
-              className="article"
-              dangerouslySetInnerHTML={{ __html: post.html }}
-            />
-          </div>
-          <div className="line opacity-5 margin-5-t" />
-          <footer>
-              <div
-                className="flex align-vertical align-horizontal is-black pad-5"
-                style={{ justifyContent: "center" }}
-              >
-                <div>
-                  <p className="margin-0">
-                    Written by <Link to="/"><strong>DesignRant</strong></Link>
-                  </p>
-                </div>
-              </div>
-          </footer>
+      <div className="container row margin-10-t margin-10-b">
+        <div className="col-xs-12 pad-5-lr">
+          <h1 className="text-align-left is-background-blue-text">{frontmatter.title}</h1>
+        </div>
+        <div className="col-xs-12 pad-5-lr margin-4-b">
+          <h3 className="is-background-blue-text">{frontmatter.date}</h3>
+        </div>
+        <div className="col-xs-12 pad-5-lr blog-text article">
+          {ReactHtmlParser(html)}
         </div>
       </div>
     </Layout>

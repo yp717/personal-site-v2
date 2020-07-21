@@ -8,8 +8,6 @@ type: 'legal'
 description: Cookie Policy for designrant.app
 ---
 
-# Disclaimer
-
 DesignRant is a growing blog site with contributors from around the world. Since consuming the content on our blog is 100% free, people often wonder how we keep our blog profitable.
 
 This page is here to serve as a legal disclaimer, and as information for those of you that are interested.
