@@ -1,21 +1,33 @@
 import React from 'react';
-import { graphql, Link } from 'gatsby';
+import { graphql, Link, navigate } from 'gatsby';
 import Img from "gatsby-image"
 import { kebabCase } from 'lodash';
+import { trackCustomEvent } from "gatsby-plugin-google-analytics"
 
 import SEO from '../components/seo';
 import Layout from '../components/layout';
 import ReactHtmlParser from "react-html-parser";
 import BuyMeCoffee from "../components/cards/buyMeCoffeeCard";
 
-const BlogPost = ({ data }) => {
+const BlogPost = ({ data, pageContext, location }) => {
+  const post = data.markdownRemark
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
+  const { previous, next } = pageContext
   const tags = frontmatter.tags;
 
   return (
     <Layout>
-      <SEO title={frontmatter.title} keywords={frontmatter.tags}/>
+      <SEO 
+        title={post.frontmatter.title}
+        location={location}
+        description={post.frontmatter.description || post.excerpt}
+        image={
+          "https://yannispanagis.com" +
+          post.frontmatter.hero.childImageSharp.fluid.src
+        } 
+        keywords={frontmatter.tags}
+      />
       <div className="container row margin-10-t margin-10-b">
         <div className="col-xs-12 pad-5-lr margin-4-b">          
           <Img fluid={frontmatter.hero.childImageSharp.fluid} />
@@ -41,6 +53,40 @@ const BlogPost = ({ data }) => {
           {ReactHtmlParser(html)}
         </div>
         <BuyMeCoffee/>
+        <div className="col-xs-12 col-md-6 text-align-left pad-5-lr">
+          {previous && (
+            <button
+              onClick={() => {
+                trackCustomEvent({
+                  category: "Explore from post",
+                  action: "Click",
+                  label: "previous",
+                })
+                navigate('/' + previous.fields.slug)
+              }}
+              style={{outline: 'none'}}
+            >
+              <p className="is-background-blue-text text-align-left article-nav-links grow">← {previous.frontmatter.title}</p>
+            </button>
+          )}
+        </div>
+        <div className="col-xs-12 col-md-6 pad-5-lr text-align-right">
+          {next && (
+            <button
+              onClick={() => {
+                trackCustomEvent({
+                  category: "Explore from post",
+                  action: "Click",
+                  label: "next",
+                })
+                navigate('/' + next.fields.slug)
+              }}
+              style={{outline: 'none'}}
+            >
+              <p className="is-background-blue-text text-align-right article-nav-links grow">{next.frontmatter.title} →</p>
+            </button>
+          )}
+        </div>
       </div>
       </Layout>
   );
