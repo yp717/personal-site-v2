@@ -8,7 +8,7 @@ type: 'legal'
 description: Cookie Policy for designrant.app
 ---
 
-This is the Cookie Policy for designrant.app, accessible from [https://designrant.app/cookie-policy](https://designrant.app/cookie-policy)
+This is the Cookie Policy for [yannispanagis.com](https://yannispanagis.com).
 
 ## What Are Cookies
 
